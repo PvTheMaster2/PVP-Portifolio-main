@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico E Hidrossanitario Al Alexandre AL"
-setor: Residencial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-eletrico-e-hidrossanitario-al-alexandre-al/
+setor: Residencial
+title: projeto-eletrico-e-hidrossanitario-al-alexandre-al
 updated: 2025-07-30T03:19
 ---
 

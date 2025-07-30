@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Reforma Ad Adriene AD"
-setor: Residencial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/reforma-ad-adriene-ad/
+setor: Residencial
+title: reforma-ad-adriene-ad
 updated: 2025-07-30T03:19
 ---
 

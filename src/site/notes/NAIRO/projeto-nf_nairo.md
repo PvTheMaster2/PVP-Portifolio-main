@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Nf Nairo NF"
-setor: Residencial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-nf-nairo-nf/
+setor: Residencial
+title: projeto-nf-nairo-nf
 updated: 2025-07-30T03:06
 ---
 

@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Lr. Lojas Remiao LR"
-setor: Comercial
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-lr-lojas-remiao-lr/
+setor: Comercial
+title: projeto-eletrico-lr-lojas-remiao-lr
 updated: 2025-07-30T03:06
 ---
 

@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Dz Zotti DZ"
-setor: Comercial
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-dz-zotti-dz/
+setor: Comercial
+title: projeto-eletrico-dz-zotti-dz
 updated: 2025-07-30T03:19
 ---
 

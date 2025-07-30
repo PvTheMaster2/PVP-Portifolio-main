@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Dp Dom Pedrito DP"
-setor: Predial
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-dp-dom-pedrito-dp/
+setor: Predial
+title: projeto-eletrico-dp-dom-pedrito-dp
 updated: 2025-07-30T03:06
 ---
 

@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Gp GP"
-setor: Residencial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-eletrico-gp-gp/
+setor: Residencial
+title: projeto-eletrico-gp-gp
 updated: 2025-07-30T03:19
 ---
 

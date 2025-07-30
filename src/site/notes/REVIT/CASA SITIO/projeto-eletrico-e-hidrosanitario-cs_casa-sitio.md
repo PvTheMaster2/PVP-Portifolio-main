@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico E Hidrosanitario Cs Casa Sitio CS"
-setor: Residencial
-ferramentas: Revit, AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit, AutoCAD
+permalink: /notes/projeto-eletrico-e-hidrosanitario-cs-casa-sitio-cs/
+setor: Residencial
+title: projeto-eletrico-e-hidrosanitario-cs-casa-sitio-cs
 updated: 2025-07-30T03:06
 ---
 

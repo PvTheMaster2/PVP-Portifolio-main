@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Af Loja Avenida AF"
-setor: Comercial
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-af-loja-avenida-af/
+setor: Comercial
+title: projeto-eletrico-af-loja-avenida-af
 updated: 2025-07-30T03:06
 ---
 

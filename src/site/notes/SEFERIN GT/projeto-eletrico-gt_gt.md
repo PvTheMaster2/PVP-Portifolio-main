@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Gt GT"
-setor: Residencial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-eletrico-gt-gt/
+setor: Residencial
+title: projeto-eletrico-gt-gt
 updated: 2025-07-30T03:19
 ---
 

@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Lep LEP"
-setor: Residencial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-lep-lep/
+setor: Residencial
+title: projeto-lep-lep
 updated: 2025-07-30T03:19
 ---
 

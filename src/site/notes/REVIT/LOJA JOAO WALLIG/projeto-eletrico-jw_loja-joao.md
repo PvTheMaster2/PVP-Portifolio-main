@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Jw Loja Joao JW"
-setor: Comercial
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-jw-loja-joao-jw/
+setor: Comercial
+title: projeto-eletrico-jw-loja-joao-jw
 updated: 2025-07-30T03:06
 ---
 

@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Si Sicredi SI"
-setor: Comercial / Corporativo
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-si-sicredi-si/
+setor: Comercial / Corporativo
+title: projeto-eletrico-si-sicredi-si
 updated: 2025-07-30T03:19
 ---
 

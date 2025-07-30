@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Ma Marista MA"
-setor: Institucional
-ferramentas: Revit
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: Revit
+permalink: /notes/projeto-eletrico-ma-marista-ma/
+setor: Institucional
+title: projeto-eletrico-ma-marista-ma
 updated: 2025-07-30T03:19
 ---
 

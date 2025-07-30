@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico Bu Barao Uba BU"
-setor: Predial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-eletrico-bu-barao-uba-bu/
+setor: Predial
+title: projeto-eletrico-bu-barao-uba-bu
 updated: 2025-07-30T03:06
 ---
 

@@ -1,9 +1,10 @@
 ---
-dg-publish: true
-title: "Projeto Eletrico E Hidrossanitario Rmc Predio Comercio RMC"
-setor: Predial
-ferramentas: AutoCAD
 created: 2025-07-30T01:31
+dg-publish: true
+ferramentas: AutoCAD
+permalink: /notes/projeto-eletrico-e-hidrossanitario-rmc-predio-comercio-rmc/
+setor: Predial
+title: projeto-eletrico-e-hidrossanitario-rmc-predio-comercio-rmc
 updated: 2025-07-30T03:06
 ---
 
