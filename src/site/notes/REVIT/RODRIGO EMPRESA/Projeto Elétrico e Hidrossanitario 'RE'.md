@@ -1,15 +1,7 @@
 ---
-dg-publish: true
-dg-home: true
-title: Edifício Comercial – Provedora de Internet (Revit)
-setor: Comercial / Predial
-ferramentas: Revit, AutoCAD
-cliente: Empresa de Telecomunicações
-ano: 2024
-local: Alvorada/RS
-created: 2025-07-25T04:21
-updated: 2025-07-30T01:00
+{"dg-publish":true,"permalink":"/REVIT/RODRIGO EMPRESA/Projeto Elétrico e Hidrossanitario 'RE'/","title":"Edifício Comercial – Provedora de Internet (Revit)","tags":["gardenEntry"],"noteIcon":""}
 ---
+
 ---
 
 # Edifício Comercial – Empresa de Internet 🏢🌐
