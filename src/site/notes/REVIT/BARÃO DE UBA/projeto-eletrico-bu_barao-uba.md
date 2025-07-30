@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Projeto Elétrico Predial - Edifício Residencial Vertical
+title: "Projeto Eletrico Bu Barao Uba BU"
 setor: Predial
 ferramentas: AutoCAD
 created: 2025-07-30T01:31

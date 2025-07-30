@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Projeto Elétrico Comercial - Loja Térrea (Revit)
+title: "Projeto Eletrico Jw Loja Joao JW"
 setor: Comercial
 ferramentas: Revit
 created: 2025-07-30T01:31

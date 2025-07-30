@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Estudo Elétrico Corporativo – Perfilados Teto e Piso
+title: "Projeto Eletrico Si Sicredi SI"
 setor: Comercial / Corporativo
 ferramentas: Revit
 created: 2025-07-30T01:31

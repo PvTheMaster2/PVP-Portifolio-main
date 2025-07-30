@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Reforma Elétrica Institucional – Sala de Aula (Revit)
+title: "Projeto Eletrico Ma Marista MA"
 setor: Institucional
 ferramentas: Revit
 created: 2025-07-30T01:31

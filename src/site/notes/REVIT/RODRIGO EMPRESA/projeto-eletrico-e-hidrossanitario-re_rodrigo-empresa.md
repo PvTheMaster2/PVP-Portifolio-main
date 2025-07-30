@@ -1,7 +1,7 @@
 ---
 dg-publish: true
 permalink: /REVIT/RODRIGO EMPRESA/Projeto Elétrico e Hidrossanitario 'RE'/
-title: Edifício Comercial – Provedora de Internet (Revit)
+title: "Projeto Eletrico E Hidrossanitario Re Rodrigo Empresa RE"
 tags:
   - gardenEntry
 noteIcon: ""

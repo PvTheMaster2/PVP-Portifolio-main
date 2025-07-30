@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Projeto Elétrico Residencial 'Casa GP'
+title: "Projeto Eletrico Gp GP"
 setor: Residencial
 ferramentas: AutoCAD
 created: 2025-07-30T01:31

@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Projeto Elétrico e Hidrossanitário - Residência em Sítio
+title: "Projeto Eletrico E Hidrosanitario Cs Casa Sitio CS"
 setor: Residencial
 ferramentas: Revit, AutoCAD
 created: 2025-07-30T01:31

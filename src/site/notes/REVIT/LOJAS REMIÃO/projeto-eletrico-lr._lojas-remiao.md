@@ -1,6 +1,6 @@
 ---
 dg-publish: true
-title: Projeto Elétrico Comercial - Loja 2 Pavimentos (Revit)
+title: "Projeto Eletrico Lr. Lojas Remiao LR"
 setor: Comercial
 ferramentas: Revit
 created: 2025-07-30T01:31
