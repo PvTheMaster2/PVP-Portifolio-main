@@ -4,7 +4,7 @@ title: Projeto Elétrico Comercial com Duas Unidades
 setor: Comercial
 ferramentas: Revit
 created: 2025-07-30T01:31
-updated: 2025-07-30T03:06
+updated: 2025-07-30T03:19
 ---
 
 # Loja Comercial 'DZ' com Duas Unidades Consumidoras ⚡🏬

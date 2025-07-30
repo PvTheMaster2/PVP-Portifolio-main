@@ -4,7 +4,7 @@ title: Estudo Elétrico Corporativo – Perfilados Teto e Piso
 setor: Comercial / Corporativo
 ferramentas: Revit
 created: 2025-07-30T01:31
-updated: 2025-07-30T03:06
+updated: 2025-07-30T03:19
 ---
 
 # Estudo de Infraestrutura Elétrica 'SI' – Escritório Corporativo 🏢⚡

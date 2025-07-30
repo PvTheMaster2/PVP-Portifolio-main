@@ -4,7 +4,7 @@ title: Reforma Elétrica Institucional – Sala de Aula (Revit)
 setor: Institucional
 ferramentas: Revit
 created: 2025-07-30T01:31
-updated: 2025-07-30T03:06
+updated: 2025-07-30T03:19
 ---
 
 # Reforma Elétrica Institucional 'MA' – Sala de Aula e Banheiros👨‍🏫⚡

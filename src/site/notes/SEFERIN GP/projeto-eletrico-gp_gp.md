@@ -4,7 +4,7 @@ title: Projeto Elétrico Residencial 'Casa GP'
 setor: Residencial
 ferramentas: AutoCAD
 created: 2025-07-30T01:31
-updated: 2025-07-30T03:06
+updated: 2025-07-30T03:19
 ---
 
 # Projeto Elétrico Residencial “Casa GP” 🏡
