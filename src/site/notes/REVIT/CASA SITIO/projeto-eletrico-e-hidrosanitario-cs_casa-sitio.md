@@ -59,12 +59,12 @@ Este projeto foi desenvolvido para atender às necessidades técnicas de uma res
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico em PDF**](/assets/pdfs/sitio_2024_eletrico.pdf_casa-sitio.pdf){:target="_blank" .reveal}  
-[📄 **Ver Isométrico Hidrossanitário e Sistema Séptico**](/assets/pdfs/sitio_2024_hidrosanitario.pdf_casa-sitio.pdf){:target="_blank" .reveal}
+[📄 **Ver Projeto Elétrico em PDF**](/assets/pdfs/pvp-a03-e101-r02-terreo_recorte_p1_casa-sitio.pdf){:target="_blank" .reveal}  
+[📄 **Ver Isométrico Hidrossanitário e Sistema Séptico**](/assets/pdfs/pvp-a03-h100-r02-água-quente-e-fria_recorte_p1_casa-sitio.pdf){:target="_blank" .reveal}
 
 <div class="pdf-container reveal">
-  <object data="/assets/pdfs/sitio_2024_hidrosanitario.pdf#toolbar=0"
+  <object data="/assets/pdfs/pvp-a03-h100-r02-água-quente-e-fria_recorte_p1_casa-sitio.pdf#toolbar=0"
           type="application/pdf" width="100%" height="500">
-    <p>PDF indisponível — <a href="/assets/pdfs/sitio_2024_hidrosanitario.pdf" target="_blank">baixar</a>.</p>
+    <p>PDF indisponível — <a href="/assets/pdfs/pvp-a03-h100-r02-água-quente-e-fria_recorte_p1_casa-sitio.pdf" target="_blank">baixar</a>.</p>
   </object>
 </div>

@@ -56,11 +56,11 @@ A infraestrutura contempla **entrada de energia individualizada**, **esperas par
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Loja Mezanino (PDF)**](/assets/pdfs/loja_mezanino_2024.pdf_lojas-remiao.pdf){:target="_blank" .reveal}  
+[📄 **Ver Projeto Elétrico Loja Mezanino (PDF)**](/assets/pdfs/692_arq_ex_modelo_r00_recorte_p1_lojas-remiao.pdf){:target="_blank" .reveal}  
 
 <div class="pdf-container reveal">
-  <object data="/assets/pdfs/loja_mezanino_2024.pdf#toolbar=0"
+  <object data="/assets/pdfs/692_arq_ex_modelo_r00_recorte_p1_lojas-remiao.pdf#toolbar=0"
           type="application/pdf" width="100%" height="500">
-    <p>PDF indisponível — <a href="/assets/pdfs/loja_mezanino_2024.pdf" target="_blank">baixar</a>.</p>
+    <p>PDF indisponível — <a href="/assets/pdfs/692_arq_ex_modelo_r00_recorte_p1_lojas-remiao.pdf" target="_blank">baixar</a>.</p>
   </object>
 </div>

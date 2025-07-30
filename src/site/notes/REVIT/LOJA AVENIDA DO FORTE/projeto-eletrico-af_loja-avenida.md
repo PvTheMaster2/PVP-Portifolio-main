@@ -55,11 +55,11 @@ A **modularidade do projeto** é o grande diferencial: cada loja conta com **med
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Loja Modular (PDF)**](/assets/pdfs/loja_revit_2024.pdf_loja-avenida.pdf){:target="_blank" .reveal}  
+[📄 **Ver Projeto Elétrico Loja Modular (PDF)**](/assets/pdfs/675_arq_av-do-forte_ex_r01_recorte_p1_loja-avenida.pdf){:target="_blank" .reveal}  
 
 <div class="pdf-container reveal">
-  <object data="/assets/pdfs/loja_revit_2024.pdf#toolbar=0"
+  <object data="/assets/pdfs/675_arq_av-do-forte_ex_r01_recorte_p1_loja-avenida.pdf#toolbar=0"
           type="application/pdf" width="100%" height="500">
-    <p>PDF indisponível — <a href="/assets/pdfs/loja_revit_2024.pdf" target="_blank">baixar</a>.</p>
+    <p>PDF indisponível — <a href="/assets/pdfs/675_arq_av-do-forte_ex_r01_recorte_p1_loja-avenida.pdf" target="_blank">baixar</a>.</p>
   </object>
 </div>

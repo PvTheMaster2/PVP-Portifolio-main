@@ -52,12 +52,12 @@ Este edifício multifamiliar foi modelado integralmente no **Revit**, com foco e
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Revit (PDF)**](/assets/pdfs/habit_2024_eletrico.pdf_dom-pedrito.pdf){:target="_blank" .reveal}  
-[📄 **Ver Prumadas Técnicas e SPDA**](/assets/pdfs/habit_2024_prumadas_spda.pdf_dom-pedrito.pdf){:target="_blank" .reveal}
+[📄 **Ver Projeto Elétrico Revit (PDF)**](/assets/pdfs/fc-d08-wolf-e201-r05-térreo_recorte_p1_dom-pedrito.pdf){:target="_blank" .reveal}  
+[📄 **Ver Prumadas Técnicas e SPDA**](/assets/pdfs/fc-d08-wolf-e999-r00-detalhe-prumada_recorte_p1_dom-pedrito.pdf){:target="_blank" .reveal}
 
 <div class="pdf-container reveal">
-  <object data="/assets/pdfs/habit_2024_eletrico.pdf#toolbar=0"
+  <object data="/assets/pdfs/fc-d08-wolf-e201-r05-térreo_recorte_p1_dom-pedrito.pdf#toolbar=0"
           type="application/pdf" width="100%" height="500">
-    <p>PDF indisponível — <a href="/assets/pdfs/habit_2024_eletrico.pdf" target="_blank">baixar</a>.</p>
+    <p>PDF indisponível — <a href="/assets/pdfs/fc-d08-wolf-e201-r05-térreo_recorte_p1_dom-pedrito.pdf" target="_blank">baixar</a>.</p>
   </object>
 </div>

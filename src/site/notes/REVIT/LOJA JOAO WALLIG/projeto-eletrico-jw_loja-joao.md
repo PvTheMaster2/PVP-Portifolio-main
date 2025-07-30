@@ -57,11 +57,11 @@ Foram previstos **furos em vigas e passagens técnicas para eletrodutos aparente
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Loja Térrea (PDF)**](/assets/pdfs/loja_terrea_2024.pdf_loja-joao.pdf){:target="_blank" .reveal}  
+[📄 **Ver Projeto Elétrico Loja Térrea (PDF)**](/assets/pdfs/694_arq_ep_joaowallig_r04_recorte_p1_loja-joao.pdf){:target="_blank" .reveal}  
 
 <div class="pdf-container reveal">
-  <object data="/assets/pdfs/loja_terrea_2024.pdf#toolbar=0"
+  <object data="/assets/pdfs/694_arq_ep_joaowallig_r04_recorte_p1_loja-joao.pdf#toolbar=0"
           type="application/pdf" width="100%" height="500">
-    <p>PDF indisponível — <a href="/assets/pdfs/loja_terrea_2024.pdf" target="_blank">baixar</a>.</p>
+    <p>PDF indisponível — <a href="/assets/pdfs/694_arq_ep_joaowallig_r04_recorte_p1_loja-joao.pdf" target="_blank">baixar</a>.</p>
   </object>
 </div>

@@ -56,13 +56,13 @@ O projeto elétrico deste edifício multifamiliar foi desenvolvido para garantir
 
 ## Documentação
 
-[📄 **Ver Diagrama Multifilar**](/assets/pdfs/predio-20apt_multifilar.pdf_barao-uba.pdf){:target="_blank" .reveal}  
-[📄 **Ver Esquema Vertical e Entrada de Energia**](/assets/pdfs/predio-20apt_vertical_entrada.pdf_barao-uba.pdf){:target="_blank" .reveal}  
-[📄 **Ver Detalhe dos Medidores**](/assets/pdfs/predio-20apt_medidores.pdf_barao-uba.pdf){:target="_blank" .reveal}
+[📄 **Ver Diagrama Unifilar**](/assets/pdfs/fc-d07-e005-r00-diagrama-unifilar_recorte_p1_barao-uba.pdf){:target="_blank" .reveal}  
+[📄 **Ver Esquema Vertical**](/assets/pdfs/fc-d07-e004-r00-esquema-vertical_recorte_p1_barao-uba.pdf){:target="_blank" .reveal}  
+[📄 **Ver Painéis de Medição**](/assets/pdfs/fc-d07-e001-r00-paineis-de-medição_recorte_p1_barao-uba.pdf){:target="_blank" .reveal}
 
 <div class="pdf-container reveal">
-  <object data="/assets/pdfs/predio-20apt_multifilar.pdf#toolbar=0"
+  <object data="/assets/pdfs/fc-d07-e005-r00-diagrama-unifilar_recorte_p1_barao-uba.pdf#toolbar=0"
           type="application/pdf" width="100%" height="500">
-    <p>PDF indisponível — <a href="/assets/pdfs/predio-20apt_multifilar.pdf" target="_blank">baixar</a>.</p>
+    <p>PDF indisponível — <a href="/assets/pdfs/fc-d07-e005-r00-diagrama-unifilar_recorte_p1_barao-uba.pdf" target="_blank">baixar</a>.</p>
   </object>
 </div>
