@@ -1,8 +1,8 @@
 {
   "githubRepo": "PVP-Portifolio-main",
-  "githubToken": "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",
+  "githubToken": "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",
   "githubUserName": "pvthemaster2",
-  "gardenBaseUrl": "pvpportifolio.netlify.app",
+  "gardenBaseUrl": "pvpportifolio.netlify.app/",
   "prHistory": [
     "https://github.com/PvTheMaster2/OBSIDIAN-TCC-R00/pull/1"
   ],

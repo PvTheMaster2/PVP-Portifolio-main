@@ -11,10 +11,14 @@
             "id": "5d317dfd218c7071",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ADRIENE/reforma-ad_adriene.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "reforma-ad_adriene"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 677.5
+    "width": 245.5
   },
   "right": {
     "id": "24023d18c86abac7",
@@ -265,6 +269,7 @@
   },
   "active": "5d317dfd218c7071",
   "lastOpenFiles": [
+    "REVIT/RODRIGO EMPRESA/projeto-eletrico-e-hidrossanitario-re_rodrigo-empresa.md",
     "REVIT/RODRIGO EMPRESA/Projeto Elétrico e Hidrossanitario 'RE'.md",
     "util/readme_unknown.md",
     "util/guia_rapido_unknown.md",
@@ -273,7 +278,6 @@
     "SEFERIN CD/projeto-eletrico-cd_cd.md",
     "REVIT/ZOTTI/projeto-eletrico-dz_zotti.md",
     "REVIT/SICREDI/projeto-eletrico-si_sicredi.md",
-    "REVIT/RODRIGO EMPRESA/projeto-eletrico-e-hidrossanitario-re_rodrigo-empresa.md",
     "REVIT/MARISTA/projeto-eletrico-ma_marista.md",
     "REVIT/LOJAS REMIÃO/projeto-eletrico-lr._lojas-remiao.md",
     "REVIT/LOJA JOAO WALLIG/projeto-eletrico-jw_loja-joao.md",
