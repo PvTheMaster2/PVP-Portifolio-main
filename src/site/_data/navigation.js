@@ -12,13 +12,13 @@ module.exports = {
       name: 'Sobre',
       url: '/sobre',
       icon: '👨‍💼',
-      description: 'Conheça nossa empresa'
+      description: 'Conheça a PVP Projects'
     },
     {
       name: 'Serviços',
       url: '/servicos',
       icon: '⚡',
-      description: 'Nossas soluções'
+      description: 'Nossas soluções de engenharia'
     },
     {
       name: 'Projetos',
@@ -39,46 +39,56 @@ module.exports = {
     {
       id: 'eletrico',
       name: 'Projetos Elétricos',
-      description: 'Instalações elétricas residenciais, comerciais e industriais',
+      description: 'Instalações de baixa tensão para todos os portes',
       icon: '⚡',
       url: '/servicos/eletrico',
       features: [
-        'Instalações residenciais',
-        'Instalações comerciais',
-        'Instalações industriais',
-        'Quadros de distribuição',
-        'Iluminação e tomadas',
-        'Medição individualizada'
+        'Entrada de energia e medição individualizada',
+        'Quadros de distribuição e diagramas unifilares',
+        'Projetos de iluminação e tomadas',
+        'Infraestrutura para climatização',
+        'Sistema de Proteção contra Descargas Atmosféricas (SPDA)',
+        'Automação e sistemas fotovoltaicos'
       ]
     },
     {
       id: 'hidrossanitario',
       name: 'Projetos Hidrossanitários',
-      description: 'Instalações hidráulicas e sanitárias',
+      description: 'Redes de água fria e quente',
       icon: '🚰',
       url: '/servicos/hidrossanitario',
       features: [
-        'Instalações hidráulicas',
-        'Instalações sanitárias',
-        'Sistemas de drenagem',
-        'Tratamento de esgoto',
-        'Captação de água da chuva',
-        'Fossas sépticas'
+        'Sistemas de esgoto cloacal e pluvial',
+        'Dimensionamento de reservatórios',
+        'Caixas de inspeção e sistemas sépticos',
+        'Documentação para aprovação em concessionárias',
+        'DMAE, SEMAE e outras concessionárias'
       ]
     },
     {
-      id: 'estrutural',
-      name: 'Projetos Estruturais',
-      description: 'Dimensionamento e cálculo estrutural',
-      icon: '🏗️',
-      url: '/servicos/estrutural',
+      id: 'comunicacao',
+      name: 'Projetos de Comunicação',
+      description: 'Infraestrutura para redes de dados, telefonia e TV',
+      icon: '📡',
+      url: '/servicos/comunicacao',
       features: [
-        'Cálculo estrutural',
-        'Dimensionamento',
-        'Análise de cargas',
-        'Projetos de fundação',
-        'Estruturas metálicas',
-        'Estruturas de concreto'
+        'Cabeamento estruturado',
+        'Redes de dados',
+        'Telefonia',
+        'TV'
+      ]
+    },
+    {
+      id: 'consultoria',
+      name: 'Consultoria e Compatibilização BIM',
+      description: 'Modelagem 3D das instalações em Revit',
+      icon: '🏗️',
+      url: '/servicos/consultoria',
+      features: [
+        'Análise de interferências e otimização de rotas',
+        'Coordenação com projetos de arquitetura',
+        'Modelagem 3D das instalações em Revit',
+        'Compatibilização entre disciplinas'
       ]
     }
   ],
@@ -108,6 +118,14 @@ module.exports = {
       icon: '🏪',
       url: '/projetos/comercial',
       count: 1
+    },
+    {
+      id: 'institucional',
+      name: 'Projetos Institucionais',
+      description: 'Escolas, hospitais e instituições',
+      icon: '🏛️',
+      url: '/projetos/institucional',
+      count: 0
     }
   ],
 
@@ -116,14 +134,14 @@ module.exports = {
     company: [
       { name: 'Sobre Nós', url: '/sobre' },
       { name: 'Nossa Missão', url: '/sobre#missao' },
-      { name: 'Equipe', url: '/sobre#equipe' },
-      { name: 'História', url: '/sobre#historia' }
+      { name: 'Nossa História', url: '/sobre#historia' },
+      { name: 'Valores', url: '/sobre#valores' }
     ],
     services: [
       { name: 'Projetos Elétricos', url: '/servicos/eletrico' },
       { name: 'Projetos Hidrossanitários', url: '/servicos/hidrossanitario' },
-      { name: 'Projetos Estruturais', url: '/servicos/estrutural' },
-      { name: 'Consultoria', url: '/servicos/consultoria' }
+      { name: 'Projetos de Comunicação', url: '/servicos/comunicacao' },
+      { name: 'Consultoria BIM', url: '/servicos/consultoria' }
     ],
     projects: [
       { name: 'Projetos Prediais', url: '/projetos/predial' },
@@ -151,19 +169,19 @@ module.exports = {
   social: [
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/pedro-vitor-engenheiro',
+      url: 'https://linkedin.com/in/pedro-vitor-pagliarin',
       icon: 'linkedin',
       color: 'blue'
     },
     {
       name: 'WhatsApp',
-      url: 'https://wa.me/5551999999999',
+      url: 'https://wa.me/5554991590379',
       icon: 'whatsapp',
       color: 'green'
     },
     {
       name: 'Email',
-      url: 'mailto:contato@pedrovitor.com.br',
+      url: 'mailto:pedrovitor.pagliarin@hotmail.com',
       icon: 'mail',
       color: 'red'
     }
@@ -171,8 +189,9 @@ module.exports = {
 
   // Contact information
   contact: {
-    phone: '+55 (51) 99999-9999',
-    email: 'contato@pedrovitor.com.br',
+    engineer: 'Eng. Pedro Vitor Pagliarin',
+    phone: '+55 (54) 99159-0379',
+    email: 'pedrovitor.pagliarin@hotmail.com',
     address: 'Porto Alegre, RS, Brasil',
     hours: 'Segunda a Sexta: 8h às 18h'
   }

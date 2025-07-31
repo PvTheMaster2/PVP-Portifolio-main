@@ -4,33 +4,27 @@ module.exports = {
   categories: {
     eletrico: {
       name: 'Projetos Elétricos',
-      description: 'Instalações elétricas residenciais, comerciais e industriais',
+      description: 'Instalações de baixa tensão para todos os portes',
       icon: '⚡',
       color: 'primary'
     },
     hidrossanitario: {
       name: 'Projetos Hidrossanitários',
-      description: 'Instalações hidráulicas e sanitárias',
+      description: 'Redes de água fria e quente',
       icon: '🚰',
       color: 'secondary'
     },
-    estrutural: {
-      name: 'Projetos Estruturais',
-      description: 'Dimensionamento e cálculo estrutural',
-      icon: '🏗️',
+    comunicacao: {
+      name: 'Projetos de Comunicação',
+      description: 'Infraestrutura para redes de dados, telefonia e TV',
+      icon: '📡',
       color: 'accent'
     },
-    predial: {
-      name: 'Projetos Prediais',
-      description: 'Edifícios residenciais e comerciais',
-      icon: '🏢',
+    consultoria: {
+      name: 'Consultoria e Compatibilização BIM',
+      description: 'Modelagem 3D das instalações em Revit',
+      icon: '🏗️',
       color: 'success'
-    },
-    residencial: {
-      name: 'Projetos Residenciais',
-      description: 'Casas e apartamentos',
-      icon: '🏠',
-      color: 'warning'
     }
   },
 
@@ -298,12 +292,12 @@ module.exports = {
       },
       challenges: [
         'Iluminação comercial',
-        'Sistema de ar condicionado',
+        'Sistema de climatização',
         'Tomadas para equipamentos'
       ],
       solutions: [
         'Iluminação LED eficiente',
-        'Infraestrutura para climatização',
+        'Infraestrutura para ar condicionado',
         'Distribuição otimizada de pontos'
       ],
       results: [
@@ -618,7 +612,8 @@ module.exports = {
     services: {
       eletrico: 10,
       hidrossanitario: 2,
-      estrutural: 0
+      comunicacao: 0,
+      consultoria: 0
     }
   },
 
