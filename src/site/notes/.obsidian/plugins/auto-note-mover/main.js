@@ -9,92 +9,132 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
+var __markAsModule = target => __defProp(target, '__esModule', { value: true });
 var __export = (target, all) => {
   __markAsModule(target);
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __reExport = (target, module2, desc) => {
-  if (module2 && typeof module2 === "object" || typeof module2 === "function") {
+  if (
+    (module2 && typeof module2 === 'object') ||
+    typeof module2 === 'function'
+  ) {
     for (let key of __getOwnPropNames(module2))
-      if (!__hasOwnProp.call(target, key) && key !== "default")
-        __defProp(target, key, { get: () => module2[key], enumerable: !(desc = __getOwnPropDesc(module2, key)) || desc.enumerable });
+      if (!__hasOwnProp.call(target, key) && key !== 'default')
+        __defProp(target, key, {
+          get: () => module2[key],
+          enumerable:
+            !(desc = __getOwnPropDesc(module2, key)) || desc.enumerable,
+        });
   }
   return target;
 };
-var __toModule = (module2) => {
-  return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
+var __toModule = module2 => {
+  return __reExport(
+    __markAsModule(
+      __defProp(
+        module2 != null ? __create(__getProtoOf(module2)) : {},
+        'default',
+        module2 && module2.__esModule && 'default' in module2
+          ? { get: () => module2.default, enumerable: true }
+          : { value: module2, enumerable: true }
+      )
+    ),
+    module2
+  );
 };
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
-    var fulfilled = (value) => {
+    var fulfilled = value => {
       try {
         step(generator.next(value));
       } catch (e) {
         reject(e);
       }
     };
-    var rejected = (value) => {
+    var rejected = value => {
       try {
         step(generator.throw(value));
       } catch (e) {
         reject(e);
       }
     };
-    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    var step = x =>
+      x.done
+        ? resolve(x.value)
+        : Promise.resolve(x.value).then(fulfilled, rejected);
     step((generator = generator.apply(__this, __arguments)).next());
   });
 };
 
 // main.ts
 __export(exports, {
-  default: () => AutoNoteMover
+  default: () => AutoNoteMover,
 });
-var import_obsidian6 = __toModule(require("obsidian"));
+var import_obsidian6 = __toModule(require('obsidian'));
 
 // settings/settings.ts
-var import_obsidian5 = __toModule(require("obsidian"));
+var import_obsidian5 = __toModule(require('obsidian'));
 
 // suggests/file-suggest.ts
-var import_obsidian2 = __toModule(require("obsidian"));
+var import_obsidian2 = __toModule(require('obsidian'));
 
 // suggests/suggest.ts
-var import_obsidian = __toModule(require("obsidian"));
+var import_obsidian = __toModule(require('obsidian'));
 
 // node_modules/@popperjs/core/lib/enums.js
-var top = "top";
-var bottom = "bottom";
-var right = "right";
-var left = "left";
-var auto = "auto";
+var top = 'top';
+var bottom = 'bottom';
+var right = 'right';
+var left = 'left';
+var auto = 'auto';
 var basePlacements = [top, bottom, right, left];
-var start = "start";
-var end = "end";
-var clippingParents = "clippingParents";
-var viewport = "viewport";
-var popper = "popper";
-var reference = "reference";
-var variationPlacements = /* @__PURE__ */ basePlacements.reduce(function(acc, placement) {
-  return acc.concat([placement + "-" + start, placement + "-" + end]);
+var start = 'start';
+var end = 'end';
+var clippingParents = 'clippingParents';
+var viewport = 'viewport';
+var popper = 'popper';
+var reference = 'reference';
+var variationPlacements = /* @__PURE__ */ basePlacements.reduce(function (
+  acc,
+  placement
+) {
+  return acc.concat([placement + '-' + start, placement + '-' + end]);
 }, []);
-var placements = /* @__PURE__ */ [].concat(basePlacements, [auto]).reduce(function(acc, placement) {
-  return acc.concat([placement, placement + "-" + start, placement + "-" + end]);
-}, []);
-var beforeRead = "beforeRead";
-var read = "read";
-var afterRead = "afterRead";
-var beforeMain = "beforeMain";
-var main = "main";
-var afterMain = "afterMain";
-var beforeWrite = "beforeWrite";
-var write = "write";
-var afterWrite = "afterWrite";
-var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
+var placements = /* @__PURE__ */ []
+  .concat(basePlacements, [auto])
+  .reduce(function (acc, placement) {
+    return acc.concat([
+      placement,
+      placement + '-' + start,
+      placement + '-' + end,
+    ]);
+  }, []);
+var beforeRead = 'beforeRead';
+var read = 'read';
+var afterRead = 'afterRead';
+var beforeMain = 'beforeMain';
+var main = 'main';
+var afterMain = 'afterMain';
+var beforeWrite = 'beforeWrite';
+var write = 'write';
+var afterWrite = 'afterWrite';
+var modifierPhases = [
+  beforeRead,
+  read,
+  afterRead,
+  beforeMain,
+  main,
+  afterMain,
+  beforeWrite,
+  write,
+  afterWrite,
+];
 
 // node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
 function getNodeName(element) {
-  return element ? (element.nodeName || "").toLowerCase() : null;
+  return element ? (element.nodeName || '').toLowerCase() : null;
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getWindow.js
@@ -102,7 +142,7 @@ function getWindow(node) {
   if (node == null) {
     return window;
   }
-  if (node.toString() !== "[object Window]") {
+  if (node.toString() !== '[object Window]') {
     var ownerDocument = node.ownerDocument;
     return ownerDocument ? ownerDocument.defaultView || window : window;
   }
@@ -119,7 +159,7 @@ function isHTMLElement(node) {
   return node instanceof OwnElement || node instanceof HTMLElement;
 }
 function isShadowRoot(node) {
-  if (typeof ShadowRoot === "undefined") {
+  if (typeof ShadowRoot === 'undefined') {
     return false;
   }
   var OwnElement = getWindow(node).ShadowRoot;
@@ -129,7 +169,7 @@ function isShadowRoot(node) {
 // node_modules/@popperjs/core/lib/modifiers/applyStyles.js
 function applyStyles(_ref) {
   var state = _ref.state;
-  Object.keys(state.elements).forEach(function(name) {
+  Object.keys(state.elements).forEach(function (name) {
     var style = state.styles[name] || {};
     var attributes = state.attributes[name] || {};
     var element = state.elements[name];
@@ -137,12 +177,12 @@ function applyStyles(_ref) {
       return;
     }
     Object.assign(element.style, style);
-    Object.keys(attributes).forEach(function(name2) {
+    Object.keys(attributes).forEach(function (name2) {
       var value = attributes[name2];
       if (value === false) {
         element.removeAttribute(name2);
       } else {
-        element.setAttribute(name2, value === true ? "" : value);
+        element.setAttribute(name2, value === true ? '' : value);
       }
     });
   });
@@ -152,51 +192,55 @@ function effect(_ref2) {
   var initialStyles = {
     popper: {
       position: state.options.strategy,
-      left: "0",
-      top: "0",
-      margin: "0"
+      left: '0',
+      top: '0',
+      margin: '0',
     },
     arrow: {
-      position: "absolute"
+      position: 'absolute',
     },
-    reference: {}
+    reference: {},
   };
   Object.assign(state.elements.popper.style, initialStyles.popper);
   state.styles = initialStyles;
   if (state.elements.arrow) {
     Object.assign(state.elements.arrow.style, initialStyles.arrow);
   }
-  return function() {
-    Object.keys(state.elements).forEach(function(name) {
+  return function () {
+    Object.keys(state.elements).forEach(function (name) {
       var element = state.elements[name];
       var attributes = state.attributes[name] || {};
-      var styleProperties = Object.keys(state.styles.hasOwnProperty(name) ? state.styles[name] : initialStyles[name]);
-      var style = styleProperties.reduce(function(style2, property) {
-        style2[property] = "";
+      var styleProperties = Object.keys(
+        state.styles.hasOwnProperty(name)
+          ? state.styles[name]
+          : initialStyles[name]
+      );
+      var style = styleProperties.reduce(function (style2, property) {
+        style2[property] = '';
         return style2;
       }, {});
       if (!isHTMLElement(element) || !getNodeName(element)) {
         return;
       }
       Object.assign(element.style, style);
-      Object.keys(attributes).forEach(function(attribute) {
+      Object.keys(attributes).forEach(function (attribute) {
         element.removeAttribute(attribute);
       });
     });
   };
 }
 var applyStyles_default = {
-  name: "applyStyles",
+  name: 'applyStyles',
   enabled: true,
-  phase: "write",
+  phase: 'write',
   fn: applyStyles,
   effect,
-  requires: ["computeStyles"]
+  requires: ['computeStyles'],
 };
 
 // node_modules/@popperjs/core/lib/utils/getBasePlacement.js
 function getBasePlacement(placement) {
-  return placement.split("-")[0];
+  return placement.split('-')[0];
 }
 
 // node_modules/@popperjs/core/lib/utils/math.js
@@ -230,7 +274,7 @@ function getBoundingClientRect(element, includeScale) {
     bottom: rect.bottom / scaleY,
     left: rect.left / scaleX,
     x: rect.left / scaleX,
-    y: rect.top / scaleY
+    y: rect.top / scaleY,
   };
 }
 
@@ -249,7 +293,7 @@ function getLayoutRect(element) {
     x: element.offsetLeft,
     y: element.offsetTop,
     width,
-    height
+    height,
   };
 }
 
@@ -277,35 +321,46 @@ function getComputedStyle(element) {
 
 // node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
 function isTableElement(element) {
-  return ["table", "td", "th"].indexOf(getNodeName(element)) >= 0;
+  return ['table', 'td', 'th'].indexOf(getNodeName(element)) >= 0;
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
 function getDocumentElement(element) {
-  return ((isElement(element) ? element.ownerDocument : element.document) || window.document).documentElement;
+  return (
+    (isElement(element) ? element.ownerDocument : element.document) ||
+    window.document
+  ).documentElement;
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
 function getParentNode(element) {
-  if (getNodeName(element) === "html") {
+  if (getNodeName(element) === 'html') {
     return element;
   }
-  return element.assignedSlot || element.parentNode || (isShadowRoot(element) ? element.host : null) || getDocumentElement(element);
+  return (
+    element.assignedSlot ||
+    element.parentNode ||
+    (isShadowRoot(element) ? element.host : null) ||
+    getDocumentElement(element)
+  );
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
 function getTrueOffsetParent(element) {
-  if (!isHTMLElement(element) || getComputedStyle(element).position === "fixed") {
+  if (
+    !isHTMLElement(element) ||
+    getComputedStyle(element).position === 'fixed'
+  ) {
     return null;
   }
   return element.offsetParent;
 }
 function getContainingBlock(element) {
-  var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") !== -1;
-  var isIE = navigator.userAgent.indexOf("Trident") !== -1;
+  var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') !== -1;
+  var isIE = navigator.userAgent.indexOf('Trident') !== -1;
   if (isIE && isHTMLElement(element)) {
     var elementCss = getComputedStyle(element);
-    if (elementCss.position === "fixed") {
+    if (elementCss.position === 'fixed') {
       return null;
     }
   }
@@ -313,9 +368,19 @@ function getContainingBlock(element) {
   if (isShadowRoot(currentNode)) {
     currentNode = currentNode.host;
   }
-  while (isHTMLElement(currentNode) && ["html", "body"].indexOf(getNodeName(currentNode)) < 0) {
+  while (
+    isHTMLElement(currentNode) &&
+    ['html', 'body'].indexOf(getNodeName(currentNode)) < 0
+  ) {
     var css = getComputedStyle(currentNode);
-    if (css.transform !== "none" || css.perspective !== "none" || css.contain === "paint" || ["transform", "perspective"].indexOf(css.willChange) !== -1 || isFirefox && css.willChange === "filter" || isFirefox && css.filter && css.filter !== "none") {
+    if (
+      css.transform !== 'none' ||
+      css.perspective !== 'none' ||
+      css.contain === 'paint' ||
+      ['transform', 'perspective'].indexOf(css.willChange) !== -1 ||
+      (isFirefox && css.willChange === 'filter') ||
+      (isFirefox && css.filter && css.filter !== 'none')
+    ) {
       return currentNode;
     } else {
       currentNode = currentNode.parentNode;
@@ -326,10 +391,19 @@ function getContainingBlock(element) {
 function getOffsetParent(element) {
   var window2 = getWindow(element);
   var offsetParent = getTrueOffsetParent(element);
-  while (offsetParent && isTableElement(offsetParent) && getComputedStyle(offsetParent).position === "static") {
+  while (
+    offsetParent &&
+    isTableElement(offsetParent) &&
+    getComputedStyle(offsetParent).position === 'static'
+  ) {
     offsetParent = getTrueOffsetParent(offsetParent);
   }
-  if (offsetParent && (getNodeName(offsetParent) === "html" || getNodeName(offsetParent) === "body" && getComputedStyle(offsetParent).position === "static")) {
+  if (
+    offsetParent &&
+    (getNodeName(offsetParent) === 'html' ||
+      (getNodeName(offsetParent) === 'body' &&
+        getComputedStyle(offsetParent).position === 'static'))
+  ) {
     return window2;
   }
   return offsetParent || getContainingBlock(element) || window2;
@@ -337,7 +411,7 @@ function getOffsetParent(element) {
 
 // node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
 function getMainAxisFromPlacement(placement) {
-  return ["top", "bottom"].indexOf(placement) >= 0 ? "x" : "y";
+  return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
 }
 
 // node_modules/@popperjs/core/lib/utils/within.js
@@ -355,7 +429,7 @@ function getFreshSideObject() {
     top: 0,
     right: 0,
     bottom: 0,
-    left: 0
+    left: 0,
   };
 }
 
@@ -366,7 +440,7 @@ function mergePaddingObject(paddingObject) {
 
 // node_modules/@popperjs/core/lib/utils/expandToHashMap.js
 function expandToHashMap(value, keys) {
-  return keys.reduce(function(hashMap, key) {
+  return keys.reduce(function (hashMap, key) {
     hashMap[key] = value;
     return hashMap;
   }, {});
@@ -374,46 +448,72 @@ function expandToHashMap(value, keys) {
 
 // node_modules/@popperjs/core/lib/modifiers/arrow.js
 var toPaddingObject = function toPaddingObject2(padding, state) {
-  padding = typeof padding === "function" ? padding(Object.assign({}, state.rects, {
-    placement: state.placement
-  })) : padding;
-  return mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
+  padding =
+    typeof padding === 'function'
+      ? padding(
+          Object.assign({}, state.rects, {
+            placement: state.placement,
+          })
+        )
+      : padding;
+  return mergePaddingObject(
+    typeof padding !== 'number'
+      ? padding
+      : expandToHashMap(padding, basePlacements)
+  );
 };
 function arrow(_ref) {
   var _state$modifiersData$;
-  var state = _ref.state, name = _ref.name, options = _ref.options;
+  var state = _ref.state,
+    name = _ref.name,
+    options = _ref.options;
   var arrowElement = state.elements.arrow;
   var popperOffsets2 = state.modifiersData.popperOffsets;
   var basePlacement = getBasePlacement(state.placement);
   var axis = getMainAxisFromPlacement(basePlacement);
   var isVertical = [left, right].indexOf(basePlacement) >= 0;
-  var len = isVertical ? "height" : "width";
+  var len = isVertical ? 'height' : 'width';
   if (!arrowElement || !popperOffsets2) {
     return;
   }
   var paddingObject = toPaddingObject(options.padding, state);
   var arrowRect = getLayoutRect(arrowElement);
-  var minProp = axis === "y" ? top : left;
-  var maxProp = axis === "y" ? bottom : right;
-  var endDiff = state.rects.reference[len] + state.rects.reference[axis] - popperOffsets2[axis] - state.rects.popper[len];
+  var minProp = axis === 'y' ? top : left;
+  var maxProp = axis === 'y' ? bottom : right;
+  var endDiff =
+    state.rects.reference[len] +
+    state.rects.reference[axis] -
+    popperOffsets2[axis] -
+    state.rects.popper[len];
   var startDiff = popperOffsets2[axis] - state.rects.reference[axis];
   var arrowOffsetParent = getOffsetParent(arrowElement);
-  var clientSize = arrowOffsetParent ? axis === "y" ? arrowOffsetParent.clientHeight || 0 : arrowOffsetParent.clientWidth || 0 : 0;
+  var clientSize = arrowOffsetParent
+    ? axis === 'y'
+      ? arrowOffsetParent.clientHeight || 0
+      : arrowOffsetParent.clientWidth || 0
+    : 0;
   var centerToReference = endDiff / 2 - startDiff / 2;
   var min2 = paddingObject[minProp];
   var max2 = clientSize - arrowRect[len] - paddingObject[maxProp];
   var center = clientSize / 2 - arrowRect[len] / 2 + centerToReference;
   var offset2 = within(min2, center, max2);
   var axisProp = axis;
-  state.modifiersData[name] = (_state$modifiersData$ = {}, _state$modifiersData$[axisProp] = offset2, _state$modifiersData$.centerOffset = offset2 - center, _state$modifiersData$);
+  state.modifiersData[name] =
+    ((_state$modifiersData$ = {}),
+    (_state$modifiersData$[axisProp] = offset2),
+    (_state$modifiersData$.centerOffset = offset2 - center),
+    _state$modifiersData$);
 }
 function effect2(_ref2) {
-  var state = _ref2.state, options = _ref2.options;
-  var _options$element = options.element, arrowElement = _options$element === void 0 ? "[data-popper-arrow]" : _options$element;
+  var state = _ref2.state,
+    options = _ref2.options;
+  var _options$element = options.element,
+    arrowElement =
+      _options$element === void 0 ? '[data-popper-arrow]' : _options$element;
   if (arrowElement == null) {
     return;
   }
-  if (typeof arrowElement === "string") {
+  if (typeof arrowElement === 'string') {
     arrowElement = state.elements.popper.querySelector(arrowElement);
     if (!arrowElement) {
       return;
@@ -421,118 +521,210 @@ function effect2(_ref2) {
   }
   if (true) {
     if (!isHTMLElement(arrowElement)) {
-      console.error(['Popper: "arrow" element must be an HTMLElement (not an SVGElement).', "To use an SVG arrow, wrap it in an HTMLElement that will be used as", "the arrow."].join(" "));
+      console.error(
+        [
+          'Popper: "arrow" element must be an HTMLElement (not an SVGElement).',
+          'To use an SVG arrow, wrap it in an HTMLElement that will be used as',
+          'the arrow.',
+        ].join(' ')
+      );
     }
   }
   if (!contains(state.elements.popper, arrowElement)) {
     if (true) {
-      console.error(['Popper: "arrow" modifier\'s `element` must be a child of the popper', "element."].join(" "));
+      console.error(
+        [
+          'Popper: "arrow" modifier\'s `element` must be a child of the popper',
+          'element.',
+        ].join(' ')
+      );
     }
     return;
   }
   state.elements.arrow = arrowElement;
 }
 var arrow_default = {
-  name: "arrow",
+  name: 'arrow',
   enabled: true,
-  phase: "main",
+  phase: 'main',
   fn: arrow,
   effect: effect2,
-  requires: ["popperOffsets"],
-  requiresIfExists: ["preventOverflow"]
+  requires: ['popperOffsets'],
+  requiresIfExists: ['preventOverflow'],
 };
 
 // node_modules/@popperjs/core/lib/utils/getVariation.js
 function getVariation(placement) {
-  return placement.split("-")[1];
+  return placement.split('-')[1];
 }
 
 // node_modules/@popperjs/core/lib/modifiers/computeStyles.js
 var unsetSides = {
-  top: "auto",
-  right: "auto",
-  bottom: "auto",
-  left: "auto"
+  top: 'auto',
+  right: 'auto',
+  bottom: 'auto',
+  left: 'auto',
 };
 function roundOffsetsByDPR(_ref) {
-  var x = _ref.x, y = _ref.y;
+  var x = _ref.x,
+    y = _ref.y;
   var win = window;
   var dpr = win.devicePixelRatio || 1;
   return {
     x: round(x * dpr) / dpr || 0,
-    y: round(y * dpr) / dpr || 0
+    y: round(y * dpr) / dpr || 0,
   };
 }
 function mapToStyles(_ref2) {
   var _Object$assign2;
-  var popper2 = _ref2.popper, popperRect = _ref2.popperRect, placement = _ref2.placement, variation = _ref2.variation, offsets = _ref2.offsets, position = _ref2.position, gpuAcceleration = _ref2.gpuAcceleration, adaptive = _ref2.adaptive, roundOffsets = _ref2.roundOffsets, isFixed = _ref2.isFixed;
-  var _offsets$x = offsets.x, x = _offsets$x === void 0 ? 0 : _offsets$x, _offsets$y = offsets.y, y = _offsets$y === void 0 ? 0 : _offsets$y;
-  var _ref3 = typeof roundOffsets === "function" ? roundOffsets({
-    x,
-    y
-  }) : {
-    x,
-    y
-  };
+  var popper2 = _ref2.popper,
+    popperRect = _ref2.popperRect,
+    placement = _ref2.placement,
+    variation = _ref2.variation,
+    offsets = _ref2.offsets,
+    position = _ref2.position,
+    gpuAcceleration = _ref2.gpuAcceleration,
+    adaptive = _ref2.adaptive,
+    roundOffsets = _ref2.roundOffsets,
+    isFixed = _ref2.isFixed;
+  var _offsets$x = offsets.x,
+    x = _offsets$x === void 0 ? 0 : _offsets$x,
+    _offsets$y = offsets.y,
+    y = _offsets$y === void 0 ? 0 : _offsets$y;
+  var _ref3 =
+    typeof roundOffsets === 'function'
+      ? roundOffsets({
+          x,
+          y,
+        })
+      : {
+          x,
+          y,
+        };
   x = _ref3.x;
   y = _ref3.y;
-  var hasX = offsets.hasOwnProperty("x");
-  var hasY = offsets.hasOwnProperty("y");
+  var hasX = offsets.hasOwnProperty('x');
+  var hasY = offsets.hasOwnProperty('y');
   var sideX = left;
   var sideY = top;
   var win = window;
   if (adaptive) {
     var offsetParent = getOffsetParent(popper2);
-    var heightProp = "clientHeight";
-    var widthProp = "clientWidth";
+    var heightProp = 'clientHeight';
+    var widthProp = 'clientWidth';
     if (offsetParent === getWindow(popper2)) {
       offsetParent = getDocumentElement(popper2);
-      if (getComputedStyle(offsetParent).position !== "static" && position === "absolute") {
-        heightProp = "scrollHeight";
-        widthProp = "scrollWidth";
+      if (
+        getComputedStyle(offsetParent).position !== 'static' &&
+        position === 'absolute'
+      ) {
+        heightProp = 'scrollHeight';
+        widthProp = 'scrollWidth';
       }
     }
     offsetParent = offsetParent;
-    if (placement === top || (placement === left || placement === right) && variation === end) {
+    if (
+      placement === top ||
+      ((placement === left || placement === right) && variation === end)
+    ) {
       sideY = bottom;
-      var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : offsetParent[heightProp];
+      var offsetY =
+        isFixed && offsetParent === win && win.visualViewport
+          ? win.visualViewport.height
+          : offsetParent[heightProp];
       y -= offsetY - popperRect.height;
       y *= gpuAcceleration ? 1 : -1;
     }
-    if (placement === left || (placement === top || placement === bottom) && variation === end) {
+    if (
+      placement === left ||
+      ((placement === top || placement === bottom) && variation === end)
+    ) {
       sideX = right;
-      var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : offsetParent[widthProp];
+      var offsetX =
+        isFixed && offsetParent === win && win.visualViewport
+          ? win.visualViewport.width
+          : offsetParent[widthProp];
       x -= offsetX - popperRect.width;
       x *= gpuAcceleration ? 1 : -1;
     }
   }
-  var commonStyles = Object.assign({
-    position
-  }, adaptive && unsetSides);
-  var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
-    x,
-    y
-  }) : {
-    x,
-    y
-  };
+  var commonStyles = Object.assign(
+    {
+      position,
+    },
+    adaptive && unsetSides
+  );
+  var _ref4 =
+    roundOffsets === true
+      ? roundOffsetsByDPR({
+          x,
+          y,
+        })
+      : {
+          x,
+          y,
+        };
   x = _ref4.x;
   y = _ref4.y;
   if (gpuAcceleration) {
     var _Object$assign;
-    return Object.assign({}, commonStyles, (_Object$assign = {}, _Object$assign[sideY] = hasY ? "0" : "", _Object$assign[sideX] = hasX ? "0" : "", _Object$assign.transform = (win.devicePixelRatio || 1) <= 1 ? "translate(" + x + "px, " + y + "px)" : "translate3d(" + x + "px, " + y + "px, 0)", _Object$assign));
+    return Object.assign(
+      {},
+      commonStyles,
+      ((_Object$assign = {}),
+      (_Object$assign[sideY] = hasY ? '0' : ''),
+      (_Object$assign[sideX] = hasX ? '0' : ''),
+      (_Object$assign.transform =
+        (win.devicePixelRatio || 1) <= 1
+          ? 'translate(' + x + 'px, ' + y + 'px)'
+          : 'translate3d(' + x + 'px, ' + y + 'px, 0)'),
+      _Object$assign)
+    );
   }
-  return Object.assign({}, commonStyles, (_Object$assign2 = {}, _Object$assign2[sideY] = hasY ? y + "px" : "", _Object$assign2[sideX] = hasX ? x + "px" : "", _Object$assign2.transform = "", _Object$assign2));
+  return Object.assign(
+    {},
+    commonStyles,
+    ((_Object$assign2 = {}),
+    (_Object$assign2[sideY] = hasY ? y + 'px' : ''),
+    (_Object$assign2[sideX] = hasX ? x + 'px' : ''),
+    (_Object$assign2.transform = ''),
+    _Object$assign2)
+  );
 }
 function computeStyles(_ref5) {
-  var state = _ref5.state, options = _ref5.options;
-  var _options$gpuAccelerat = options.gpuAcceleration, gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat, _options$adaptive = options.adaptive, adaptive = _options$adaptive === void 0 ? true : _options$adaptive, _options$roundOffsets = options.roundOffsets, roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
+  var state = _ref5.state,
+    options = _ref5.options;
+  var _options$gpuAccelerat = options.gpuAcceleration,
+    gpuAcceleration =
+      _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat,
+    _options$adaptive = options.adaptive,
+    adaptive = _options$adaptive === void 0 ? true : _options$adaptive,
+    _options$roundOffsets = options.roundOffsets,
+    roundOffsets =
+      _options$roundOffsets === void 0 ? true : _options$roundOffsets;
   if (true) {
-    var transitionProperty = getComputedStyle(state.elements.popper).transitionProperty || "";
-    if (adaptive && ["transform", "top", "right", "bottom", "left"].some(function(property) {
-      return transitionProperty.indexOf(property) >= 0;
-    })) {
-      console.warn(["Popper: Detected CSS transitions on at least one of the following", 'CSS properties: "transform", "top", "right", "bottom", "left".', "\n\n", 'Disable the "computeStyles" modifier\'s `adaptive` option to allow', "for smooth transitions, or remove these properties from the CSS", "transition declaration on the popper element if only transitioning", "opacity or background-color for example.", "\n\n", "We recommend using the popper element as a wrapper around an inner", "element that can have any CSS property transitioned for animations."].join(" "));
+    var transitionProperty =
+      getComputedStyle(state.elements.popper).transitionProperty || '';
+    if (
+      adaptive &&
+      ['transform', 'top', 'right', 'bottom', 'left'].some(function (property) {
+        return transitionProperty.indexOf(property) >= 0;
+      })
+    ) {
+      console.warn(
+        [
+          'Popper: Detected CSS transitions on at least one of the following',
+          'CSS properties: "transform", "top", "right", "bottom", "left".',
+          '\n\n',
+          'Disable the "computeStyles" modifier\'s `adaptive` option to allow',
+          'for smooth transitions, or remove these properties from the CSS',
+          'transition declaration on the popper element if only transitioning',
+          'opacity or background-color for example.',
+          '\n\n',
+          'We recommend using the popper element as a wrapper around an inner',
+          'element that can have any CSS property transitioned for animations.',
+        ].join(' ')
+      );
     }
   }
   var commonStyles = {
@@ -541,94 +733,113 @@ function computeStyles(_ref5) {
     popper: state.elements.popper,
     popperRect: state.rects.popper,
     gpuAcceleration,
-    isFixed: state.options.strategy === "fixed"
+    isFixed: state.options.strategy === 'fixed',
   };
   if (state.modifiersData.popperOffsets != null) {
-    state.styles.popper = Object.assign({}, state.styles.popper, mapToStyles(Object.assign({}, commonStyles, {
-      offsets: state.modifiersData.popperOffsets,
-      position: state.options.strategy,
-      adaptive,
-      roundOffsets
-    })));
+    state.styles.popper = Object.assign(
+      {},
+      state.styles.popper,
+      mapToStyles(
+        Object.assign({}, commonStyles, {
+          offsets: state.modifiersData.popperOffsets,
+          position: state.options.strategy,
+          adaptive,
+          roundOffsets,
+        })
+      )
+    );
   }
   if (state.modifiersData.arrow != null) {
-    state.styles.arrow = Object.assign({}, state.styles.arrow, mapToStyles(Object.assign({}, commonStyles, {
-      offsets: state.modifiersData.arrow,
-      position: "absolute",
-      adaptive: false,
-      roundOffsets
-    })));
+    state.styles.arrow = Object.assign(
+      {},
+      state.styles.arrow,
+      mapToStyles(
+        Object.assign({}, commonStyles, {
+          offsets: state.modifiersData.arrow,
+          position: 'absolute',
+          adaptive: false,
+          roundOffsets,
+        })
+      )
+    );
   }
   state.attributes.popper = Object.assign({}, state.attributes.popper, {
-    "data-popper-placement": state.placement
+    'data-popper-placement': state.placement,
   });
 }
 var computeStyles_default = {
-  name: "computeStyles",
+  name: 'computeStyles',
   enabled: true,
-  phase: "beforeWrite",
+  phase: 'beforeWrite',
   fn: computeStyles,
-  data: {}
+  data: {},
 };
 
 // node_modules/@popperjs/core/lib/modifiers/eventListeners.js
 var passive = {
-  passive: true
+  passive: true,
 };
 function effect3(_ref) {
-  var state = _ref.state, instance = _ref.instance, options = _ref.options;
-  var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
+  var state = _ref.state,
+    instance = _ref.instance,
+    options = _ref.options;
+  var _options$scroll = options.scroll,
+    scroll = _options$scroll === void 0 ? true : _options$scroll,
+    _options$resize = options.resize,
+    resize = _options$resize === void 0 ? true : _options$resize;
   var window2 = getWindow(state.elements.popper);
-  var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
+  var scrollParents = [].concat(
+    state.scrollParents.reference,
+    state.scrollParents.popper
+  );
   if (scroll) {
-    scrollParents.forEach(function(scrollParent) {
-      scrollParent.addEventListener("scroll", instance.update, passive);
+    scrollParents.forEach(function (scrollParent) {
+      scrollParent.addEventListener('scroll', instance.update, passive);
     });
   }
   if (resize) {
-    window2.addEventListener("resize", instance.update, passive);
+    window2.addEventListener('resize', instance.update, passive);
   }
-  return function() {
+  return function () {
     if (scroll) {
-      scrollParents.forEach(function(scrollParent) {
-        scrollParent.removeEventListener("scroll", instance.update, passive);
+      scrollParents.forEach(function (scrollParent) {
+        scrollParent.removeEventListener('scroll', instance.update, passive);
       });
     }
     if (resize) {
-      window2.removeEventListener("resize", instance.update, passive);
+      window2.removeEventListener('resize', instance.update, passive);
     }
   };
 }
 var eventListeners_default = {
-  name: "eventListeners",
+  name: 'eventListeners',
   enabled: true,
-  phase: "write",
-  fn: function fn() {
-  },
+  phase: 'write',
+  fn: function fn() {},
   effect: effect3,
-  data: {}
+  data: {},
 };
 
 // node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
 var hash = {
-  left: "right",
-  right: "left",
-  bottom: "top",
-  top: "bottom"
+  left: 'right',
+  right: 'left',
+  bottom: 'top',
+  top: 'bottom',
 };
 function getOppositePlacement(placement) {
-  return placement.replace(/left|right|bottom|top/g, function(matched) {
+  return placement.replace(/left|right|bottom|top/g, function (matched) {
     return hash[matched];
   });
 }
 
 // node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
 var hash2 = {
-  start: "end",
-  end: "start"
+  start: 'end',
+  end: 'start',
 };
 function getOppositeVariationPlacement(placement) {
-  return placement.replace(/start|end/g, function(matched) {
+  return placement.replace(/start|end/g, function (matched) {
     return hash2[matched];
   });
 }
@@ -640,13 +851,16 @@ function getWindowScroll(node) {
   var scrollTop = win.pageYOffset;
   return {
     scrollLeft,
-    scrollTop
+    scrollTop,
   };
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
 function getWindowScrollBarX(element) {
-  return getBoundingClientRect(getDocumentElement(element)).left + getWindowScroll(element).scrollLeft;
+  return (
+    getBoundingClientRect(getDocumentElement(element)).left +
+    getWindowScroll(element).scrollLeft
+  );
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
@@ -670,7 +884,7 @@ function getViewportRect(element) {
     width,
     height,
     x: x + getWindowScrollBarX(element),
-    y
+    y,
   };
 }
 
@@ -679,31 +893,47 @@ function getDocumentRect(element) {
   var _element$ownerDocumen;
   var html = getDocumentElement(element);
   var winScroll = getWindowScroll(element);
-  var body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
-  var width = max(html.scrollWidth, html.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
-  var height = max(html.scrollHeight, html.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
+  var body =
+    (_element$ownerDocumen = element.ownerDocument) == null
+      ? void 0
+      : _element$ownerDocumen.body;
+  var width = max(
+    html.scrollWidth,
+    html.clientWidth,
+    body ? body.scrollWidth : 0,
+    body ? body.clientWidth : 0
+  );
+  var height = max(
+    html.scrollHeight,
+    html.clientHeight,
+    body ? body.scrollHeight : 0,
+    body ? body.clientHeight : 0
+  );
   var x = -winScroll.scrollLeft + getWindowScrollBarX(element);
   var y = -winScroll.scrollTop;
-  if (getComputedStyle(body || html).direction === "rtl") {
+  if (getComputedStyle(body || html).direction === 'rtl') {
     x += max(html.clientWidth, body ? body.clientWidth : 0) - width;
   }
   return {
     width,
     height,
     x,
-    y
+    y,
   };
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
 function isScrollParent(element) {
-  var _getComputedStyle = getComputedStyle(element), overflow = _getComputedStyle.overflow, overflowX = _getComputedStyle.overflowX, overflowY = _getComputedStyle.overflowY;
+  var _getComputedStyle = getComputedStyle(element),
+    overflow = _getComputedStyle.overflow,
+    overflowX = _getComputedStyle.overflowX,
+    overflowY = _getComputedStyle.overflowY;
   return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
 }
 
 // node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
 function getScrollParent(node) {
-  if (["html", "body", "#document"].indexOf(getNodeName(node)) >= 0) {
+  if (['html', 'body', '#document'].indexOf(getNodeName(node)) >= 0) {
     return node.ownerDocument.body;
   }
   if (isHTMLElement(node) && isScrollParent(node)) {
@@ -719,11 +949,22 @@ function listScrollParents(element, list) {
     list = [];
   }
   var scrollParent = getScrollParent(element);
-  var isBody = scrollParent === ((_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body);
+  var isBody =
+    scrollParent ===
+    ((_element$ownerDocumen = element.ownerDocument) == null
+      ? void 0
+      : _element$ownerDocumen.body);
   var win = getWindow(scrollParent);
-  var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
+  var target = isBody
+    ? [win].concat(
+        win.visualViewport || [],
+        isScrollParent(scrollParent) ? scrollParent : []
+      )
+    : scrollParent;
   var updatedList = list.concat(target);
-  return isBody ? updatedList : updatedList.concat(listScrollParents(getParentNode(target)));
+  return isBody
+    ? updatedList
+    : updatedList.concat(listScrollParents(getParentNode(target)));
 }
 
 // node_modules/@popperjs/core/lib/utils/rectToClientRect.js
@@ -732,7 +973,7 @@ function rectToClientRect(rect) {
     left: rect.x,
     top: rect.y,
     right: rect.x + rect.width,
-    bottom: rect.y + rect.height
+    bottom: rect.y + rect.height,
   });
 }
 
@@ -750,31 +991,49 @@ function getInnerBoundingClientRect(element) {
   return rect;
 }
 function getClientRectFromMixedType(element, clippingParent) {
-  return clippingParent === viewport ? rectToClientRect(getViewportRect(element)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+  return clippingParent === viewport
+    ? rectToClientRect(getViewportRect(element))
+    : isElement(clippingParent)
+      ? getInnerBoundingClientRect(clippingParent)
+      : rectToClientRect(getDocumentRect(getDocumentElement(element)));
 }
 function getClippingParents(element) {
   var clippingParents2 = listScrollParents(getParentNode(element));
-  var canEscapeClipping = ["absolute", "fixed"].indexOf(getComputedStyle(element).position) >= 0;
-  var clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
+  var canEscapeClipping =
+    ['absolute', 'fixed'].indexOf(getComputedStyle(element).position) >= 0;
+  var clipperElement =
+    canEscapeClipping && isHTMLElement(element)
+      ? getOffsetParent(element)
+      : element;
   if (!isElement(clipperElement)) {
     return [];
   }
-  return clippingParents2.filter(function(clippingParent) {
-    return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== "body";
+  return clippingParents2.filter(function (clippingParent) {
+    return (
+      isElement(clippingParent) &&
+      contains(clippingParent, clipperElement) &&
+      getNodeName(clippingParent) !== 'body'
+    );
   });
 }
 function getClippingRect(element, boundary, rootBoundary) {
-  var mainClippingParents = boundary === "clippingParents" ? getClippingParents(element) : [].concat(boundary);
+  var mainClippingParents =
+    boundary === 'clippingParents'
+      ? getClippingParents(element)
+      : [].concat(boundary);
   var clippingParents2 = [].concat(mainClippingParents, [rootBoundary]);
   var firstClippingParent = clippingParents2[0];
-  var clippingRect = clippingParents2.reduce(function(accRect, clippingParent) {
-    var rect = getClientRectFromMixedType(element, clippingParent);
-    accRect.top = max(rect.top, accRect.top);
-    accRect.right = min(rect.right, accRect.right);
-    accRect.bottom = min(rect.bottom, accRect.bottom);
-    accRect.left = max(rect.left, accRect.left);
-    return accRect;
-  }, getClientRectFromMixedType(element, firstClippingParent));
+  var clippingRect = clippingParents2.reduce(
+    function (accRect, clippingParent) {
+      var rect = getClientRectFromMixedType(element, clippingParent);
+      accRect.top = max(rect.top, accRect.top);
+      accRect.right = min(rect.right, accRect.right);
+      accRect.bottom = min(rect.bottom, accRect.bottom);
+      accRect.left = max(rect.left, accRect.left);
+      return accRect;
+    },
+    getClientRectFromMixedType(element, firstClippingParent)
+  );
   clippingRect.width = clippingRect.right - clippingRect.left;
   clippingRect.height = clippingRect.bottom - clippingRect.top;
   clippingRect.x = clippingRect.left;
@@ -784,7 +1043,9 @@ function getClippingRect(element, boundary, rootBoundary) {
 
 // node_modules/@popperjs/core/lib/utils/computeOffsets.js
 function computeOffsets(_ref) {
-  var reference2 = _ref.reference, element = _ref.element, placement = _ref.placement;
+  var reference2 = _ref.reference,
+    element = _ref.element,
+    placement = _ref.placement;
   var basePlacement = placement ? getBasePlacement(placement) : null;
   var variation = placement ? getVariation(placement) : null;
   var commonX = reference2.x + reference2.width / 2 - element.width / 2;
@@ -794,42 +1055,44 @@ function computeOffsets(_ref) {
     case top:
       offsets = {
         x: commonX,
-        y: reference2.y - element.height
+        y: reference2.y - element.height,
       };
       break;
     case bottom:
       offsets = {
         x: commonX,
-        y: reference2.y + reference2.height
+        y: reference2.y + reference2.height,
       };
       break;
     case right:
       offsets = {
         x: reference2.x + reference2.width,
-        y: commonY
+        y: commonY,
       };
       break;
     case left:
       offsets = {
         x: reference2.x - element.width,
-        y: commonY
+        y: commonY,
       };
       break;
     default:
       offsets = {
         x: reference2.x,
-        y: reference2.y
+        y: reference2.y,
       };
   }
   var mainAxis = basePlacement ? getMainAxisFromPlacement(basePlacement) : null;
   if (mainAxis != null) {
-    var len = mainAxis === "y" ? "height" : "width";
+    var len = mainAxis === 'y' ? 'height' : 'width';
     switch (variation) {
       case start:
-        offsets[mainAxis] = offsets[mainAxis] - (reference2[len] / 2 - element[len] / 2);
+        offsets[mainAxis] =
+          offsets[mainAxis] - (reference2[len] / 2 - element[len] / 2);
         break;
       case end:
-        offsets[mainAxis] = offsets[mainAxis] + (reference2[len] / 2 - element[len] / 2);
+        offsets[mainAxis] =
+          offsets[mainAxis] + (reference2[len] / 2 - element[len] / 2);
         break;
       default:
     }
@@ -842,33 +1105,67 @@ function detectOverflow(state, options) {
   if (options === void 0) {
     options = {};
   }
-  var _options = options, _options$placement = _options.placement, placement = _options$placement === void 0 ? state.placement : _options$placement, _options$boundary = _options.boundary, boundary = _options$boundary === void 0 ? clippingParents : _options$boundary, _options$rootBoundary = _options.rootBoundary, rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary, _options$elementConte = _options.elementContext, elementContext = _options$elementConte === void 0 ? popper : _options$elementConte, _options$altBoundary = _options.altBoundary, altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary, _options$padding = _options.padding, padding = _options$padding === void 0 ? 0 : _options$padding;
-  var paddingObject = mergePaddingObject(typeof padding !== "number" ? padding : expandToHashMap(padding, basePlacements));
+  var _options = options,
+    _options$placement = _options.placement,
+    placement =
+      _options$placement === void 0 ? state.placement : _options$placement,
+    _options$boundary = _options.boundary,
+    boundary =
+      _options$boundary === void 0 ? clippingParents : _options$boundary,
+    _options$rootBoundary = _options.rootBoundary,
+    rootBoundary =
+      _options$rootBoundary === void 0 ? viewport : _options$rootBoundary,
+    _options$elementConte = _options.elementContext,
+    elementContext =
+      _options$elementConte === void 0 ? popper : _options$elementConte,
+    _options$altBoundary = _options.altBoundary,
+    altBoundary =
+      _options$altBoundary === void 0 ? false : _options$altBoundary,
+    _options$padding = _options.padding,
+    padding = _options$padding === void 0 ? 0 : _options$padding;
+  var paddingObject = mergePaddingObject(
+    typeof padding !== 'number'
+      ? padding
+      : expandToHashMap(padding, basePlacements)
+  );
   var altContext = elementContext === popper ? reference : popper;
   var popperRect = state.rects.popper;
   var element = state.elements[altBoundary ? altContext : elementContext];
-  var clippingClientRect = getClippingRect(isElement(element) ? element : element.contextElement || getDocumentElement(state.elements.popper), boundary, rootBoundary);
+  var clippingClientRect = getClippingRect(
+    isElement(element)
+      ? element
+      : element.contextElement || getDocumentElement(state.elements.popper),
+    boundary,
+    rootBoundary
+  );
   var referenceClientRect = getBoundingClientRect(state.elements.reference);
   var popperOffsets2 = computeOffsets({
     reference: referenceClientRect,
     element: popperRect,
-    strategy: "absolute",
-    placement
+    strategy: 'absolute',
+    placement,
   });
-  var popperClientRect = rectToClientRect(Object.assign({}, popperRect, popperOffsets2));
-  var elementClientRect = elementContext === popper ? popperClientRect : referenceClientRect;
+  var popperClientRect = rectToClientRect(
+    Object.assign({}, popperRect, popperOffsets2)
+  );
+  var elementClientRect =
+    elementContext === popper ? popperClientRect : referenceClientRect;
   var overflowOffsets = {
     top: clippingClientRect.top - elementClientRect.top + paddingObject.top,
-    bottom: elementClientRect.bottom - clippingClientRect.bottom + paddingObject.bottom,
+    bottom:
+      elementClientRect.bottom -
+      clippingClientRect.bottom +
+      paddingObject.bottom,
     left: clippingClientRect.left - elementClientRect.left + paddingObject.left,
-    right: elementClientRect.right - clippingClientRect.right + paddingObject.right
+    right:
+      elementClientRect.right - clippingClientRect.right + paddingObject.right,
   };
   var offsetData = state.modifiersData.offset;
   if (elementContext === popper && offsetData) {
     var offset2 = offsetData[placement];
-    Object.keys(overflowOffsets).forEach(function(key) {
+    Object.keys(overflowOffsets).forEach(function (key) {
       var multiply = [right, bottom].indexOf(key) >= 0 ? 1 : -1;
-      var axis = [top, bottom].indexOf(key) >= 0 ? "y" : "x";
+      var axis = [top, bottom].indexOf(key) >= 0 ? 'y' : 'x';
       overflowOffsets[key] += offset2[axis] * multiply;
     });
   }
@@ -880,30 +1177,50 @@ function computeAutoPlacement(state, options) {
   if (options === void 0) {
     options = {};
   }
-  var _options = options, placement = _options.placement, boundary = _options.boundary, rootBoundary = _options.rootBoundary, padding = _options.padding, flipVariations = _options.flipVariations, _options$allowedAutoP = _options.allowedAutoPlacements, allowedAutoPlacements = _options$allowedAutoP === void 0 ? placements : _options$allowedAutoP;
+  var _options = options,
+    placement = _options.placement,
+    boundary = _options.boundary,
+    rootBoundary = _options.rootBoundary,
+    padding = _options.padding,
+    flipVariations = _options.flipVariations,
+    _options$allowedAutoP = _options.allowedAutoPlacements,
+    allowedAutoPlacements =
+      _options$allowedAutoP === void 0 ? placements : _options$allowedAutoP;
   var variation = getVariation(placement);
-  var placements2 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function(placement2) {
-    return getVariation(placement2) === variation;
-  }) : basePlacements;
-  var allowedPlacements = placements2.filter(function(placement2) {
+  var placements2 = variation
+    ? flipVariations
+      ? variationPlacements
+      : variationPlacements.filter(function (placement2) {
+          return getVariation(placement2) === variation;
+        })
+    : basePlacements;
+  var allowedPlacements = placements2.filter(function (placement2) {
     return allowedAutoPlacements.indexOf(placement2) >= 0;
   });
   if (allowedPlacements.length === 0) {
     allowedPlacements = placements2;
     if (true) {
-      console.error(["Popper: The `allowedAutoPlacements` option did not allow any", "placements. Ensure the `placement` option matches the variation", "of the allowed placements.", 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(" "));
+      console.error(
+        [
+          'Popper: The `allowedAutoPlacements` option did not allow any',
+          'placements. Ensure the `placement` option matches the variation',
+          'of the allowed placements.',
+          'For example, "auto" cannot be used to allow "bottom-start".',
+          'Use "auto-start" instead.',
+        ].join(' ')
+      );
     }
   }
-  var overflows = allowedPlacements.reduce(function(acc, placement2) {
+  var overflows = allowedPlacements.reduce(function (acc, placement2) {
     acc[placement2] = detectOverflow(state, {
       placement: placement2,
       boundary,
       rootBoundary,
-      padding
+      padding,
     })[getBasePlacement(placement2)];
     return acc;
   }, {});
-  return Object.keys(overflows).sort(function(a, b) {
+  return Object.keys(overflows).sort(function (a, b) {
     return overflows[a] - overflows[b];
   });
 }
@@ -914,28 +1231,56 @@ function getExpandedFallbackPlacements(placement) {
     return [];
   }
   var oppositePlacement = getOppositePlacement(placement);
-  return [getOppositeVariationPlacement(placement), oppositePlacement, getOppositeVariationPlacement(oppositePlacement)];
+  return [
+    getOppositeVariationPlacement(placement),
+    oppositePlacement,
+    getOppositeVariationPlacement(oppositePlacement),
+  ];
 }
 function flip(_ref) {
-  var state = _ref.state, options = _ref.options, name = _ref.name;
+  var state = _ref.state,
+    options = _ref.options,
+    name = _ref.name;
   if (state.modifiersData[name]._skip) {
     return;
   }
-  var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? true : _options$altAxis, specifiedFallbackPlacements = options.fallbackPlacements, padding = options.padding, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, _options$flipVariatio = options.flipVariations, flipVariations = _options$flipVariatio === void 0 ? true : _options$flipVariatio, allowedAutoPlacements = options.allowedAutoPlacements;
+  var _options$mainAxis = options.mainAxis,
+    checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis,
+    _options$altAxis = options.altAxis,
+    checkAltAxis = _options$altAxis === void 0 ? true : _options$altAxis,
+    specifiedFallbackPlacements = options.fallbackPlacements,
+    padding = options.padding,
+    boundary = options.boundary,
+    rootBoundary = options.rootBoundary,
+    altBoundary = options.altBoundary,
+    _options$flipVariatio = options.flipVariations,
+    flipVariations =
+      _options$flipVariatio === void 0 ? true : _options$flipVariatio,
+    allowedAutoPlacements = options.allowedAutoPlacements;
   var preferredPlacement = state.options.placement;
   var basePlacement = getBasePlacement(preferredPlacement);
   var isBasePlacement = basePlacement === preferredPlacement;
-  var fallbackPlacements = specifiedFallbackPlacements || (isBasePlacement || !flipVariations ? [getOppositePlacement(preferredPlacement)] : getExpandedFallbackPlacements(preferredPlacement));
-  var placements2 = [preferredPlacement].concat(fallbackPlacements).reduce(function(acc, placement2) {
-    return acc.concat(getBasePlacement(placement2) === auto ? computeAutoPlacement(state, {
-      placement: placement2,
-      boundary,
-      rootBoundary,
-      padding,
-      flipVariations,
-      allowedAutoPlacements
-    }) : placement2);
-  }, []);
+  var fallbackPlacements =
+    specifiedFallbackPlacements ||
+    (isBasePlacement || !flipVariations
+      ? [getOppositePlacement(preferredPlacement)]
+      : getExpandedFallbackPlacements(preferredPlacement));
+  var placements2 = [preferredPlacement]
+    .concat(fallbackPlacements)
+    .reduce(function (acc, placement2) {
+      return acc.concat(
+        getBasePlacement(placement2) === auto
+          ? computeAutoPlacement(state, {
+              placement: placement2,
+              boundary,
+              rootBoundary,
+              padding,
+              flipVariations,
+              allowedAutoPlacements,
+            })
+          : placement2
+      );
+    }, []);
   var referenceRect = state.rects.reference;
   var popperRect = state.rects.popper;
   var checksMap = new Map();
@@ -946,15 +1291,21 @@ function flip(_ref) {
     var _basePlacement = getBasePlacement(placement);
     var isStartVariation = getVariation(placement) === start;
     var isVertical = [top, bottom].indexOf(_basePlacement) >= 0;
-    var len = isVertical ? "width" : "height";
+    var len = isVertical ? 'width' : 'height';
     var overflow = detectOverflow(state, {
       placement,
       boundary,
       rootBoundary,
       altBoundary,
-      padding
+      padding,
     });
-    var mainVariationSide = isVertical ? isStartVariation ? right : left : isStartVariation ? bottom : top;
+    var mainVariationSide = isVertical
+      ? isStartVariation
+        ? right
+        : left
+      : isStartVariation
+        ? bottom
+        : top;
     if (referenceRect[len] > popperRect[len]) {
       mainVariationSide = getOppositePlacement(mainVariationSide);
     }
@@ -964,11 +1315,16 @@ function flip(_ref) {
       checks.push(overflow[_basePlacement] <= 0);
     }
     if (checkAltAxis) {
-      checks.push(overflow[mainVariationSide] <= 0, overflow[altVariationSide] <= 0);
+      checks.push(
+        overflow[mainVariationSide] <= 0,
+        overflow[altVariationSide] <= 0
+      );
     }
-    if (checks.every(function(check) {
-      return check;
-    })) {
+    if (
+      checks.every(function (check) {
+        return check;
+      })
+    ) {
       firstFittingPlacement = placement;
       makeFallbackChecks = false;
       break;
@@ -978,23 +1334,22 @@ function flip(_ref) {
   if (makeFallbackChecks) {
     var numberOfChecks = flipVariations ? 3 : 1;
     var _loop = function _loop2(_i2) {
-      var fittingPlacement = placements2.find(function(placement2) {
+      var fittingPlacement = placements2.find(function (placement2) {
         var checks2 = checksMap.get(placement2);
         if (checks2) {
-          return checks2.slice(0, _i2).every(function(check) {
+          return checks2.slice(0, _i2).every(function (check) {
             return check;
           });
         }
       });
       if (fittingPlacement) {
         firstFittingPlacement = fittingPlacement;
-        return "break";
+        return 'break';
       }
     };
     for (var _i = numberOfChecks; _i > 0; _i--) {
       var _ret = _loop(_i);
-      if (_ret === "break")
-        break;
+      if (_ret === 'break') break;
     }
   }
   if (state.placement !== firstFittingPlacement) {
@@ -1004,14 +1359,14 @@ function flip(_ref) {
   }
 }
 var flip_default = {
-  name: "flip",
+  name: 'flip',
   enabled: true,
-  phase: "main",
+  phase: 'main',
   fn: flip,
-  requiresIfExists: ["offset"],
+  requiresIfExists: ['offset'],
   data: {
-    _skip: false
-  }
+    _skip: false,
+  },
 };
 
 // node_modules/@popperjs/core/lib/modifiers/hide.js
@@ -1019,80 +1374,102 @@ function getSideOffsets(overflow, rect, preventedOffsets) {
   if (preventedOffsets === void 0) {
     preventedOffsets = {
       x: 0,
-      y: 0
+      y: 0,
     };
   }
   return {
     top: overflow.top - rect.height - preventedOffsets.y,
     right: overflow.right - rect.width + preventedOffsets.x,
     bottom: overflow.bottom - rect.height + preventedOffsets.y,
-    left: overflow.left - rect.width - preventedOffsets.x
+    left: overflow.left - rect.width - preventedOffsets.x,
   };
 }
 function isAnySideFullyClipped(overflow) {
-  return [top, right, bottom, left].some(function(side) {
+  return [top, right, bottom, left].some(function (side) {
     return overflow[side] >= 0;
   });
 }
 function hide(_ref) {
-  var state = _ref.state, name = _ref.name;
+  var state = _ref.state,
+    name = _ref.name;
   var referenceRect = state.rects.reference;
   var popperRect = state.rects.popper;
   var preventedOffsets = state.modifiersData.preventOverflow;
   var referenceOverflow = detectOverflow(state, {
-    elementContext: "reference"
+    elementContext: 'reference',
   });
   var popperAltOverflow = detectOverflow(state, {
-    altBoundary: true
+    altBoundary: true,
   });
-  var referenceClippingOffsets = getSideOffsets(referenceOverflow, referenceRect);
-  var popperEscapeOffsets = getSideOffsets(popperAltOverflow, popperRect, preventedOffsets);
+  var referenceClippingOffsets = getSideOffsets(
+    referenceOverflow,
+    referenceRect
+  );
+  var popperEscapeOffsets = getSideOffsets(
+    popperAltOverflow,
+    popperRect,
+    preventedOffsets
+  );
   var isReferenceHidden = isAnySideFullyClipped(referenceClippingOffsets);
   var hasPopperEscaped = isAnySideFullyClipped(popperEscapeOffsets);
   state.modifiersData[name] = {
     referenceClippingOffsets,
     popperEscapeOffsets,
     isReferenceHidden,
-    hasPopperEscaped
+    hasPopperEscaped,
   };
   state.attributes.popper = Object.assign({}, state.attributes.popper, {
-    "data-popper-reference-hidden": isReferenceHidden,
-    "data-popper-escaped": hasPopperEscaped
+    'data-popper-reference-hidden': isReferenceHidden,
+    'data-popper-escaped': hasPopperEscaped,
   });
 }
 var hide_default = {
-  name: "hide",
+  name: 'hide',
   enabled: true,
-  phase: "main",
-  requiresIfExists: ["preventOverflow"],
-  fn: hide
+  phase: 'main',
+  requiresIfExists: ['preventOverflow'],
+  fn: hide,
 };
 
 // node_modules/@popperjs/core/lib/modifiers/offset.js
 function distanceAndSkiddingToXY(placement, rects, offset2) {
   var basePlacement = getBasePlacement(placement);
   var invertDistance = [left, top].indexOf(basePlacement) >= 0 ? -1 : 1;
-  var _ref = typeof offset2 === "function" ? offset2(Object.assign({}, rects, {
-    placement
-  })) : offset2, skidding = _ref[0], distance = _ref[1];
+  var _ref =
+      typeof offset2 === 'function'
+        ? offset2(
+            Object.assign({}, rects, {
+              placement,
+            })
+          )
+        : offset2,
+    skidding = _ref[0],
+    distance = _ref[1];
   skidding = skidding || 0;
   distance = (distance || 0) * invertDistance;
-  return [left, right].indexOf(basePlacement) >= 0 ? {
-    x: distance,
-    y: skidding
-  } : {
-    x: skidding,
-    y: distance
-  };
+  return [left, right].indexOf(basePlacement) >= 0
+    ? {
+        x: distance,
+        y: skidding,
+      }
+    : {
+        x: skidding,
+        y: distance,
+      };
 }
 function offset(_ref2) {
-  var state = _ref2.state, options = _ref2.options, name = _ref2.name;
-  var _options$offset = options.offset, offset2 = _options$offset === void 0 ? [0, 0] : _options$offset;
-  var data = placements.reduce(function(acc, placement) {
+  var state = _ref2.state,
+    options = _ref2.options,
+    name = _ref2.name;
+  var _options$offset = options.offset,
+    offset2 = _options$offset === void 0 ? [0, 0] : _options$offset;
+  var data = placements.reduce(function (acc, placement) {
     acc[placement] = distanceAndSkiddingToXY(placement, state.rects, offset2);
     return acc;
   }, {});
-  var _data$state$placement = data[state.placement], x = _data$state$placement.x, y = _data$state$placement.y;
+  var _data$state$placement = data[state.placement],
+    x = _data$state$placement.x,
+    y = _data$state$placement.y;
   if (state.modifiersData.popperOffsets != null) {
     state.modifiersData.popperOffsets.x += x;
     state.modifiersData.popperOffsets.y += y;
@@ -1100,45 +1477,59 @@ function offset(_ref2) {
   state.modifiersData[name] = data;
 }
 var offset_default = {
-  name: "offset",
+  name: 'offset',
   enabled: true,
-  phase: "main",
-  requires: ["popperOffsets"],
-  fn: offset
+  phase: 'main',
+  requires: ['popperOffsets'],
+  fn: offset,
 };
 
 // node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
 function popperOffsets(_ref) {
-  var state = _ref.state, name = _ref.name;
+  var state = _ref.state,
+    name = _ref.name;
   state.modifiersData[name] = computeOffsets({
     reference: state.rects.reference,
     element: state.rects.popper,
-    strategy: "absolute",
-    placement: state.placement
+    strategy: 'absolute',
+    placement: state.placement,
   });
 }
 var popperOffsets_default = {
-  name: "popperOffsets",
+  name: 'popperOffsets',
   enabled: true,
-  phase: "read",
+  phase: 'read',
   fn: popperOffsets,
-  data: {}
+  data: {},
 };
 
 // node_modules/@popperjs/core/lib/utils/getAltAxis.js
 function getAltAxis(axis) {
-  return axis === "x" ? "y" : "x";
+  return axis === 'x' ? 'y' : 'x';
 }
 
 // node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
 function preventOverflow(_ref) {
-  var state = _ref.state, options = _ref.options, name = _ref.name;
-  var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, padding = options.padding, _options$tether = options.tether, tether = _options$tether === void 0 ? true : _options$tether, _options$tetherOffset = options.tetherOffset, tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
+  var state = _ref.state,
+    options = _ref.options,
+    name = _ref.name;
+  var _options$mainAxis = options.mainAxis,
+    checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis,
+    _options$altAxis = options.altAxis,
+    checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis,
+    boundary = options.boundary,
+    rootBoundary = options.rootBoundary,
+    altBoundary = options.altBoundary,
+    padding = options.padding,
+    _options$tether = options.tether,
+    tether = _options$tether === void 0 ? true : _options$tether,
+    _options$tetherOffset = options.tetherOffset,
+    tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
   var overflow = detectOverflow(state, {
     boundary,
     rootBoundary,
     padding,
-    altBoundary
+    altBoundary,
   });
   var basePlacement = getBasePlacement(state.placement);
   var variation = getVariation(state.placement);
@@ -1148,29 +1539,42 @@ function preventOverflow(_ref) {
   var popperOffsets2 = state.modifiersData.popperOffsets;
   var referenceRect = state.rects.reference;
   var popperRect = state.rects.popper;
-  var tetherOffsetValue = typeof tetherOffset === "function" ? tetherOffset(Object.assign({}, state.rects, {
-    placement: state.placement
-  })) : tetherOffset;
-  var normalizedTetherOffsetValue = typeof tetherOffsetValue === "number" ? {
-    mainAxis: tetherOffsetValue,
-    altAxis: tetherOffsetValue
-  } : Object.assign({
-    mainAxis: 0,
-    altAxis: 0
-  }, tetherOffsetValue);
-  var offsetModifierState = state.modifiersData.offset ? state.modifiersData.offset[state.placement] : null;
+  var tetherOffsetValue =
+    typeof tetherOffset === 'function'
+      ? tetherOffset(
+          Object.assign({}, state.rects, {
+            placement: state.placement,
+          })
+        )
+      : tetherOffset;
+  var normalizedTetherOffsetValue =
+    typeof tetherOffsetValue === 'number'
+      ? {
+          mainAxis: tetherOffsetValue,
+          altAxis: tetherOffsetValue,
+        }
+      : Object.assign(
+          {
+            mainAxis: 0,
+            altAxis: 0,
+          },
+          tetherOffsetValue
+        );
+  var offsetModifierState = state.modifiersData.offset
+    ? state.modifiersData.offset[state.placement]
+    : null;
   var data = {
     x: 0,
-    y: 0
+    y: 0,
   };
   if (!popperOffsets2) {
     return;
   }
   if (checkMainAxis) {
     var _offsetModifierState$;
-    var mainSide = mainAxis === "y" ? top : left;
-    var altSide = mainAxis === "y" ? bottom : right;
-    var len = mainAxis === "y" ? "height" : "width";
+    var mainSide = mainAxis === 'y' ? top : left;
+    var altSide = mainAxis === 'y' ? bottom : right;
+    var len = mainAxis === 'y' ? 'height' : 'width';
     var offset2 = popperOffsets2[mainAxis];
     var min2 = offset2 + overflow[mainSide];
     var max2 = offset2 - overflow[altSide];
@@ -1178,56 +1582,117 @@ function preventOverflow(_ref) {
     var minLen = variation === start ? referenceRect[len] : popperRect[len];
     var maxLen = variation === start ? -popperRect[len] : -referenceRect[len];
     var arrowElement = state.elements.arrow;
-    var arrowRect = tether && arrowElement ? getLayoutRect(arrowElement) : {
-      width: 0,
-      height: 0
-    };
-    var arrowPaddingObject = state.modifiersData["arrow#persistent"] ? state.modifiersData["arrow#persistent"].padding : getFreshSideObject();
+    var arrowRect =
+      tether && arrowElement
+        ? getLayoutRect(arrowElement)
+        : {
+            width: 0,
+            height: 0,
+          };
+    var arrowPaddingObject = state.modifiersData['arrow#persistent']
+      ? state.modifiersData['arrow#persistent'].padding
+      : getFreshSideObject();
     var arrowPaddingMin = arrowPaddingObject[mainSide];
     var arrowPaddingMax = arrowPaddingObject[altSide];
     var arrowLen = within(0, referenceRect[len], arrowRect[len]);
-    var minOffset = isBasePlacement ? referenceRect[len] / 2 - additive - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis : minLen - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis;
-    var maxOffset = isBasePlacement ? -referenceRect[len] / 2 + additive + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis : maxLen + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis;
-    var arrowOffsetParent = state.elements.arrow && getOffsetParent(state.elements.arrow);
-    var clientOffset = arrowOffsetParent ? mainAxis === "y" ? arrowOffsetParent.clientTop || 0 : arrowOffsetParent.clientLeft || 0 : 0;
-    var offsetModifierValue = (_offsetModifierState$ = offsetModifierState == null ? void 0 : offsetModifierState[mainAxis]) != null ? _offsetModifierState$ : 0;
+    var minOffset = isBasePlacement
+      ? referenceRect[len] / 2 -
+        additive -
+        arrowLen -
+        arrowPaddingMin -
+        normalizedTetherOffsetValue.mainAxis
+      : minLen -
+        arrowLen -
+        arrowPaddingMin -
+        normalizedTetherOffsetValue.mainAxis;
+    var maxOffset = isBasePlacement
+      ? -referenceRect[len] / 2 +
+        additive +
+        arrowLen +
+        arrowPaddingMax +
+        normalizedTetherOffsetValue.mainAxis
+      : maxLen +
+        arrowLen +
+        arrowPaddingMax +
+        normalizedTetherOffsetValue.mainAxis;
+    var arrowOffsetParent =
+      state.elements.arrow && getOffsetParent(state.elements.arrow);
+    var clientOffset = arrowOffsetParent
+      ? mainAxis === 'y'
+        ? arrowOffsetParent.clientTop || 0
+        : arrowOffsetParent.clientLeft || 0
+      : 0;
+    var offsetModifierValue =
+      (_offsetModifierState$ =
+        offsetModifierState == null ? void 0 : offsetModifierState[mainAxis]) !=
+      null
+        ? _offsetModifierState$
+        : 0;
     var tetherMin = offset2 + minOffset - offsetModifierValue - clientOffset;
     var tetherMax = offset2 + maxOffset - offsetModifierValue;
-    var preventedOffset = within(tether ? min(min2, tetherMin) : min2, offset2, tether ? max(max2, tetherMax) : max2);
+    var preventedOffset = within(
+      tether ? min(min2, tetherMin) : min2,
+      offset2,
+      tether ? max(max2, tetherMax) : max2
+    );
     popperOffsets2[mainAxis] = preventedOffset;
     data[mainAxis] = preventedOffset - offset2;
   }
   if (checkAltAxis) {
     var _offsetModifierState$2;
-    var _mainSide = mainAxis === "x" ? top : left;
-    var _altSide = mainAxis === "x" ? bottom : right;
+    var _mainSide = mainAxis === 'x' ? top : left;
+    var _altSide = mainAxis === 'x' ? bottom : right;
     var _offset = popperOffsets2[altAxis];
-    var _len = altAxis === "y" ? "height" : "width";
+    var _len = altAxis === 'y' ? 'height' : 'width';
     var _min = _offset + overflow[_mainSide];
     var _max = _offset - overflow[_altSide];
     var isOriginSide = [top, left].indexOf(basePlacement) !== -1;
-    var _offsetModifierValue = (_offsetModifierState$2 = offsetModifierState == null ? void 0 : offsetModifierState[altAxis]) != null ? _offsetModifierState$2 : 0;
-    var _tetherMin = isOriginSide ? _min : _offset - referenceRect[_len] - popperRect[_len] - _offsetModifierValue + normalizedTetherOffsetValue.altAxis;
-    var _tetherMax = isOriginSide ? _offset + referenceRect[_len] + popperRect[_len] - _offsetModifierValue - normalizedTetherOffsetValue.altAxis : _max;
-    var _preventedOffset = tether && isOriginSide ? withinMaxClamp(_tetherMin, _offset, _tetherMax) : within(tether ? _tetherMin : _min, _offset, tether ? _tetherMax : _max);
+    var _offsetModifierValue =
+      (_offsetModifierState$2 =
+        offsetModifierState == null ? void 0 : offsetModifierState[altAxis]) !=
+      null
+        ? _offsetModifierState$2
+        : 0;
+    var _tetherMin = isOriginSide
+      ? _min
+      : _offset -
+        referenceRect[_len] -
+        popperRect[_len] -
+        _offsetModifierValue +
+        normalizedTetherOffsetValue.altAxis;
+    var _tetherMax = isOriginSide
+      ? _offset +
+        referenceRect[_len] +
+        popperRect[_len] -
+        _offsetModifierValue -
+        normalizedTetherOffsetValue.altAxis
+      : _max;
+    var _preventedOffset =
+      tether && isOriginSide
+        ? withinMaxClamp(_tetherMin, _offset, _tetherMax)
+        : within(
+            tether ? _tetherMin : _min,
+            _offset,
+            tether ? _tetherMax : _max
+          );
     popperOffsets2[altAxis] = _preventedOffset;
     data[altAxis] = _preventedOffset - _offset;
   }
   state.modifiersData[name] = data;
 }
 var preventOverflow_default = {
-  name: "preventOverflow",
+  name: 'preventOverflow',
   enabled: true,
-  phase: "main",
+  phase: 'main',
   fn: preventOverflow,
-  requiresIfExists: ["offset"]
+  requiresIfExists: ['offset'],
 };
 
 // node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
 function getHTMLElementScroll(element) {
   return {
     scrollLeft: element.scrollLeft,
-    scrollTop: element.scrollTop
+    scrollTop: element.scrollTop,
   };
 }
 
@@ -1252,19 +1717,26 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     isFixed = false;
   }
   var isOffsetParentAnElement = isHTMLElement(offsetParent);
-  var offsetParentIsScaled = isHTMLElement(offsetParent) && isElementScaled(offsetParent);
+  var offsetParentIsScaled =
+    isHTMLElement(offsetParent) && isElementScaled(offsetParent);
   var documentElement = getDocumentElement(offsetParent);
-  var rect = getBoundingClientRect(elementOrVirtualElement, offsetParentIsScaled);
+  var rect = getBoundingClientRect(
+    elementOrVirtualElement,
+    offsetParentIsScaled
+  );
   var scroll = {
     scrollLeft: 0,
-    scrollTop: 0
+    scrollTop: 0,
   };
   var offsets = {
     x: 0,
-    y: 0
+    y: 0,
   };
-  if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
-    if (getNodeName(offsetParent) !== "body" || isScrollParent(documentElement)) {
+  if (isOffsetParentAnElement || (!isOffsetParentAnElement && !isFixed)) {
+    if (
+      getNodeName(offsetParent) !== 'body' ||
+      isScrollParent(documentElement)
+    ) {
       scroll = getNodeScroll(offsetParent);
     }
     if (isHTMLElement(offsetParent)) {
@@ -1279,7 +1751,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     x: rect.left + scroll.scrollLeft - offsets.x,
     y: rect.top + scroll.scrollTop - offsets.y,
     width: rect.width,
-    height: rect.height
+    height: rect.height,
   };
 }
 
@@ -1288,13 +1760,16 @@ function order(modifiers) {
   var map = new Map();
   var visited = new Set();
   var result = [];
-  modifiers.forEach(function(modifier) {
+  modifiers.forEach(function (modifier) {
     map.set(modifier.name, modifier);
   });
   function sort(modifier) {
     visited.add(modifier.name);
-    var requires = [].concat(modifier.requires || [], modifier.requiresIfExists || []);
-    requires.forEach(function(dep) {
+    var requires = [].concat(
+      modifier.requires || [],
+      modifier.requiresIfExists || []
+    );
+    requires.forEach(function (dep) {
       if (!visited.has(dep)) {
         var depModifier = map.get(dep);
         if (depModifier) {
@@ -1304,7 +1779,7 @@ function order(modifiers) {
     });
     result.push(modifier);
   }
-  modifiers.forEach(function(modifier) {
+  modifiers.forEach(function (modifier) {
     if (!visited.has(modifier.name)) {
       sort(modifier);
     }
@@ -1313,20 +1788,22 @@ function order(modifiers) {
 }
 function orderModifiers(modifiers) {
   var orderedModifiers = order(modifiers);
-  return modifierPhases.reduce(function(acc, phase) {
-    return acc.concat(orderedModifiers.filter(function(modifier) {
-      return modifier.phase === phase;
-    }));
+  return modifierPhases.reduce(function (acc, phase) {
+    return acc.concat(
+      orderedModifiers.filter(function (modifier) {
+        return modifier.phase === phase;
+      })
+    );
   }, []);
 }
 
 // node_modules/@popperjs/core/lib/utils/debounce.js
 function debounce(fn2) {
   var pending;
-  return function() {
+  return function () {
     if (!pending) {
-      pending = new Promise(function(resolve) {
-        Promise.resolve().then(function() {
+      pending = new Promise(function (resolve) {
+        Promise.resolve().then(function () {
           pending = void 0;
           resolve(fn2());
         });
@@ -1338,82 +1815,181 @@ function debounce(fn2) {
 
 // node_modules/@popperjs/core/lib/utils/format.js
 function format(str) {
-  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+  for (
+    var _len = arguments.length,
+      args = new Array(_len > 1 ? _len - 1 : 0),
+      _key = 1;
+    _key < _len;
+    _key++
+  ) {
     args[_key - 1] = arguments[_key];
   }
-  return [].concat(args).reduce(function(p, c) {
+  return [].concat(args).reduce(function (p, c) {
     return p.replace(/%s/, c);
   }, str);
 }
 
 // node_modules/@popperjs/core/lib/utils/validateModifiers.js
-var INVALID_MODIFIER_ERROR = 'Popper: modifier "%s" provided an invalid %s property, expected %s but got %s';
-var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
-var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
+var INVALID_MODIFIER_ERROR =
+  'Popper: modifier "%s" provided an invalid %s property, expected %s but got %s';
+var MISSING_DEPENDENCY_ERROR =
+  'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
+var VALID_PROPERTIES = [
+  'name',
+  'enabled',
+  'phase',
+  'fn',
+  'effect',
+  'requires',
+  'options',
+];
 function validateModifiers(modifiers) {
-  modifiers.forEach(function(modifier) {
-    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self) {
-      return self.indexOf(value) === index;
-    }).forEach(function(key) {
-      switch (key) {
-        case "name":
-          if (typeof modifier.name !== "string") {
-            console.error(format(INVALID_MODIFIER_ERROR, String(modifier.name), '"name"', '"string"', '"' + String(modifier.name) + '"'));
-          }
-          break;
-        case "enabled":
-          if (typeof modifier.enabled !== "boolean") {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"enabled"', '"boolean"', '"' + String(modifier.enabled) + '"'));
-          }
-          break;
-        case "phase":
-          if (modifierPhases.indexOf(modifier.phase) < 0) {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"phase"', "either " + modifierPhases.join(", "), '"' + String(modifier.phase) + '"'));
-          }
-          break;
-        case "fn":
-          if (typeof modifier.fn !== "function") {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"fn"', '"function"', '"' + String(modifier.fn) + '"'));
-          }
-          break;
-        case "effect":
-          if (modifier.effect != null && typeof modifier.effect !== "function") {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"effect"', '"function"', '"' + String(modifier.fn) + '"'));
-          }
-          break;
-        case "requires":
-          if (modifier.requires != null && !Array.isArray(modifier.requires)) {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requires"', '"array"', '"' + String(modifier.requires) + '"'));
-          }
-          break;
-        case "requiresIfExists":
-          if (!Array.isArray(modifier.requiresIfExists)) {
-            console.error(format(INVALID_MODIFIER_ERROR, modifier.name, '"requiresIfExists"', '"array"', '"' + String(modifier.requiresIfExists) + '"'));
-          }
-          break;
-        case "options":
-        case "data":
-          break;
-        default:
-          console.error('PopperJS: an invalid property has been provided to the "' + modifier.name + '" modifier, valid properties are ' + VALID_PROPERTIES.map(function(s) {
-            return '"' + s + '"';
-          }).join(", ") + '; but "' + key + '" was provided.');
-      }
-      modifier.requires && modifier.requires.forEach(function(requirement) {
-        if (modifiers.find(function(mod) {
-          return mod.name === requirement;
-        }) == null) {
-          console.error(format(MISSING_DEPENDENCY_ERROR, String(modifier.name), requirement, requirement));
+  modifiers.forEach(function (modifier) {
+    []
+      .concat(Object.keys(modifier), VALID_PROPERTIES)
+      .filter(function (value, index, self) {
+        return self.indexOf(value) === index;
+      })
+      .forEach(function (key) {
+        switch (key) {
+          case 'name':
+            if (typeof modifier.name !== 'string') {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  String(modifier.name),
+                  '"name"',
+                  '"string"',
+                  '"' + String(modifier.name) + '"'
+                )
+              );
+            }
+            break;
+          case 'enabled':
+            if (typeof modifier.enabled !== 'boolean') {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  modifier.name,
+                  '"enabled"',
+                  '"boolean"',
+                  '"' + String(modifier.enabled) + '"'
+                )
+              );
+            }
+            break;
+          case 'phase':
+            if (modifierPhases.indexOf(modifier.phase) < 0) {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  modifier.name,
+                  '"phase"',
+                  'either ' + modifierPhases.join(', '),
+                  '"' + String(modifier.phase) + '"'
+                )
+              );
+            }
+            break;
+          case 'fn':
+            if (typeof modifier.fn !== 'function') {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  modifier.name,
+                  '"fn"',
+                  '"function"',
+                  '"' + String(modifier.fn) + '"'
+                )
+              );
+            }
+            break;
+          case 'effect':
+            if (
+              modifier.effect != null &&
+              typeof modifier.effect !== 'function'
+            ) {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  modifier.name,
+                  '"effect"',
+                  '"function"',
+                  '"' + String(modifier.fn) + '"'
+                )
+              );
+            }
+            break;
+          case 'requires':
+            if (
+              modifier.requires != null &&
+              !Array.isArray(modifier.requires)
+            ) {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  modifier.name,
+                  '"requires"',
+                  '"array"',
+                  '"' + String(modifier.requires) + '"'
+                )
+              );
+            }
+            break;
+          case 'requiresIfExists':
+            if (!Array.isArray(modifier.requiresIfExists)) {
+              console.error(
+                format(
+                  INVALID_MODIFIER_ERROR,
+                  modifier.name,
+                  '"requiresIfExists"',
+                  '"array"',
+                  '"' + String(modifier.requiresIfExists) + '"'
+                )
+              );
+            }
+            break;
+          case 'options':
+          case 'data':
+            break;
+          default:
+            console.error(
+              'PopperJS: an invalid property has been provided to the "' +
+                modifier.name +
+                '" modifier, valid properties are ' +
+                VALID_PROPERTIES.map(function (s) {
+                  return '"' + s + '"';
+                }).join(', ') +
+                '; but "' +
+                key +
+                '" was provided.'
+            );
         }
+        modifier.requires &&
+          modifier.requires.forEach(function (requirement) {
+            if (
+              modifiers.find(function (mod) {
+                return mod.name === requirement;
+              }) == null
+            ) {
+              console.error(
+                format(
+                  MISSING_DEPENDENCY_ERROR,
+                  String(modifier.name),
+                  requirement,
+                  requirement
+                )
+              );
+            }
+          });
       });
-    });
   });
 }
 
 // node_modules/@popperjs/core/lib/utils/uniqueBy.js
 function uniqueBy(arr, fn2) {
   var identifiers = new Set();
-  return arr.filter(function(item) {
+  return arr.filter(function (item) {
     var identifier = fn2(item);
     if (!identifiers.has(identifier)) {
       identifiers.add(identifier);
@@ -1424,92 +2000,146 @@ function uniqueBy(arr, fn2) {
 
 // node_modules/@popperjs/core/lib/utils/mergeByName.js
 function mergeByName(modifiers) {
-  var merged = modifiers.reduce(function(merged2, current) {
+  var merged = modifiers.reduce(function (merged2, current) {
     var existing = merged2[current.name];
-    merged2[current.name] = existing ? Object.assign({}, existing, current, {
-      options: Object.assign({}, existing.options, current.options),
-      data: Object.assign({}, existing.data, current.data)
-    }) : current;
+    merged2[current.name] = existing
+      ? Object.assign({}, existing, current, {
+          options: Object.assign({}, existing.options, current.options),
+          data: Object.assign({}, existing.data, current.data),
+        })
+      : current;
     return merged2;
   }, {});
-  return Object.keys(merged).map(function(key) {
+  return Object.keys(merged).map(function (key) {
     return merged[key];
   });
 }
 
 // node_modules/@popperjs/core/lib/createPopper.js
-var INVALID_ELEMENT_ERROR = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.";
-var INFINITE_LOOP_ERROR = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.";
+var INVALID_ELEMENT_ERROR =
+  'Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.';
+var INFINITE_LOOP_ERROR =
+  'Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.';
 var DEFAULT_OPTIONS = {
-  placement: "bottom",
+  placement: 'bottom',
   modifiers: [],
-  strategy: "absolute"
+  strategy: 'absolute',
 };
 function areValidElements() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+  for (
+    var _len = arguments.length, args = new Array(_len), _key = 0;
+    _key < _len;
+    _key++
+  ) {
     args[_key] = arguments[_key];
   }
-  return !args.some(function(element) {
-    return !(element && typeof element.getBoundingClientRect === "function");
+  return !args.some(function (element) {
+    return !(element && typeof element.getBoundingClientRect === 'function');
   });
 }
 function popperGenerator(generatorOptions) {
   if (generatorOptions === void 0) {
     generatorOptions = {};
   }
-  var _generatorOptions = generatorOptions, _generatorOptions$def = _generatorOptions.defaultModifiers, defaultModifiers2 = _generatorOptions$def === void 0 ? [] : _generatorOptions$def, _generatorOptions$def2 = _generatorOptions.defaultOptions, defaultOptions = _generatorOptions$def2 === void 0 ? DEFAULT_OPTIONS : _generatorOptions$def2;
+  var _generatorOptions = generatorOptions,
+    _generatorOptions$def = _generatorOptions.defaultModifiers,
+    defaultModifiers2 =
+      _generatorOptions$def === void 0 ? [] : _generatorOptions$def,
+    _generatorOptions$def2 = _generatorOptions.defaultOptions,
+    defaultOptions =
+      _generatorOptions$def2 === void 0
+        ? DEFAULT_OPTIONS
+        : _generatorOptions$def2;
   return function createPopper2(reference2, popper2, options) {
     if (options === void 0) {
       options = defaultOptions;
     }
     var state = {
-      placement: "bottom",
+      placement: 'bottom',
       orderedModifiers: [],
       options: Object.assign({}, DEFAULT_OPTIONS, defaultOptions),
       modifiersData: {},
       elements: {
         reference: reference2,
-        popper: popper2
+        popper: popper2,
       },
       attributes: {},
-      styles: {}
+      styles: {},
     };
     var effectCleanupFns = [];
     var isDestroyed = false;
     var instance = {
       state,
       setOptions: function setOptions(setOptionsAction) {
-        var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
+        var options2 =
+          typeof setOptionsAction === 'function'
+            ? setOptionsAction(state.options)
+            : setOptionsAction;
         cleanupModifierEffects();
-        state.options = Object.assign({}, defaultOptions, state.options, options2);
+        state.options = Object.assign(
+          {},
+          defaultOptions,
+          state.options,
+          options2
+        );
         state.scrollParents = {
-          reference: isElement(reference2) ? listScrollParents(reference2) : reference2.contextElement ? listScrollParents(reference2.contextElement) : [],
-          popper: listScrollParents(popper2)
+          reference: isElement(reference2)
+            ? listScrollParents(reference2)
+            : reference2.contextElement
+              ? listScrollParents(reference2.contextElement)
+              : [],
+          popper: listScrollParents(popper2),
         };
-        var orderedModifiers = orderModifiers(mergeByName([].concat(defaultModifiers2, state.options.modifiers)));
-        state.orderedModifiers = orderedModifiers.filter(function(m) {
+        var orderedModifiers = orderModifiers(
+          mergeByName([].concat(defaultModifiers2, state.options.modifiers))
+        );
+        state.orderedModifiers = orderedModifiers.filter(function (m) {
           return m.enabled;
         });
         if (true) {
-          var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function(_ref) {
-            var name = _ref.name;
-            return name;
-          });
+          var modifiers = uniqueBy(
+            [].concat(orderedModifiers, state.options.modifiers),
+            function (_ref) {
+              var name = _ref.name;
+              return name;
+            }
+          );
           validateModifiers(modifiers);
           if (getBasePlacement(state.options.placement) === auto) {
-            var flipModifier = state.orderedModifiers.find(function(_ref2) {
+            var flipModifier = state.orderedModifiers.find(function (_ref2) {
               var name = _ref2.name;
-              return name === "flip";
+              return name === 'flip';
             });
             if (!flipModifier) {
-              console.error(['Popper: "auto" placements require the "flip" modifier be', "present and enabled to work."].join(" "));
+              console.error(
+                [
+                  'Popper: "auto" placements require the "flip" modifier be',
+                  'present and enabled to work.',
+                ].join(' ')
+              );
             }
           }
-          var _getComputedStyle = getComputedStyle(popper2), marginTop = _getComputedStyle.marginTop, marginRight = _getComputedStyle.marginRight, marginBottom = _getComputedStyle.marginBottom, marginLeft = _getComputedStyle.marginLeft;
-          if ([marginTop, marginRight, marginBottom, marginLeft].some(function(margin) {
-            return parseFloat(margin);
-          })) {
-            console.warn(['Popper: CSS "margin" styles cannot be used to apply padding', "between the popper and its reference element or boundary.", "To replicate margin, use the `offset` modifier, as well as", "the `padding` option in the `preventOverflow` and `flip`", "modifiers."].join(" "));
+          var _getComputedStyle = getComputedStyle(popper2),
+            marginTop = _getComputedStyle.marginTop,
+            marginRight = _getComputedStyle.marginRight,
+            marginBottom = _getComputedStyle.marginBottom,
+            marginLeft = _getComputedStyle.marginLeft;
+          if (
+            [marginTop, marginRight, marginBottom, marginLeft].some(
+              function (margin) {
+                return parseFloat(margin);
+              }
+            )
+          ) {
+            console.warn(
+              [
+                'Popper: CSS "margin" styles cannot be used to apply padding',
+                'between the popper and its reference element or boundary.',
+                'To replicate margin, use the `offset` modifier, as well as',
+                'the `padding` option in the `preventOverflow` and `flip`',
+                'modifiers.',
+              ].join(' ')
+            );
           }
         }
         runModifierEffects();
@@ -1519,7 +2149,9 @@ function popperGenerator(generatorOptions) {
         if (isDestroyed) {
           return;
         }
-        var _state$elements = state.elements, reference3 = _state$elements.reference, popper3 = _state$elements.popper;
+        var _state$elements = state.elements,
+          reference3 = _state$elements.reference,
+          popper3 = _state$elements.popper;
         if (!areValidElements(reference3, popper3)) {
           if (true) {
             console.error(INVALID_ELEMENT_ERROR);
@@ -1527,13 +2159,20 @@ function popperGenerator(generatorOptions) {
           return;
         }
         state.rects = {
-          reference: getCompositeRect(reference3, getOffsetParent(popper3), state.options.strategy === "fixed"),
-          popper: getLayoutRect(popper3)
+          reference: getCompositeRect(
+            reference3,
+            getOffsetParent(popper3),
+            state.options.strategy === 'fixed'
+          ),
+          popper: getLayoutRect(popper3),
         };
         state.reset = false;
         state.placement = state.options.placement;
-        state.orderedModifiers.forEach(function(modifier) {
-          return state.modifiersData[modifier.name] = Object.assign({}, modifier.data);
+        state.orderedModifiers.forEach(function (modifier) {
+          return (state.modifiersData[modifier.name] = Object.assign(
+            {},
+            modifier.data
+          ));
         });
         var __debug_loops__ = 0;
         for (var index = 0; index < state.orderedModifiers.length; index++) {
@@ -1549,19 +2188,25 @@ function popperGenerator(generatorOptions) {
             index = -1;
             continue;
           }
-          var _state$orderedModifie = state.orderedModifiers[index], fn2 = _state$orderedModifie.fn, _state$orderedModifie2 = _state$orderedModifie.options, _options = _state$orderedModifie2 === void 0 ? {} : _state$orderedModifie2, name = _state$orderedModifie.name;
-          if (typeof fn2 === "function") {
-            state = fn2({
-              state,
-              options: _options,
-              name,
-              instance
-            }) || state;
+          var _state$orderedModifie = state.orderedModifiers[index],
+            fn2 = _state$orderedModifie.fn,
+            _state$orderedModifie2 = _state$orderedModifie.options,
+            _options =
+              _state$orderedModifie2 === void 0 ? {} : _state$orderedModifie2,
+            name = _state$orderedModifie.name;
+          if (typeof fn2 === 'function') {
+            state =
+              fn2({
+                state,
+                options: _options,
+                name,
+                instance,
+              }) || state;
           }
         }
       },
-      update: debounce(function() {
-        return new Promise(function(resolve) {
+      update: debounce(function () {
+        return new Promise(function (resolve) {
           instance.forceUpdate();
           resolve(state);
         });
@@ -1569,7 +2214,7 @@ function popperGenerator(generatorOptions) {
       destroy: function destroy() {
         cleanupModifierEffects();
         isDestroyed = true;
-      }
+      },
     };
     if (!areValidElements(reference2, popper2)) {
       if (true) {
@@ -1577,29 +2222,31 @@ function popperGenerator(generatorOptions) {
       }
       return instance;
     }
-    instance.setOptions(options).then(function(state2) {
+    instance.setOptions(options).then(function (state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
     });
     function runModifierEffects() {
-      state.orderedModifiers.forEach(function(_ref3) {
-        var name = _ref3.name, _ref3$options = _ref3.options, options2 = _ref3$options === void 0 ? {} : _ref3$options, effect4 = _ref3.effect;
-        if (typeof effect4 === "function") {
+      state.orderedModifiers.forEach(function (_ref3) {
+        var name = _ref3.name,
+          _ref3$options = _ref3.options,
+          options2 = _ref3$options === void 0 ? {} : _ref3$options,
+          effect4 = _ref3.effect;
+        if (typeof effect4 === 'function') {
           var cleanupFn = effect4({
             state,
             name,
             instance,
-            options: options2
+            options: options2,
           });
-          var noopFn = function noopFn2() {
-          };
+          var noopFn = function noopFn2() {};
           effectCleanupFns.push(cleanupFn || noopFn);
         }
       });
     }
     function cleanupModifierEffects() {
-      effectCleanupFns.forEach(function(fn2) {
+      effectCleanupFns.forEach(function (fn2) {
         return fn2();
       });
       effectCleanupFns = [];
@@ -1609,34 +2256,52 @@ function popperGenerator(generatorOptions) {
 }
 
 // node_modules/@popperjs/core/lib/popper.js
-var defaultModifiers = [eventListeners_default, popperOffsets_default, computeStyles_default, applyStyles_default, offset_default, flip_default, preventOverflow_default, arrow_default, hide_default];
+var defaultModifiers = [
+  eventListeners_default,
+  popperOffsets_default,
+  computeStyles_default,
+  applyStyles_default,
+  offset_default,
+  flip_default,
+  preventOverflow_default,
+  arrow_default,
+  hide_default,
+];
 var createPopper = /* @__PURE__ */ popperGenerator({
-  defaultModifiers
+  defaultModifiers,
 });
 
 // suggests/suggest.ts
 var wrapAround = (value, size) => {
-  return (value % size + size) % size;
+  return ((value % size) + size) % size;
 };
 var Suggest = class {
   constructor(owner, containerEl, scope) {
     this.owner = owner;
     this.containerEl = containerEl;
-    containerEl.on("click", ".suggestion-item", this.onSuggestionClick.bind(this));
-    containerEl.on("mousemove", ".suggestion-item", this.onSuggestionMouseover.bind(this));
-    scope.register([], "ArrowUp", (event) => {
+    containerEl.on(
+      'click',
+      '.suggestion-item',
+      this.onSuggestionClick.bind(this)
+    );
+    containerEl.on(
+      'mousemove',
+      '.suggestion-item',
+      this.onSuggestionMouseover.bind(this)
+    );
+    scope.register([], 'ArrowUp', event => {
       if (!event.isComposing) {
         this.setSelectedItem(this.selectedItem - 1, true);
         return false;
       }
     });
-    scope.register([], "ArrowDown", (event) => {
+    scope.register([], 'ArrowDown', event => {
       if (!event.isComposing) {
         this.setSelectedItem(this.selectedItem + 1, true);
         return false;
       }
     });
-    scope.register([], "Enter", (event) => {
+    scope.register([], 'Enter', event => {
       if (!event.isComposing) {
         this.useSelectedItem(event);
         return false;
@@ -1656,8 +2321,8 @@ var Suggest = class {
   setSuggestions(values) {
     this.containerEl.empty();
     const suggestionEls = [];
-    values.forEach((value) => {
-      const suggestionEl = this.containerEl.createDiv("suggestion-item");
+    values.forEach(value => {
+      const suggestionEl = this.containerEl.createDiv('suggestion-item');
       this.owner.renderSuggestion(value, suggestionEl);
       suggestionEls.push(suggestionEl);
     });
@@ -1675,8 +2340,12 @@ var Suggest = class {
     const normalizedIndex = wrapAround(selectedIndex, this.suggestions.length);
     const prevSelectedSuggestion = this.suggestions[this.selectedItem];
     const selectedSuggestion = this.suggestions[normalizedIndex];
-    prevSelectedSuggestion == null ? void 0 : prevSelectedSuggestion.removeClass("is-selected");
-    selectedSuggestion == null ? void 0 : selectedSuggestion.addClass("is-selected");
+    prevSelectedSuggestion == null
+      ? void 0
+      : prevSelectedSuggestion.removeClass('is-selected');
+    selectedSuggestion == null
+      ? void 0
+      : selectedSuggestion.addClass('is-selected');
     this.selectedItem = normalizedIndex;
     if (scrollIntoView) {
       selectedSuggestion.scrollIntoView(false);
@@ -1688,14 +2357,14 @@ var TextInputSuggest = class {
     this.app = app;
     this.inputEl = inputEl;
     this.scope = new import_obsidian.Scope();
-    this.suggestEl = createDiv("suggestion-container");
-    const suggestion = this.suggestEl.createDiv("suggestion");
+    this.suggestEl = createDiv('suggestion-container');
+    const suggestion = this.suggestEl.createDiv('suggestion');
     this.suggest = new Suggest(this, suggestion, this.scope);
-    this.scope.register([], "Escape", this.close.bind(this));
-    this.inputEl.addEventListener("input", this.onInputChanged.bind(this));
-    this.inputEl.addEventListener("focus", this.onInputChanged.bind(this));
-    this.inputEl.addEventListener("blur", this.close.bind(this));
-    this.suggestEl.on("mousedown", ".suggestion-container", (event) => {
+    this.scope.register([], 'Escape', this.close.bind(this));
+    this.inputEl.addEventListener('input', this.onInputChanged.bind(this));
+    this.inputEl.addEventListener('focus', this.onInputChanged.bind(this));
+    this.inputEl.addEventListener('blur', this.close.bind(this));
+    this.suggestEl.on('mousedown', '.suggestion-container', event => {
       event.preventDefault();
     });
   }
@@ -1711,10 +2380,10 @@ var TextInputSuggest = class {
     this.app.keymap.pushScope(this.scope);
     container.appendChild(this.suggestEl);
     this.popper = createPopper(inputEl, this.suggestEl, {
-      placement: "bottom-start",
+      placement: 'bottom-start',
       modifiers: [
         {
-          name: "sameWidth",
+          name: 'sameWidth',
           enabled: true,
           fn: ({ state, instance }) => {
             const targetWidth = `${state.rects.reference.width}px`;
@@ -1724,10 +2393,10 @@ var TextInputSuggest = class {
             state.styles.popper.width = targetWidth;
             instance.update();
           },
-          phase: "beforeWrite",
-          requires: ["computeStyles"]
-        }
-      ]
+          phase: 'beforeWrite',
+          requires: ['computeStyles'],
+        },
+      ],
     });
   }
   close() {
@@ -1744,8 +2413,11 @@ var FolderSuggest = class extends TextInputSuggest {
     const abstractFiles = this.app.vault.getAllLoadedFiles();
     const folders = [];
     const lowerCaseInputStr = inputStr.toLowerCase();
-    abstractFiles.forEach((folder) => {
-      if (folder instanceof import_obsidian2.TFolder && folder.path.toLowerCase().contains(lowerCaseInputStr)) {
+    abstractFiles.forEach(folder => {
+      if (
+        folder instanceof import_obsidian2.TFolder &&
+        folder.path.toLowerCase().contains(lowerCaseInputStr)
+      ) {
         folders.push(folder);
       }
     });
@@ -1756,21 +2428,25 @@ var FolderSuggest = class extends TextInputSuggest {
   }
   selectSuggestion(file) {
     this.inputEl.value = file.path;
-    this.inputEl.trigger("input");
+    this.inputEl.trigger('input');
     this.close();
   }
 };
 
 // suggests/tag-suggest.ts
-var import_obsidian3 = __toModule(require("obsidian"));
+var import_obsidian3 = __toModule(require('obsidian'));
 var GetAllTagsInTheVault = class extends import_obsidian3.Plugin {
   constructor(app, manifest) {
     super(app, manifest);
     this.fileArray = this.app.vault.getMarkdownFiles();
-    this.fileCache = this.fileArray.map((value) => this.app.metadataCache.getFileCache(value));
-    this.tagArray = this.fileCache.map((value) => (0, import_obsidian3.getAllTags)(value));
+    this.fileCache = this.fileArray.map(value =>
+      this.app.metadataCache.getFileCache(value)
+    );
+    this.tagArray = this.fileCache.map(value =>
+      (0, import_obsidian3.getAllTags)(value)
+    );
     this.tagArrayJoin = this.tagArray.join();
-    this.tagArraySplit = this.tagArrayJoin.split(",");
+    this.tagArraySplit = this.tagArrayJoin.split(',');
     this.tagArrayFilter = this.tagArraySplit.filter(Boolean);
     this.tagList = [...new Set(this.tagArrayFilter)];
   }
@@ -1783,7 +2459,7 @@ var TagSuggest = class extends TextInputSuggest {
     this.tagList = new GetAllTagsInTheVault(this.app, this.manifest);
     this.tagMatch = [];
     this.lowerCaseInputStr = inputStr.toLowerCase();
-    this.tagList.pull().forEach((Tag) => {
+    this.tagList.pull().forEach(Tag => {
       if (Tag.toLowerCase().contains(this.lowerCaseInputStr)) {
         this.tagMatch.push(Tag);
       }
@@ -1795,16 +2471,19 @@ var TagSuggest = class extends TextInputSuggest {
   }
   selectSuggestion(Tag) {
     this.inputEl.value = Tag;
-    this.inputEl.trigger("input");
+    this.inputEl.trigger('input');
     this.close();
   }
 };
 
 // utils/Utils.ts
-var import_obsidian4 = __toModule(require("obsidian"));
-var isFmDisable = (fileCache) => {
-  const fm = (0, import_obsidian4.parseFrontMatterEntry)(fileCache.frontmatter, "AutoNoteMover");
-  if (fm === "disable") {
+var import_obsidian4 = __toModule(require('obsidian'));
+var isFmDisable = fileCache => {
+  const fm = (0, import_obsidian4.parseFrontMatterEntry)(
+    fileCache.frontmatter,
+    'AutoNoteMover'
+  );
+  if (fm === 'disable') {
     return true;
   } else {
     return false;
@@ -1825,33 +2504,45 @@ var isTFExists = (app, path, F) => {
     return false;
   }
 };
-var fileMove = (app, settingFolder, fileFullName, file) => __async(void 0, null, function* () {
-  if (!isTFExists(app, settingFolder, import_obsidian4.TFolder)) {
-    console.error(`[Auto Note Mover] The destination folder "${settingFolder}" does not exist.`);
-    new import_obsidian4.Notice(`[Auto Note Mover]
+var fileMove = (app, settingFolder, fileFullName, file) =>
+  __async(void 0, null, function* () {
+    if (!isTFExists(app, settingFolder, import_obsidian4.TFolder)) {
+      console.error(
+        `[Auto Note Mover] The destination folder "${settingFolder}" does not exist.`
+      );
+      new import_obsidian4.Notice(`[Auto Note Mover]
 "Error: The destination folder
 "${settingFolder}"
 does not exist.`);
-    return;
-  }
-  const newPath = (0, import_obsidian4.normalizePath)(settingFolder + "/" + fileFullName);
-  if (isTFExists(app, newPath, import_obsidian4.TFile) && newPath !== file.path) {
-    console.error(`[Auto Note Mover] Error: A file with the same name "${fileFullName}" exists at the destination folder.`);
-    new import_obsidian4.Notice(`[Auto Note Mover]
+      return;
+    }
+    const newPath = (0, import_obsidian4.normalizePath)(
+      settingFolder + '/' + fileFullName
+    );
+    if (
+      isTFExists(app, newPath, import_obsidian4.TFile) &&
+      newPath !== file.path
+    ) {
+      console.error(
+        `[Auto Note Mover] Error: A file with the same name "${fileFullName}" exists at the destination folder.`
+      );
+      new import_obsidian4.Notice(`[Auto Note Mover]
 Error: A file with the same name
 "${fileFullName}"
 exists at the destination folder.`);
-    return;
-  }
-  if (newPath === file.path) {
-    return;
-  }
-  yield app.fileManager.renameFile(file, newPath);
-  console.log(`[Auto Note Mover] Moved the note "${fileFullName}" to the "${settingFolder}".`);
-  new import_obsidian4.Notice(`[Auto Note Mover]
+      return;
+    }
+    if (newPath === file.path) {
+      return;
+    }
+    yield app.fileManager.renameFile(file, newPath);
+    console.log(
+      `[Auto Note Mover] Moved the note "${fileFullName}" to the "${settingFolder}".`
+    );
+    new import_obsidian4.Notice(`[Auto Note Mover]
 Moved the note "${fileFullName}"
 to the "${settingFolder}".`);
-});
+  });
 var arrayMove = (array, fromIndex, toIndex) => {
   if (toIndex < 0 || toIndex === array.length) {
     return;
@@ -1860,8 +2551,8 @@ var arrayMove = (array, fromIndex, toIndex) => {
   array[fromIndex] = array[toIndex];
   array[toIndex] = temp;
 };
-var getTriggerIndicator = (trigger) => {
-  if (trigger === "Automatic") {
+var getTriggerIndicator = trigger => {
+  if (trigger === 'Automatic') {
     return `[A]`;
   } else {
     return `[M]`;
@@ -1870,12 +2561,12 @@ var getTriggerIndicator = (trigger) => {
 
 // settings/settings.ts
 var DEFAULT_SETTINGS = {
-  trigger_auto_manual: "Automatic",
+  trigger_auto_manual: 'Automatic',
   use_regex_to_check_for_tags: false,
   statusBar_trigger_indicator: true,
-  folder_tag_pattern: [{ folder: "", tag: "", pattern: "" }],
+  folder_tag_pattern: [{ folder: '', tag: '', pattern: '' }],
   use_regex_to_check_for_excluded_folder: false,
-  excluded_folder: [{ folder: "" }]
+  excluded_folder: [{ folder: '' }],
 };
 var AutoNoteMoverSettingTab = class extends import_obsidian5.PluginSettingTab {
   constructor(app, plugin) {
@@ -1889,162 +2580,348 @@ var AutoNoteMoverSettingTab = class extends import_obsidian5.PluginSettingTab {
     this.add_auto_note_mover_setting();
   }
   add_auto_note_mover_setting() {
-    this.containerEl.createEl("h2", { text: "Auto Note Mover" });
+    this.containerEl.createEl('h2', { text: 'Auto Note Mover' });
     const descEl = document.createDocumentFragment();
-    new import_obsidian5.Setting(this.containerEl).setDesc("Auto Note Mover will automatically move the active notes to their respective folders according to the rules.");
+    new import_obsidian5.Setting(this.containerEl).setDesc(
+      'Auto Note Mover will automatically move the active notes to their respective folders according to the rules.'
+    );
     const triggerDesc = document.createDocumentFragment();
-    triggerDesc.append("Choose how the trigger will be activated.", descEl.createEl("br"), descEl.createEl("strong", { text: "Automatic " }), "is triggered when you create, edit, or rename a note, and moves the note if it matches the rules.", descEl.createEl("br"), "You can also activate the trigger with a command.", descEl.createEl("br"), descEl.createEl("strong", { text: "Manual " }), "will not automatically move notes.", descEl.createEl("br"), "You can trigger by command.");
-    new import_obsidian5.Setting(this.containerEl).setName("Trigger").setDesc(triggerDesc).addDropdown((dropDown) => dropDown.addOption("Automatic", "Automatic").addOption("Manual", "Manual").setValue(this.plugin.settings.trigger_auto_manual).onChange((value) => {
-      this.plugin.settings.trigger_auto_manual = value;
-      this.plugin.saveData(this.plugin.settings);
-      this.display();
-    }));
+    triggerDesc.append(
+      'Choose how the trigger will be activated.',
+      descEl.createEl('br'),
+      descEl.createEl('strong', { text: 'Automatic ' }),
+      'is triggered when you create, edit, or rename a note, and moves the note if it matches the rules.',
+      descEl.createEl('br'),
+      'You can also activate the trigger with a command.',
+      descEl.createEl('br'),
+      descEl.createEl('strong', { text: 'Manual ' }),
+      'will not automatically move notes.',
+      descEl.createEl('br'),
+      'You can trigger by command.'
+    );
+    new import_obsidian5.Setting(this.containerEl)
+      .setName('Trigger')
+      .setDesc(triggerDesc)
+      .addDropdown(dropDown =>
+        dropDown
+          .addOption('Automatic', 'Automatic')
+          .addOption('Manual', 'Manual')
+          .setValue(this.plugin.settings.trigger_auto_manual)
+          .onChange(value => {
+            this.plugin.settings.trigger_auto_manual = value;
+            this.plugin.saveData(this.plugin.settings);
+            this.display();
+          })
+      );
     const useRegexToCheckForTags = document.createDocumentFragment();
-    useRegexToCheckForTags.append("If enabled, tags will be checked with regular expressions.", descEl.createEl("br"), "For example, if you want to match the #tag, you would write ", descEl.createEl("strong", { text: "^#tag$" }), descEl.createEl("br"), "This setting is for a specific purpose, such as specifying nested tags in bulk.", descEl.createEl("br"), descEl.createEl("strong", {
-      text: "If you want to use the suggested tags as they are, it is recommended to disable this setting."
-    }));
-    new import_obsidian5.Setting(this.containerEl).setName("Use regular expressions to check for tags").setDesc(useRegexToCheckForTags).addToggle((toggle) => {
-      toggle.setValue(this.plugin.settings.use_regex_to_check_for_tags).onChange((value) => __async(this, null, function* () {
-        this.plugin.settings.use_regex_to_check_for_tags = value;
-        yield this.plugin.saveSettings();
-        this.display();
-      }));
-    });
+    useRegexToCheckForTags.append(
+      'If enabled, tags will be checked with regular expressions.',
+      descEl.createEl('br'),
+      'For example, if you want to match the #tag, you would write ',
+      descEl.createEl('strong', { text: '^#tag$' }),
+      descEl.createEl('br'),
+      'This setting is for a specific purpose, such as specifying nested tags in bulk.',
+      descEl.createEl('br'),
+      descEl.createEl('strong', {
+        text: 'If you want to use the suggested tags as they are, it is recommended to disable this setting.',
+      })
+    );
+    new import_obsidian5.Setting(this.containerEl)
+      .setName('Use regular expressions to check for tags')
+      .setDesc(useRegexToCheckForTags)
+      .addToggle(toggle => {
+        toggle
+          .setValue(this.plugin.settings.use_regex_to_check_for_tags)
+          .onChange(value =>
+            __async(this, null, function* () {
+              this.plugin.settings.use_regex_to_check_for_tags = value;
+              yield this.plugin.saveSettings();
+              this.display();
+            })
+          );
+      });
     const ruleDesc = document.createDocumentFragment();
-    ruleDesc.append("1. Set the destination folder.", descEl.createEl("br"), "2. Set a tag or title that matches the note you want to move. ", descEl.createEl("strong", { text: "You can set either the tag or the title. " }), descEl.createEl("br"), "3. The rules are checked in order from the top. The notes will be moved to the folder with the ", descEl.createEl("strong", { text: "first matching rule." }), descEl.createEl("br"), "Tag: Be sure to add a", descEl.createEl("strong", { text: " # " }), "at the beginning.", descEl.createEl("br"), "Title: Tested by JavaScript regular expressions.", descEl.createEl("br"), descEl.createEl("br"), "Notice:", descEl.createEl("br"), "1. Attached files will not be moved, but they will still appear in the note.", descEl.createEl("br"), '2. Auto Note Mover will not move notes that have "', descEl.createEl("strong", { text: "AutoNoteMover: disable" }), '" in the frontmatter.');
-    new import_obsidian5.Setting(this.containerEl).setName("Add new rule").setDesc(ruleDesc).addButton((button) => {
-      button.setTooltip("Add new rule").setButtonText("+").setCta().onClick(() => __async(this, null, function* () {
-        this.plugin.settings.folder_tag_pattern.push({
-          folder: "",
-          tag: "",
-          pattern: ""
-        });
-        yield this.plugin.saveSettings();
-        this.display();
-      }));
-    });
-    this.plugin.settings.folder_tag_pattern.forEach((folder_tag_pattern, index) => {
-      const settings = this.plugin.settings.folder_tag_pattern;
-      const settingTag = settings.map((e) => e["tag"]);
-      const settingPattern = settings.map((e) => e["pattern"]);
-      const checkArr = (arr, val) => {
-        return arr.some((arrVal) => val === arrVal);
-      };
-      const s = new import_obsidian5.Setting(this.containerEl).addSearch((cb) => {
-        new FolderSuggest(this.app, cb.inputEl);
-        cb.setPlaceholder("Folder").setValue(folder_tag_pattern.folder).onChange((newFolder) => __async(this, null, function* () {
-          this.plugin.settings.folder_tag_pattern[index].folder = newFolder.trim();
-          yield this.plugin.saveSettings();
-        }));
-      }).addSearch((cb) => {
-        new TagSuggest(this.app, cb.inputEl);
-        cb.setPlaceholder("Tag").setValue(folder_tag_pattern.tag).onChange((newTag) => __async(this, null, function* () {
-          if (this.plugin.settings.folder_tag_pattern[index].pattern) {
-            this.display();
-            return new import_obsidian5.Notice(`You can set either the tag or the title.`);
-          }
-          if (newTag && checkArr(settingTag, newTag)) {
-            new import_obsidian5.Notice("This tag is already used.");
-            return;
-          }
-          if (!this.plugin.settings.use_regex_to_check_for_tags) {
-            this.plugin.settings.folder_tag_pattern[index].tag = newTag.trim();
-          } else if (this.plugin.settings.use_regex_to_check_for_tags) {
-            this.plugin.settings.folder_tag_pattern[index].tag = newTag;
-          }
-          yield this.plugin.saveSettings();
-        }));
-      }).addSearch((cb) => {
-        cb.setPlaceholder("Title by regex").setValue(folder_tag_pattern.pattern).onChange((newPattern) => __async(this, null, function* () {
-          if (this.plugin.settings.folder_tag_pattern[index].tag) {
-            this.display();
-            return new import_obsidian5.Notice(`You can set either the tag or the title.`);
-          }
-          if (newPattern && checkArr(settingPattern, newPattern)) {
-            new import_obsidian5.Notice("This pattern is already used.");
-            return;
-          }
-          this.plugin.settings.folder_tag_pattern[index].pattern = newPattern;
-          yield this.plugin.saveSettings();
-        }));
-      }).addExtraButton((cb) => {
-        cb.setIcon("up-chevron-glyph").setTooltip("Move up").onClick(() => __async(this, null, function* () {
-          arrayMove(this.plugin.settings.folder_tag_pattern, index, index - 1);
-          yield this.plugin.saveSettings();
-          this.display();
-        }));
-      }).addExtraButton((cb) => {
-        cb.setIcon("down-chevron-glyph").setTooltip("Move down").onClick(() => __async(this, null, function* () {
-          arrayMove(this.plugin.settings.folder_tag_pattern, index, index + 1);
-          yield this.plugin.saveSettings();
-          this.display();
-        }));
-      }).addExtraButton((cb) => {
-        cb.setIcon("cross").setTooltip("Delete").onClick(() => __async(this, null, function* () {
-          this.plugin.settings.folder_tag_pattern.splice(index, 1);
-          yield this.plugin.saveSettings();
-          this.display();
-        }));
+    ruleDesc.append(
+      '1. Set the destination folder.',
+      descEl.createEl('br'),
+      '2. Set a tag or title that matches the note you want to move. ',
+      descEl.createEl('strong', {
+        text: 'You can set either the tag or the title. ',
+      }),
+      descEl.createEl('br'),
+      '3. The rules are checked in order from the top. The notes will be moved to the folder with the ',
+      descEl.createEl('strong', { text: 'first matching rule.' }),
+      descEl.createEl('br'),
+      'Tag: Be sure to add a',
+      descEl.createEl('strong', { text: ' # ' }),
+      'at the beginning.',
+      descEl.createEl('br'),
+      'Title: Tested by JavaScript regular expressions.',
+      descEl.createEl('br'),
+      descEl.createEl('br'),
+      'Notice:',
+      descEl.createEl('br'),
+      '1. Attached files will not be moved, but they will still appear in the note.',
+      descEl.createEl('br'),
+      '2. Auto Note Mover will not move notes that have "',
+      descEl.createEl('strong', { text: 'AutoNoteMover: disable' }),
+      '" in the frontmatter.'
+    );
+    new import_obsidian5.Setting(this.containerEl)
+      .setName('Add new rule')
+      .setDesc(ruleDesc)
+      .addButton(button => {
+        button
+          .setTooltip('Add new rule')
+          .setButtonText('+')
+          .setCta()
+          .onClick(() =>
+            __async(this, null, function* () {
+              this.plugin.settings.folder_tag_pattern.push({
+                folder: '',
+                tag: '',
+                pattern: '',
+              });
+              yield this.plugin.saveSettings();
+              this.display();
+            })
+          );
       });
-      s.infoEl.remove();
-    });
+    this.plugin.settings.folder_tag_pattern.forEach(
+      (folder_tag_pattern, index) => {
+        const settings = this.plugin.settings.folder_tag_pattern;
+        const settingTag = settings.map(e => e['tag']);
+        const settingPattern = settings.map(e => e['pattern']);
+        const checkArr = (arr, val) => {
+          return arr.some(arrVal => val === arrVal);
+        };
+        const s = new import_obsidian5.Setting(this.containerEl)
+          .addSearch(cb => {
+            new FolderSuggest(this.app, cb.inputEl);
+            cb.setPlaceholder('Folder')
+              .setValue(folder_tag_pattern.folder)
+              .onChange(newFolder =>
+                __async(this, null, function* () {
+                  this.plugin.settings.folder_tag_pattern[index].folder =
+                    newFolder.trim();
+                  yield this.plugin.saveSettings();
+                })
+              );
+          })
+          .addSearch(cb => {
+            new TagSuggest(this.app, cb.inputEl);
+            cb.setPlaceholder('Tag')
+              .setValue(folder_tag_pattern.tag)
+              .onChange(newTag =>
+                __async(this, null, function* () {
+                  if (this.plugin.settings.folder_tag_pattern[index].pattern) {
+                    this.display();
+                    return new import_obsidian5.Notice(
+                      `You can set either the tag or the title.`
+                    );
+                  }
+                  if (newTag && checkArr(settingTag, newTag)) {
+                    new import_obsidian5.Notice('This tag is already used.');
+                    return;
+                  }
+                  if (!this.plugin.settings.use_regex_to_check_for_tags) {
+                    this.plugin.settings.folder_tag_pattern[index].tag =
+                      newTag.trim();
+                  } else if (this.plugin.settings.use_regex_to_check_for_tags) {
+                    this.plugin.settings.folder_tag_pattern[index].tag = newTag;
+                  }
+                  yield this.plugin.saveSettings();
+                })
+              );
+          })
+          .addSearch(cb => {
+            cb.setPlaceholder('Title by regex')
+              .setValue(folder_tag_pattern.pattern)
+              .onChange(newPattern =>
+                __async(this, null, function* () {
+                  if (this.plugin.settings.folder_tag_pattern[index].tag) {
+                    this.display();
+                    return new import_obsidian5.Notice(
+                      `You can set either the tag or the title.`
+                    );
+                  }
+                  if (newPattern && checkArr(settingPattern, newPattern)) {
+                    new import_obsidian5.Notice(
+                      'This pattern is already used.'
+                    );
+                    return;
+                  }
+                  this.plugin.settings.folder_tag_pattern[index].pattern =
+                    newPattern;
+                  yield this.plugin.saveSettings();
+                })
+              );
+          })
+          .addExtraButton(cb => {
+            cb.setIcon('up-chevron-glyph')
+              .setTooltip('Move up')
+              .onClick(() =>
+                __async(this, null, function* () {
+                  arrayMove(
+                    this.plugin.settings.folder_tag_pattern,
+                    index,
+                    index - 1
+                  );
+                  yield this.plugin.saveSettings();
+                  this.display();
+                })
+              );
+          })
+          .addExtraButton(cb => {
+            cb.setIcon('down-chevron-glyph')
+              .setTooltip('Move down')
+              .onClick(() =>
+                __async(this, null, function* () {
+                  arrayMove(
+                    this.plugin.settings.folder_tag_pattern,
+                    index,
+                    index + 1
+                  );
+                  yield this.plugin.saveSettings();
+                  this.display();
+                })
+              );
+          })
+          .addExtraButton(cb => {
+            cb.setIcon('cross')
+              .setTooltip('Delete')
+              .onClick(() =>
+                __async(this, null, function* () {
+                  this.plugin.settings.folder_tag_pattern.splice(index, 1);
+                  yield this.plugin.saveSettings();
+                  this.display();
+                })
+              );
+          });
+        s.infoEl.remove();
+      }
+    );
     const useRegexToCheckForExcludedFolder = document.createDocumentFragment();
-    useRegexToCheckForExcludedFolder.append("If enabled, excluded folder will be checked with regular expressions.");
-    new import_obsidian5.Setting(this.containerEl).setName("Use regular expressions to check for excluded folder").setDesc(useRegexToCheckForExcludedFolder).addToggle((toggle) => {
-      toggle.setValue(this.plugin.settings.use_regex_to_check_for_excluded_folder).onChange((value) => __async(this, null, function* () {
-        this.plugin.settings.use_regex_to_check_for_excluded_folder = value;
-        yield this.plugin.saveSettings();
-        this.display();
-      }));
-    });
-    const excludedFolderDesc = document.createDocumentFragment();
-    excludedFolderDesc.append("Notes in the excluded folder will not be moved.", descEl.createEl("br"), "This takes precedence over the notes movement rules.");
-    new import_obsidian5.Setting(this.containerEl).setName("Add Excluded Folder").setDesc(excludedFolderDesc).addButton((button) => {
-      button.setTooltip("Add Excluded Folders").setButtonText("+").setCta().onClick(() => __async(this, null, function* () {
-        this.plugin.settings.excluded_folder.push({
-          folder: ""
-        });
-        yield this.plugin.saveSettings();
-        this.display();
-      }));
-    });
-    this.plugin.settings.excluded_folder.forEach((excluded_folder, index) => {
-      const s = new import_obsidian5.Setting(this.containerEl).addSearch((cb) => {
-        new FolderSuggest(this.app, cb.inputEl);
-        cb.setPlaceholder("Folder").setValue(excluded_folder.folder).onChange((newFolder) => __async(this, null, function* () {
-          this.plugin.settings.excluded_folder[index].folder = newFolder;
-          yield this.plugin.saveSettings();
-        }));
-      }).addExtraButton((cb) => {
-        cb.setIcon("up-chevron-glyph").setTooltip("Move up").onClick(() => __async(this, null, function* () {
-          arrayMove(this.plugin.settings.excluded_folder, index, index - 1);
-          yield this.plugin.saveSettings();
-          this.display();
-        }));
-      }).addExtraButton((cb) => {
-        cb.setIcon("down-chevron-glyph").setTooltip("Move down").onClick(() => __async(this, null, function* () {
-          arrayMove(this.plugin.settings.excluded_folder, index, index + 1);
-          yield this.plugin.saveSettings();
-          this.display();
-        }));
-      }).addExtraButton((cb) => {
-        cb.setIcon("cross").setTooltip("Delete").onClick(() => __async(this, null, function* () {
-          this.plugin.settings.excluded_folder.splice(index, 1);
-          yield this.plugin.saveSettings();
-          this.display();
-        }));
+    useRegexToCheckForExcludedFolder.append(
+      'If enabled, excluded folder will be checked with regular expressions.'
+    );
+    new import_obsidian5.Setting(this.containerEl)
+      .setName('Use regular expressions to check for excluded folder')
+      .setDesc(useRegexToCheckForExcludedFolder)
+      .addToggle(toggle => {
+        toggle
+          .setValue(this.plugin.settings.use_regex_to_check_for_excluded_folder)
+          .onChange(value =>
+            __async(this, null, function* () {
+              this.plugin.settings.use_regex_to_check_for_excluded_folder =
+                value;
+              yield this.plugin.saveSettings();
+              this.display();
+            })
+          );
       });
+    const excludedFolderDesc = document.createDocumentFragment();
+    excludedFolderDesc.append(
+      'Notes in the excluded folder will not be moved.',
+      descEl.createEl('br'),
+      'This takes precedence over the notes movement rules.'
+    );
+    new import_obsidian5.Setting(this.containerEl)
+      .setName('Add Excluded Folder')
+      .setDesc(excludedFolderDesc)
+      .addButton(button => {
+        button
+          .setTooltip('Add Excluded Folders')
+          .setButtonText('+')
+          .setCta()
+          .onClick(() =>
+            __async(this, null, function* () {
+              this.plugin.settings.excluded_folder.push({
+                folder: '',
+              });
+              yield this.plugin.saveSettings();
+              this.display();
+            })
+          );
+      });
+    this.plugin.settings.excluded_folder.forEach((excluded_folder, index) => {
+      const s = new import_obsidian5.Setting(this.containerEl)
+        .addSearch(cb => {
+          new FolderSuggest(this.app, cb.inputEl);
+          cb.setPlaceholder('Folder')
+            .setValue(excluded_folder.folder)
+            .onChange(newFolder =>
+              __async(this, null, function* () {
+                this.plugin.settings.excluded_folder[index].folder = newFolder;
+                yield this.plugin.saveSettings();
+              })
+            );
+        })
+        .addExtraButton(cb => {
+          cb.setIcon('up-chevron-glyph')
+            .setTooltip('Move up')
+            .onClick(() =>
+              __async(this, null, function* () {
+                arrayMove(
+                  this.plugin.settings.excluded_folder,
+                  index,
+                  index - 1
+                );
+                yield this.plugin.saveSettings();
+                this.display();
+              })
+            );
+        })
+        .addExtraButton(cb => {
+          cb.setIcon('down-chevron-glyph')
+            .setTooltip('Move down')
+            .onClick(() =>
+              __async(this, null, function* () {
+                arrayMove(
+                  this.plugin.settings.excluded_folder,
+                  index,
+                  index + 1
+                );
+                yield this.plugin.saveSettings();
+                this.display();
+              })
+            );
+        })
+        .addExtraButton(cb => {
+          cb.setIcon('cross')
+            .setTooltip('Delete')
+            .onClick(() =>
+              __async(this, null, function* () {
+                this.plugin.settings.excluded_folder.splice(index, 1);
+                yield this.plugin.saveSettings();
+                this.display();
+              })
+            );
+        });
       s.infoEl.remove();
     });
     const statusBarTriggerIndicatorDesc = document.createDocumentFragment();
-    statusBarTriggerIndicatorDesc.append("The status bar will display [A] if the trigger is Automatic, and [M] for Manual.", descEl.createEl("br"), "To change the setting, you need to restart Obsidian.", descEl.createEl("br"), "Desktop only.");
-    new import_obsidian5.Setting(this.containerEl).setName("Status Bar Trigger Indicator").setDesc(statusBarTriggerIndicatorDesc).addToggle((toggle) => {
-      toggle.setValue(this.plugin.settings.statusBar_trigger_indicator).onChange((value) => __async(this, null, function* () {
-        this.plugin.settings.statusBar_trigger_indicator = value;
-        yield this.plugin.saveSettings();
-        this.display();
-      }));
-    });
+    statusBarTriggerIndicatorDesc.append(
+      'The status bar will display [A] if the trigger is Automatic, and [M] for Manual.',
+      descEl.createEl('br'),
+      'To change the setting, you need to restart Obsidian.',
+      descEl.createEl('br'),
+      'Desktop only.'
+    );
+    new import_obsidian5.Setting(this.containerEl)
+      .setName('Status Bar Trigger Indicator')
+      .setDesc(statusBarTriggerIndicatorDesc)
+      .addToggle(toggle => {
+        toggle
+          .setValue(this.plugin.settings.statusBar_trigger_indicator)
+          .onChange(value =>
+            __async(this, null, function* () {
+              this.plugin.settings.statusBar_trigger_indicator = value;
+              yield this.plugin.saveSettings();
+              this.display();
+            })
+          );
+      });
   }
 };
 
@@ -2056,19 +2933,32 @@ var AutoNoteMover = class extends import_obsidian6.Plugin {
       const folderTagPattern = this.settings.folder_tag_pattern;
       const excludedFolder = this.settings.excluded_folder;
       const fileCheck = (file, oldPath, caller) => {
-        if (this.settings.trigger_auto_manual !== "Automatic" && caller !== "cmd") {
+        if (
+          this.settings.trigger_auto_manual !== 'Automatic' &&
+          caller !== 'cmd'
+        ) {
           return;
         }
-        if (!(file instanceof import_obsidian6.TFile))
-          return;
-        if (oldPath && oldPath.split("/").pop() === file.basename + "." + file.extension) {
+        if (!(file instanceof import_obsidian6.TFile)) return;
+        if (
+          oldPath &&
+          oldPath.split('/').pop() === file.basename + '.' + file.extension
+        ) {
           return;
         }
         const excludedFolderLength = excludedFolder.length;
         for (let i = 0; i < excludedFolderLength; i++) {
-          if (!this.settings.use_regex_to_check_for_excluded_folder && excludedFolder[i].folder && file.parent.path === (0, import_obsidian6.normalizePath)(excludedFolder[i].folder)) {
+          if (
+            !this.settings.use_regex_to_check_for_excluded_folder &&
+            excludedFolder[i].folder &&
+            file.parent.path ===
+              (0, import_obsidian6.normalizePath)(excludedFolder[i].folder)
+          ) {
             return;
-          } else if (this.settings.use_regex_to_check_for_excluded_folder && excludedFolder[i].folder) {
+          } else if (
+            this.settings.use_regex_to_check_for_excluded_folder &&
+            excludedFolder[i].folder
+          ) {
             const regex = new RegExp(excludedFolder[i].folder);
             if (regex.test(file.parent.path)) {
               return;
@@ -2080,7 +2970,7 @@ var AutoNoteMover = class extends import_obsidian6.Plugin {
           return;
         }
         const fileName = file.basename;
-        const fileFullName = file.basename + "." + file.extension;
+        const fileFullName = file.basename + '.' + file.extension;
         const settingsLength = folderTagPattern.length;
         const cacheTag = (0, import_obsidian6.getAllTags)(fileCache);
         for (let i = 0; i < settingsLength; i++) {
@@ -2089,13 +2979,13 @@ var AutoNoteMover = class extends import_obsidian6.Plugin {
           const settingPattern = folderTagPattern[i].pattern;
           if (!settingPattern) {
             if (!this.settings.use_regex_to_check_for_tags) {
-              if (cacheTag.find((e) => e === settingTag)) {
+              if (cacheTag.find(e => e === settingTag)) {
                 fileMove(this.app, settingFolder, fileFullName, file);
                 break;
               }
             } else if (this.settings.use_regex_to_check_for_tags) {
               const regex = new RegExp(settingTag);
-              if (cacheTag.find((e) => regex.test(e))) {
+              if (cacheTag.find(e => regex.test(e))) {
                 fileMove(this.app, settingFolder, fileFullName, file);
                 break;
               }
@@ -2112,64 +3002,84 @@ var AutoNoteMover = class extends import_obsidian6.Plugin {
       };
       let triggerIndicator;
       const setIndicator = () => {
-        if (!this.settings.statusBar_trigger_indicator)
-          return;
-        triggerIndicator.setText(getTriggerIndicator(this.settings.trigger_auto_manual));
+        if (!this.settings.statusBar_trigger_indicator) return;
+        triggerIndicator.setText(
+          getTriggerIndicator(this.settings.trigger_auto_manual)
+        );
       };
       if (this.settings.statusBar_trigger_indicator) {
         triggerIndicator = this.addStatusBarItem();
         setIndicator();
-        this.registerDomEvent(window, "change", setIndicator);
+        this.registerDomEvent(window, 'change', setIndicator);
       }
       this.app.workspace.onLayoutReady(() => {
-        this.registerEvent(this.app.vault.on("create", (file) => fileCheck(file)));
-        this.registerEvent(this.app.metadataCache.on("changed", (file) => fileCheck(file)));
-        this.registerEvent(this.app.vault.on("rename", (file, oldPath) => fileCheck(file, oldPath)));
+        this.registerEvent(
+          this.app.vault.on('create', file => fileCheck(file))
+        );
+        this.registerEvent(
+          this.app.metadataCache.on('changed', file => fileCheck(file))
+        );
+        this.registerEvent(
+          this.app.vault.on('rename', (file, oldPath) =>
+            fileCheck(file, oldPath)
+          )
+        );
       });
-      const moveNoteCommand = (view) => {
+      const moveNoteCommand = view => {
         if (isFmDisable(this.app.metadataCache.getFileCache(view.file))) {
-          new import_obsidian6.Notice("Auto Note Mover is disabled in the frontmatter.");
+          new import_obsidian6.Notice(
+            'Auto Note Mover is disabled in the frontmatter.'
+          );
           return;
         }
-        fileCheck(view.file, void 0, "cmd");
+        fileCheck(view.file, void 0, 'cmd');
       };
       this.addCommand({
-        id: "Move-the-note",
-        name: "Move the note",
-        checkCallback: (checking) => {
-          const markdownView = this.app.workspace.getActiveViewOfType(import_obsidian6.MarkdownView);
+        id: 'Move-the-note',
+        name: 'Move the note',
+        checkCallback: checking => {
+          const markdownView = this.app.workspace.getActiveViewOfType(
+            import_obsidian6.MarkdownView
+          );
           if (markdownView) {
             if (!checking) {
               moveNoteCommand(markdownView);
             }
             return true;
           }
-        }
+        },
       });
       this.addCommand({
-        id: "Toggle-Auto-Manual",
-        name: "Toggle Auto-Manual",
+        id: 'Toggle-Auto-Manual',
+        name: 'Toggle Auto-Manual',
         callback: () => {
-          if (this.settings.trigger_auto_manual === "Automatic") {
-            this.settings.trigger_auto_manual = "Manual";
+          if (this.settings.trigger_auto_manual === 'Automatic') {
+            this.settings.trigger_auto_manual = 'Manual';
             this.saveData(this.settings);
-            new import_obsidian6.Notice("[Auto Note Mover]\nTrigger is Manual.");
-          } else if (this.settings.trigger_auto_manual === "Manual") {
-            this.settings.trigger_auto_manual = "Automatic";
+            new import_obsidian6.Notice(
+              '[Auto Note Mover]\nTrigger is Manual.'
+            );
+          } else if (this.settings.trigger_auto_manual === 'Manual') {
+            this.settings.trigger_auto_manual = 'Automatic';
             this.saveData(this.settings);
-            new import_obsidian6.Notice("[Auto Note Mover]\nTrigger is Automatic.");
+            new import_obsidian6.Notice(
+              '[Auto Note Mover]\nTrigger is Automatic.'
+            );
           }
           setIndicator();
-        }
+        },
       });
       this.addSettingTab(new AutoNoteMoverSettingTab(this.app, this));
     });
   }
-  onunload() {
-  }
+  onunload() {}
   loadSettings() {
     return __async(this, null, function* () {
-      this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
+      this.settings = Object.assign(
+        {},
+        DEFAULT_SETTINGS,
+        yield this.loadData()
+      );
     });
   }
   saveSettings() {

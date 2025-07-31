@@ -13,10 +13,10 @@ updated: 2025-07-30T03:06
 **Residência rural de dois pavimentos — Revit (elétrico) + AutoCAD (hidrossanitário) — Porto Alegre (RS)**  
 Projeto técnico completo para residência de campo com dois pavimentos, integrando modelagem tridimensional das instalações elétricas no **Revit** e representação detalhada das redes hidráulicas em **AutoCAD**, com **sistema séptico autônomo** e foco em conforto térmico, eficiência energética e execução precisa em obra.
 
-- **Local:** Sítio em Porto Alegre – RS  
-- **Ano:** 2024  
+- **Local:** Sítio em Porto Alegre – RS
+- **Ano:** 2024
 - **Área construída:** 250m2
-- **Ferramentas:** Revit  2023 (elétrico), AutoCAD  (hidrossanitário)
+- **Ferramentas:** Revit 2023 (elétrico), AutoCAD (hidrossanitário)
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_casa-sitio.jpg" alt="Render do modelo Revit 3D da residência" class="gallery-thumb" loading="lazy">
@@ -32,6 +32,7 @@ Este projeto foi desenvolvido para atender às necessidades técnicas de uma res
 ### Escopo Técnico Detalhado
 
 #### ⚡ Instalações Elétricas (Revit)
+
 - **Iluminação e Tomadas:** Layout completo com luminárias modeladas em 3D
 - **Quadro de Cargas e Diagrama Multifilar:** Gerados automaticamente a partir do modelo BIM
 - **Entrada de Energia:** Detalhamento técnico da caixa de medição, eletrodutos e condutores
@@ -39,6 +40,7 @@ Este projeto foi desenvolvido para atender às necessidades técnicas de uma res
 - **Setorização por pavimento:** Com painéis modelados e distribuídos conforme uso
 
 #### 💧 Instalações Hidrossanitárias (AutoCAD)
+
 - **Água Fria e Quente:** Sistemas independentes com traçados em planta baixa e isométrico
 - **Sistema Séptico:** Fossa + filtro anaeróbico conforme NBR 13969 e NBR 7229
 - **Águas Pluviais:** Separação de redes com direcionamento para infiltração no terreno
@@ -47,20 +49,20 @@ Este projeto foi desenvolvido para atender às necessidades técnicas de uma res
 
 ## Tecnologias Utilizadas
 
-- **Softwares:**  
-  - Revit MEP 2023 (instalações elétricas modeladas)  
-  - AutoCAD 2023 (plantas hidrossanitárias + isométricos)  
-- **Normas Técnicas:**  
-  - NBR 5410:2004 (elétrica)  
-  - NBR 13570:1996 (entrada)  
-  - NBR 5626:2020 (hidráulica)  
-  - NBR 8160:1999 (esgoto)  
-  - NBR 13969:1997 + NBR 7229:1993 (tanque séptico e filtro)  
+- **Softwares:**
+  - Revit MEP 2023 (instalações elétricas modeladas)
+  - AutoCAD 2023 (plantas hidrossanitárias + isométricos)
+- **Normas Técnicas:**
+  - NBR 5410:2004 (elétrica)
+  - NBR 13570:1996 (entrada)
+  - NBR 5626:2020 (hidráulica)
+  - NBR 8160:1999 (esgoto)
+  - NBR 13969:1997 + NBR 7229:1993 (tanque séptico e filtro)
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico em PDF**](/assets/pdfs/pvp-a03-e101-r02-terreo_recorte_p1_casa-sitio.pdf){:target="_blank" .reveal}  
-[📄 **Ver Isométrico Hidrossanitário e Sistema Séptico**](/assets/pdfs/pvp-a03-h100-r02-água-quente-e-fria_recorte_p1_casa-sitio.pdf){:target="_blank" .reveal}
+[📄 **Ver Projeto Elétrico em PDF**](/assets/pdfs/pvp-a03-e101-r02-terreo_recorte_p1_casa-sitio.pdf){:target="\_blank" .reveal}  
+[📄 **Ver Isométrico Hidrossanitário e Sistema Séptico**](/assets/pdfs/pvp-a03-h100-r02-água-quente-e-fria_recorte_p1_casa-sitio.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/pvp-a03-h100-r02-água-quente-e-fria_recorte_p1_casa-sitio.pdf#toolbar=0"

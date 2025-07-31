@@ -14,8 +14,8 @@ updated: 2025-07-30T03:19
 Projeto elétrico completo de uma residência de alto padrão com dois pavimentos, com ênfase em dimensionamentos executivos e documentação para aprovação junto à concessionária. O projeto abrange desde a entrada de energia até os pontos finais de uso.
 
 - **Local:** Gravataí- RS
-- **Ano:** 2022  
-- **Ferramentas:** AutoCAD   
+- **Ano:** 2022
+- **Ferramentas:** AutoCAD
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_cd.jpg" alt="Vista da fachada - projeto CD" class="gallery-thumb" loading="lazy">
@@ -31,6 +31,7 @@ O Projeto “CD” consistiu no desenvolvimento do sistema **elétrico completo*
 ### Escopo Técnico Detalhado
 
 #### ⚡ Instalações Elétricas
+
 - **Entrada de Energia:** Projeto completo da entrada padrão com eletrodutos, caixas de medição e dutos subterrâneos
 - **Quadro de Cargas:** Balanceamento de circuitos por ambiente e função
 - **Diagrama Unifilar:** Com detalhamento de disjuntores, DRs e DPS
@@ -44,16 +45,15 @@ O Projeto “CD” consistiu no desenvolvimento do sistema **elétrico completo*
 ## Tecnologias Utilizadas
 
 - **Software:** AutoCAD (plantas, diagramas, detalhamentos técnicos)
-- **Normas Técnicas:**  
-  - NBR 5410:2004 (instalações elétricas de baixa tensão)  
-  - NBR 13570:1996 (entradas de energia)  
+- **Normas Técnicas:**
+  - NBR 5410:2004 (instalações elétricas de baixa tensão)
+  - NBR 13570:1996 (entradas de energia)
   - Normativos específicos da concessionária local (CEEE)
-
 
 ## Documentação
 
-[📄 **Ver Planta Elétrica Geral**](/assets/pdfs/projeto-cd_eletrica.pdf_cd.pdf){:target="_blank" .reveal}  
-[📄 **Ver Diagrama Unifilar e Quadro de Cargas**](/assets/pdfs/projeto-cd_unifilar.pdf_cd.pdf){:target="_blank" .reveal}
+[📄 **Ver Planta Elétrica Geral**](/assets/pdfs/projeto-cd_eletrica.pdf_cd.pdf){:target="\_blank" .reveal}  
+[📄 **Ver Diagrama Unifilar e Quadro de Cargas**](/assets/pdfs/projeto-cd_unifilar.pdf_cd.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/projeto-cd_unifilar.pdf#toolbar=0"

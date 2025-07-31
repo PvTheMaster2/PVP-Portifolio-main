@@ -14,10 +14,10 @@ updated: 2025-07-30T03:19
 
 Projeto elétrico desenvolvido para a reforma de uma **sala de aula institucional**, localizada em uma edificação pré-existente. A reforma envolveu **remanejamento de layout arquitetônico**, com **quebra de paredes e criação de novas salas**, exigindo um novo planejamento elétrico completo.
 
-- **Tipo:** Institucional – Sala de Aula  
-- **Local:** Porto Alegre – RS  
-- **Ano:** 2023  
-- **Ferramenta:** Revit  
+- **Tipo:** Institucional – Sala de Aula
+- **Local:** Porto Alegre – RS
+- **Ano:** 2023
+- **Ferramenta:** Revit
 - **Escopo:** Reforma com modernização elétrica e estrutura para comunicação audiovisual
 
 <div class="project-gallery reveal">
@@ -35,6 +35,7 @@ Foram implementadas **eletrocalhas tipo perfilado acima do forro**, em conformid
 ### Escopo Técnico
 
 #### ⚡ Elétrica
+
 - **Redistribuição de Pontos Elétricos (Tomadas e Iluminação)**
 - **Eletrocalhas do tipo perfilado acima do forro**
 - **Integração com sistema HDMI e multimídia da sala**
@@ -46,7 +47,7 @@ Foram implementadas **eletrocalhas tipo perfilado acima do forro**, em conformid
 
 ## Tecnologias e Normas
 
-- **Software:** Autodesk Revit   
+- **Software:** Autodesk Revit
 - **Normas Técnicas Aplicadas:**
   - NBR 5410 (Instalações Elétricas de Baixa Tensão)
   - Diretrizes para instalações aparentes (escolas e espaços públicos)
@@ -54,7 +55,7 @@ Foram implementadas **eletrocalhas tipo perfilado acima do forro**, em conformid
 
 ## Documentação
 
-[📄 **Ver Projeto Sala de Aula (PDF)**](/assets/pdfs/sala_aula_2023.pdf_marista.pdf){:target="_blank" .reveal}
+[📄 **Ver Projeto Sala de Aula (PDF)**](/assets/pdfs/sala_aula_2023.pdf_marista.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/sala_aula_2023.pdf#toolbar=0"

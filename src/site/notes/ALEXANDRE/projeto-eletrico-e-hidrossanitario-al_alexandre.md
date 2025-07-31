@@ -13,10 +13,10 @@ updated: 2025-07-30T03:19
 **Residência unifamiliar de alto padrão — 3 pavimentos / 360 m²**  
 Projeto completo de instalações **elétricas e hidrossanitárias** para uma residência localizada em condomínio fechado. Desenvolvido para a família do próprio empreendedor, o projeto atendeu a altos padrões de detalhamento técnico e funcionalidade.
 
-- **Local:** Condomínio fechado – RS  
-- **Ano:** 2019  
-- **Área construída:** 360 m²  
-- **Ferramentas:** AutoCAD 
+- **Local:** Condomínio fechado – RS
+- **Ano:** 2019
+- **Área construída:** 360 m²
+- **Ferramentas:** AutoCAD
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_alexandre.jpg" alt="Fachada renderizada" class="gallery-thumb" loading="lazy">
@@ -32,6 +32,7 @@ O projeto Casa AL consistiu na concepção e detalhamento completo das instalaç
 ### Escopo Técnico Detalhado
 
 #### ⚡ Instalações Elétricas
+
 - **Três Quadros Elétricos:** Um por pavimento, com divisão inteligente de circuitos
 - **Iluminação LED:** Pontos distribuídos por cômodo, incluindo áreas externas
 - **Tomadas e Força:** Circuitos específicos para eletrodomésticos, climatização e bombas
@@ -41,6 +42,7 @@ O projeto Casa AL consistiu na concepção e detalhamento completo das instalaç
 - **Tubulações e embutidos:** Desenho técnico completo de eletrodutos em lajes e paredes
 
 #### 💧 Instalações Hidrossanitárias
+
 - **Sistema de coleta pluvial e cloacal:** Caixas de inspeção dimensionadas e bem distribuídas
 - **Impermeabilização com manta bedim** para garantir estanqueidade nos pontos críticos
 - **Calhas e condutores verticais:** Integrados à arquitetura
@@ -49,16 +51,15 @@ O projeto Casa AL consistiu na concepção e detalhamento completo das instalaç
 ## Tecnologias Utilizadas
 
 - **Software:** AutoCAD (layout, detalhamento)
-- **Normas:**  
-  - NBR 5410:2004 (instalações elétricas de baixa tensão)  
-  - NBR 8160:1999 (sistemas prediais de esgoto sanitário)  
+- **Normas:**
+  - NBR 5410:2004 (instalações elétricas de baixa tensão)
+  - NBR 8160:1999 (sistemas prediais de esgoto sanitário)
   - NBR 5626:2020 (instalações prediais de água fria e quente)
-
 
 ## Documentação
 
-[📄 **Ver Planta Elétrica**](/assets/pdfs/casa-al_eletrica.pdf_alexandre.pdf){:target="_blank" .reveal}  
-[📄 **Ver Planta Hidrossanitária**](/assets/pdfs/casa-al_hidrosanitaria.pdf_alexandre.pdf){:target="_blank" .reveal}
+[📄 **Ver Planta Elétrica**](/assets/pdfs/casa-al_eletrica.pdf_alexandre.pdf){:target="\_blank" .reveal}  
+[📄 **Ver Planta Hidrossanitária**](/assets/pdfs/casa-al_hidrosanitaria.pdf_alexandre.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/casa-al_eletrica.pdf#toolbar=0"

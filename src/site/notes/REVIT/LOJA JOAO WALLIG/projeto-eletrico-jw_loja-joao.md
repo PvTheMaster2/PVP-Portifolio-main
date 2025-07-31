@@ -14,9 +14,9 @@ updated: 2025-07-30T03:06
 
 Projeto elétrico completo de uma loja comercial de aproximadamente **200m²**, localizada em **Porto Alegre – RS**, desenvolvido em **Revit (2024)**. O escopo contemplou desde a entrada de energia até a infraestrutura de climatização e segurança, com destaque para a **integração com elementos estruturais da edificação** e previsão de crescimento do empreendimento.
 
-- **Local:** Porto Alegre – RS  
-- **Ano:** 2024  
-- **Tipo:** Comercial – Loja térrea  
+- **Local:** Porto Alegre – RS
+- **Ano:** 2024
+- **Tipo:** Comercial – Loja térrea
 - **Ferramenta:** Revit
 
 <div class="project-gallery reveal">
@@ -34,6 +34,7 @@ Foram previstos **furos em vigas e passagens técnicas para eletrodutos aparente
 ### Escopo Técnico
 
 #### ⚡ Elétrica
+
 - **Planta de Situação**
 - **Entrada de Energia completa**
 - **Infraestrutura para Ar-condicionado**
@@ -41,23 +42,23 @@ Foram previstos **furos em vigas e passagens técnicas para eletrodutos aparente
 - **Quadro de Cargas e Diagrama Multifilar**
 - **Caixas de Inspeção Técnica para expansões futuras**
 - **SPDA dimensionado conforme NBR 5419**
-- **Integração com Projeto Estrutural**  
+- **Integração com Projeto Estrutural**
   - Passagem de eletrodutos por elementos de concreto armado
   - Furos técnicos em vigas coordenados em Revit
 - **Modelagem 3D e documentação executiva em Revit**
 
 ## Tecnologias e Normas
 
-- **Software:** Autodesk Revit 2024  
-- **Normas Técnicas:**  
-  - NBR 5410 (Instalações Elétricas de Baixa Tensão)  
-  - NBR 5419 (SPDA)  
-  - NBR 13570 (Entrada de Energia)  
-  - Normas da concessionária CE Equatorial  
+- **Software:** Autodesk Revit 2024
+- **Normas Técnicas:**
+  - NBR 5410 (Instalações Elétricas de Baixa Tensão)
+  - NBR 5419 (SPDA)
+  - NBR 13570 (Entrada de Energia)
+  - Normas da concessionária CE Equatorial
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Loja Térrea (PDF)**](/assets/pdfs/694_arq_ep_joaowallig_r04_recorte_p1_loja-joao.pdf){:target="_blank" .reveal}  
+[📄 **Ver Projeto Elétrico Loja Térrea (PDF)**](/assets/pdfs/694_arq_ep_joaowallig_r04_recorte_p1_loja-joao.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/694_arq_ep_joaowallig_r04_recorte_p1_loja-joao.pdf#toolbar=0"

@@ -12,9 +12,9 @@ updated: 2025-07-30T03:19
 
 **Reforma elétrica completa de residência térrea** — Projeto desenvolvido para atualização total da infraestrutura elétrica de uma casa existente, com foco em funcionalidade, segurança e integração com o projeto de interiores.
 
-- **Local:** Porto Alegre, RS  
-- **Ano:** 2024  
-- **Ferramentas:**, AutoCAD, Sketchup (suporte ao projeto luminotécnico por render)  
+- **Local:** Porto Alegre, RS
+- **Ano:** 2024
+- **Ferramentas:**, AutoCAD, Sketchup (suporte ao projeto luminotécnico por render)
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_adriene.jpg" alt="Fachada renderizada" class="gallery-thumb" loading="lazy">
@@ -40,10 +40,9 @@ O projeto “Reforma Casa” consistiu na reestruturação completa das instala�
 - **Software:** AutoCAD, Sketchup (referência para simulações de iluminação)
 - **Normas:** NBR 5410:2004 (instalações elétricas), NBR 14565 (sistemas de cabeamento estruturado)
 
-
 ## Documentação
 
-[📄 **Ver Planta Elétrica**](/assets/pdfs/reforma-casa_planta.pdf_adriene.pdf){:target="_blank" .reveal}
+[📄 **Ver Planta Elétrica**](/assets/pdfs/reforma-casa_planta.pdf_adriene.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/reforma-casa_planta.pdf#toolbar=0"

@@ -14,11 +14,11 @@ updated: 2025-07-30T03:19
 
 Este projeto foi desenvolvido para uma loja comercial de médio porte, localizada em **Porto Alegre**, com dois pavimentos (térreo e mezanino), e que permite a **divisão em duas unidades consumidoras**, cada uma com seu respectivo Centro de Distribuição (CD) e entrada de energia. O projeto foi inteiramente modelado em **Revit**, com enfoque na compatibilização com os projetos **hidrossanitário e estrutural**.
 
-- **Tipo:** Projeto Elétrico Comercial  
-- **Ano:** 2023  
-- **Local:** Porto Alegre, RS  
-- **Pavimentos:** 2 (Térreo + Mezanino)  
-- **Unidades consumidoras:** 2  
+- **Tipo:** Projeto Elétrico Comercial
+- **Ano:** 2023
+- **Local:** Porto Alegre, RS
+- **Pavimentos:** 2 (Térreo + Mezanino)
+- **Unidades consumidoras:** 2
 - **Ferramentas:** Autodesk Revit
 
 <div class="project-gallery reveal">
@@ -31,11 +31,12 @@ Este projeto foi desenvolvido para uma loja comercial de médio porte, localizad
 
 O projeto foi concebido de forma a permitir **flexibilidade de uso do espaço**, podendo funcionar como **duas lojas distintas** ou uma única loja com dois ambientes. Cada unidade possui sua **entrada de energia independente**, com CDs aparentes bem localizados para facilitar manutenções futuras.
 
-A **infraestrutura elétrica** mescla condução **aparente (com eletrocalhas e perfilados)** com partes embutidas na alvenaria, garantindo tanto a **eficiência visual quanto a funcionalidade técnica**. 
+A **infraestrutura elétrica** mescla condução **aparente (com eletrocalhas e perfilados)** com partes embutidas na alvenaria, garantindo tanto a **eficiência visual quanto a funcionalidade técnica**.
 
 ### Escopo Técnico
 
 #### ⚡ Elétrica
+
 - **Duas entradas de energia**, com respectivos quadros principais (CDs aparentes)
 - **Diagrama unifilar** e detalhamento dos quadros de disjuntores
 - **Infraestrutura elétrica mista** (aparente com perfilados e embutida em eletrodutos)
@@ -46,11 +47,10 @@ A **infraestrutura elétrica** mescla condução **aparente (com eletrocalhas e 
 
 ## Tecnologias e Normas
 
-- **Software:** Autodesk Revit  
+- **Software:** Autodesk Revit
 - **Normas Técnicas Aplicadas:**
-  - NBR 5410 – Instalações Elétricas em Baixa Tensão  
-  - NBR 13570 – Instalações Elétricas – Execução de Infraestrutura  
-
+  - NBR 5410 – Instalações Elétricas em Baixa Tensão
+  - NBR 13570 – Instalações Elétricas – Execução de Infraestrutura
 
 ## Diferenciais
 
@@ -61,7 +61,7 @@ A **infraestrutura elétrica** mescla condução **aparente (com eletrocalhas e 
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico em PDF**](/assets/pdfs/projeto_loja_duas_unidades.pdf_zotti.pdf){:target="_blank" .reveal}
+[📄 **Ver Projeto Elétrico em PDF**](/assets/pdfs/projeto_loja_duas_unidades.pdf_zotti.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/projeto_loja_duas_unidades.pdf#toolbar=0"
