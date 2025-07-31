@@ -1,198 +1,204 @@
-// Estrutura de navegação principal
+// Sistema de navegação do site
 module.exports = {
   // Menu principal
   main: [
     {
-      name: 'Home',
+      title: 'Home',
       url: '/',
-      icon: '🏠',
-      description: 'Página inicial'
+      icon: 'home'
     },
     {
-      name: 'Sobre',
+      title: 'Sobre',
       url: '/sobre',
-      icon: '👨‍💼',
-      description: 'Conheça a PVP Projects'
+      icon: 'user'
     },
     {
-      name: 'Serviços',
+      title: 'Serviços',
       url: '/servicos',
-      icon: '⚡',
-      description: 'Nossas soluções de engenharia'
+      icon: 'settings',
+      children: [
+        {
+          title: 'Projetos Elétricos',
+          url: '/servicos/eletricos',
+          description: 'Instalações de baixa tensão'
+        },
+        {
+          title: 'Projetos Hidrossanitários',
+          url: '/servicos/hidrossanitarios',
+          description: 'Redes de água e esgoto'
+        },
+        {
+          title: 'Projetos de Comunicação',
+          url: '/servicos/comunicacao',
+          description: 'Infraestrutura de dados'
+        },
+        {
+          title: 'Consultoria BIM',
+          url: '/servicos/consultoria-bim',
+          description: 'Modelagem 3D em Revit'
+        }
+      ]
     },
     {
-      name: 'Projetos',
+      title: 'Projetos',
       url: '/projetos',
-      icon: '🏗️',
-      description: 'Portfólio completo'
+      icon: 'folder',
+      children: [
+        {
+          title: 'Todos os Projetos',
+          url: '/projetos',
+          description: 'Portfólio completo'
+        },
+        {
+          title: 'Projetos Prediais',
+          url: '/projetos/categoria/predial',
+          description: 'Edifícios residenciais e comerciais'
+        },
+        {
+          title: 'Projetos Residenciais',
+          url: '/projetos/categoria/residencial',
+          description: 'Casas e apartamentos'
+        },
+        {
+          title: 'Projetos Comerciais',
+          url: '/projetos/categoria/comercial',
+          description: 'Lojas e estabelecimentos'
+        }
+      ]
     },
     {
-      name: 'Contato',
+      title: 'Contato',
       url: '/contato',
-      icon: '📞',
-      description: 'Entre em contato'
+      icon: 'mail'
     }
   ],
 
-  // Categorias de serviços
-  services: [
+  // Menu secundário (footer)
+  footer: [
     {
-      id: 'eletrico',
-      name: 'Projetos Elétricos',
-      description: 'Instalações de baixa tensão para todos os portes',
-      icon: '⚡',
-      url: '/servicos/eletrico',
-      features: [
-        'Entrada de energia e medição individualizada',
-        'Quadros de distribuição e diagramas unifilares',
-        'Projetos de iluminação e tomadas',
-        'Infraestrutura para climatização',
-        'Sistema de Proteção contra Descargas Atmosféricas (SPDA)',
-        'Automação e sistemas fotovoltaicos'
+      title: 'Empresa',
+      items: [
+        { title: 'Sobre Nós', url: '/sobre' },
+        { title: 'Serviços', url: '/servicos' },
+        { title: 'Projetos', url: '/projetos' },
+        { title: 'Contato', url: '/contato' }
       ]
     },
     {
-      id: 'hidrossanitario',
-      name: 'Projetos Hidrossanitários',
-      description: 'Redes de água fria e quente',
-      icon: '🚰',
-      url: '/servicos/hidrossanitario',
-      features: [
-        'Sistemas de esgoto cloacal e pluvial',
-        'Dimensionamento de reservatórios',
-        'Caixas de inspeção e sistemas sépticos',
-        'Documentação para aprovação em concessionárias',
-        'DMAE, SEMAE e outras concessionárias'
+      title: 'Serviços',
+      items: [
+        { title: 'Projetos Elétricos', url: '/servicos/eletricos' },
+        { title: 'Projetos Hidrossanitários', url: '/servicos/hidrossanitarios' },
+        { title: 'Projetos de Comunicação', url: '/servicos/comunicacao' },
+        { title: 'Consultoria BIM', url: '/servicos/consultoria-bim' }
       ]
     },
     {
-      id: 'comunicacao',
-      name: 'Projetos de Comunicação',
-      description: 'Infraestrutura para redes de dados, telefonia e TV',
-      icon: '📡',
-      url: '/servicos/comunicacao',
-      features: [
-        'Cabeamento estruturado',
-        'Redes de dados',
-        'Telefonia',
-        'TV'
-      ]
-    },
-    {
-      id: 'consultoria',
-      name: 'Consultoria e Compatibilização BIM',
-      description: 'Modelagem 3D das instalações em Revit',
-      icon: '🏗️',
-      url: '/servicos/consultoria',
-      features: [
-        'Análise de interferências e otimização de rotas',
-        'Coordenação com projetos de arquitetura',
-        'Modelagem 3D das instalações em Revit',
-        'Compatibilização entre disciplinas'
+      title: 'Legal',
+      items: [
+        { title: 'Política de Privacidade', url: '/legal/privacidade' },
+        { title: 'Termos de Uso', url: '/legal/termos' },
+        { title: 'Cookies', url: '/legal/cookies' }
       ]
     }
   ],
-
-  // Tipos de projetos
-  projectTypes: [
-    {
-      id: 'predial',
-      name: 'Projetos Prediais',
-      description: 'Edifícios residenciais e comerciais',
-      icon: '🏢',
-      url: '/projetos/predial',
-      count: 7
-    },
-    {
-      id: 'residencial',
-      name: 'Projetos Residenciais',
-      description: 'Casas e apartamentos',
-      icon: '🏠',
-      url: '/projetos/residencial',
-      count: 2
-    },
-    {
-      id: 'comercial',
-      name: 'Projetos Comerciais',
-      description: 'Lojas e estabelecimentos',
-      icon: '🏪',
-      url: '/projetos/comercial',
-      count: 1
-    },
-    {
-      id: 'institucional',
-      name: 'Projetos Institucionais',
-      description: 'Escolas, hospitais e instituições',
-      icon: '🏛️',
-      url: '/projetos/institucional',
-      count: 0
-    }
-  ],
-
-  // Footer links
-  footer: {
-    company: [
-      { name: 'Sobre Nós', url: '/sobre' },
-      { name: 'Nossa Missão', url: '/sobre#missao' },
-      { name: 'Nossa História', url: '/sobre#historia' },
-      { name: 'Valores', url: '/sobre#valores' }
-    ],
-    services: [
-      { name: 'Projetos Elétricos', url: '/servicos/eletrico' },
-      { name: 'Projetos Hidrossanitários', url: '/servicos/hidrossanitario' },
-      { name: 'Projetos de Comunicação', url: '/servicos/comunicacao' },
-      { name: 'Consultoria BIM', url: '/servicos/consultoria' }
-    ],
-    projects: [
-      { name: 'Projetos Prediais', url: '/projetos/predial' },
-      { name: 'Projetos Residenciais', url: '/projetos/residencial' },
-      { name: 'Projetos Comerciais', url: '/projetos/comercial' },
-      { name: 'Todos os Projetos', url: '/projetos' }
-    ],
-    legal: [
-      { name: 'Política de Privacidade', url: '/legal/privacidade' },
-      { name: 'Termos de Uso', url: '/legal/termos' },
-      { name: 'Cookies', url: '/legal/cookies' }
-    ]
-  },
 
   // Breadcrumbs
   breadcrumbs: {
-    home: { name: 'Home', url: '/' },
-    about: { name: 'Sobre', url: '/sobre' },
-    services: { name: 'Serviços', url: '/servicos' },
-    projects: { name: 'Projetos', url: '/projetos' },
-    contact: { name: 'Contato', url: '/contato' }
+    home: { title: 'Home', url: '/' },
+    sobre: { title: 'Sobre', url: '/sobre' },
+    servicos: { title: 'Serviços', url: '/servicos' },
+    projetos: { title: 'Projetos', url: '/projetos' },
+    contato: { title: 'Contato', url: '/contato' }
   },
 
-  // Social media
-  social: [
+  // Categorias de projetos
+  projectCategories: [
     {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/pedro-vitor-pagliarin',
-      icon: 'linkedin',
-      color: 'blue'
+      id: 'predial',
+      title: 'Projetos Prediais',
+      description: 'Edifícios residenciais e comerciais',
+      icon: '🏢',
+      color: 'primary'
     },
     {
-      name: 'WhatsApp',
-      url: 'https://wa.me/5554991590379',
+      id: 'residencial',
+      title: 'Projetos Residenciais',
+      description: 'Casas e apartamentos',
+      icon: '🏠',
+      color: 'secondary'
+    },
+    {
+      id: 'comercial',
+      title: 'Projetos Comerciais',
+      description: 'Lojas e estabelecimentos',
+      icon: '🏪',
+      color: 'accent'
+    },
+    {
+      id: 'institucional',
+      title: 'Projetos Institucionais',
+      description: 'Escolas, hospitais e instituições',
+      icon: '🏛️',
+      color: 'success'
+    }
+  ],
+
+  // Filtros de projetos
+  projectFilters: [
+    {
+      id: 'category',
+      title: 'Categoria',
+      options: [
+        { value: 'all', label: 'Todas as Categorias' },
+        { value: 'predial', label: 'Predial' },
+        { value: 'residencial', label: 'Residencial' },
+        { value: 'comercial', label: 'Comercial' },
+        { value: 'institucional', label: 'Institucional' }
+      ]
+    },
+    {
+      id: 'service',
+      title: 'Serviço',
+      options: [
+        { value: 'all', label: 'Todos os Serviços' },
+        { value: 'eletrico', label: 'Elétrico' },
+        { value: 'hidrossanitario', label: 'Hidrossanitário' },
+        { value: 'comunicacao', label: 'Comunicação' },
+        { value: 'consultoria', label: 'Consultoria BIM' }
+      ]
+    },
+    {
+      id: 'year',
+      title: 'Ano',
+      options: [
+        { value: 'all', label: 'Todos os Anos' },
+        { value: '2024', label: '2024' },
+        { value: '2023', label: '2023' },
+        { value: '2022', label: '2022' }
+      ]
+    }
+  ],
+
+  // Links de contato rápido
+  quickContact: [
+    {
+      title: 'WhatsApp',
+      url: 'https://wa.me/5551999999999',
       icon: 'whatsapp',
       color: 'green'
     },
     {
-      name: 'Email',
+      title: 'Email',
       url: 'mailto:pedrovitor.pagliarin@hotmail.com',
       icon: 'mail',
-      color: 'red'
+      color: 'blue'
+    },
+    {
+      title: 'LinkedIn',
+      url: 'https://linkedin.com/in/pedro-vitor-pagliarin',
+      icon: 'linkedin',
+      color: 'blue'
     }
-  ],
-
-  // Contact information
-  contact: {
-    engineer: 'Eng. Pedro Vitor Pagliarin',
-    phone: '+55 (54) 99159-0379',
-    email: 'pedrovitor.pagliarin@hotmail.com',
-    address: 'Porto Alegre, RS, Brasil',
-    hours: 'Segunda a Sexta: 8h às 18h'
-  }
+  ]
 }; 

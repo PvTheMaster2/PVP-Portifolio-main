@@ -1,130 +1,236 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% if title %}{{ title }} - {% endif %}{{ meta.site.name }}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ meta.site.description }}{% endif %}">
   
   <!-- SEO Meta Tags -->
-  <title>{% if title %}{{ title }} - {{ meta.site.name }}{% else %}{{ meta.site.fullName }}{% endif %}</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ meta.site.description }}{% endif %}">
-  <meta name="keywords" content="{{ meta.seo.keywords | join(', ') }}">
+  <meta name="keywords" content="{% if keywords %}{{ keywords }}{% else %}engenharia elétrica, projetos hidrossanitários, Porto Alegre, engenheiro eletricista, Revit, AutoCAD{% endif %}">
   <meta name="author" content="{{ meta.site.author }}">
+  <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ meta.site.fullName }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ meta.site.name }}{% endif %}">
   <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ meta.site.description }}{% endif %}">
-  <meta property="og:type" content="{{ meta.seo.ogType }}">
   <meta property="og:url" content="{{ meta.site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ meta.site.url }}{{ meta.site.image }}">
+  <meta property="og:image" content="{% if ogImage %}{{ ogImage }}{% else %}{{ meta.site.url }}/assets/images/og-default.jpg{% endif %}">
   <meta property="og:site_name" content="{{ meta.site.name }}">
+  <meta property="og:locale" content="pt_BR">
   
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="{{ meta.seo.twitterCard }}">
-  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ meta.site.fullName }}{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ meta.site.name }}{% endif %}">
   <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ meta.site.description }}{% endif %}">
-  <meta name="twitter:image" content="{{ meta.site.url }}{{ meta.site.image }}">
+  <meta name="twitter:image" content="{% if ogImage %}{{ ogImage }}{% else %}{{ meta.site.url }}/assets/images/og-default.jpg{% endif %}">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
   
-  <!-- Preconnect para performance -->
+  <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="/styles/style.css">
   
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-    {{ meta.schema.organization | dump | safe }}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ meta.site.name }}",
+    "url": "{{ meta.site.url }}",
+    "logo": "{{ meta.site.url }}/assets/images/logo-pvp-projects.png",
+    "description": "{{ meta.site.description }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Porto Alegre",
+      "addressRegion": "RS",
+      "addressCountry": "BR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{ company.contact.phone }}",
+      "contactType": "customer service",
+      "email": "{{ company.contact.email }}"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Pedro Vitor Pagliarin",
+      "jobTitle": "Engenheiro Eletricista",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal do Rio Grande do Sul"
+      }
+    }
+  }
   </script>
   
-  <!-- Alpine.js -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Google Analytics (se configurado) -->
+  {% if meta.analytics.googleAnalytics != 'G-XXXXXXXXXX' %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ meta.analytics.googleAnalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ meta.analytics.googleAnalytics }}');
+  </script>
+  {% endif %}
 </head>
 
-<body class="font-sans text-gray-900 bg-white antialiased" x-data="{}">
-  <!-- Skip to main content for accessibility -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-500 text-white px-4 py-2 rounded-md z-50">
+<body class="antialiased bg-white text-gray-900 transition-colors duration-200">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-lg z-50">
     Pular para o conteúdo principal
   </a>
 
-  <!-- Header/Navigation -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-    <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+  <!-- Loading Spinner -->
+  <div class="loader fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-300">
+    <div class="animate-spin rounded-full h-12 w-12 border-4 border-primary-600 border-t-transparent"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all duration-200">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <div class="flex items-center">
-          <a href="/" class="flex items-center space-x-2 text-xl font-bold text-primary-600 hover:text-primary-700 transition-colors">
-            <span class="text-2xl">⚡</span>
-            <span>{{ meta.site.name }}</span>
+        <div class="flex-shrink-0">
+          <a href="/" class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-sm">PVP</span>
+            </div>
+            <span class="font-bold text-xl text-gray-900">{{ company.name }}</span>
           </a>
         </div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8">
-          {% for item in navigation.main %}
-          <a href="{{ item.url }}" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
-            {{ item.name }}
-          </a>
-          {% endfor %}
+        <div class="hidden md:block">
+          <div class="flex items-center space-x-8">
+            {% for item in navigation.main %}
+            <div class="relative group">
+              <a href="{{ item.url }}" class="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium">
+                {{ item.title }}
+              </a>
+              
+              {% if item.children %}
+              <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2">
+                  {% for child in item.children %}
+                  <a href="{{ child.url }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-200">
+                    <div class="font-medium">{{ child.title }}</div>
+                    <div class="text-sm text-gray-500">{{ child.description }}</div>
+                  </a>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
         </div>
 
-        <!-- CTA Button -->
-        <div class="hidden md:block">
-          <a href="/contato" class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-medium">
+        <!-- Right side -->
+        <div class="flex items-center space-x-4">
+          <!-- Theme Toggle -->
+          <button 
+            id="theme-toggle"
+            class="p-2 text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            aria-label="Alternar tema"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+
+          <!-- Search Button -->
+          <button 
+            id="search-toggle"
+            class="p-2 text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            aria-label="Buscar"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile menu button -->
+          <button 
+            id="mobile-menu-toggle"
+            class="md:hidden p-2 text-gray-500 hover:text-gray-700 transition-colors duration-200"
+            aria-label="Abrir menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- CTA Button -->
+          <a href="/contato" class="hidden md:inline-flex bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-medium">
             Solicitar Orçamento
           </a>
         </div>
-
-        <!-- Mobile menu button -->
-        <button 
-          @click="$store.mobileMenu.toggle()"
-          class="md:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100 transition-colors"
-          aria-label="Abrir menu"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
       </div>
 
       <!-- Mobile Navigation -->
-      <div 
-        x-show="$store.mobileMenu.isOpen"
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 transform -translate-y-2"
-        x-transition:enter-end="opacity-100 transform translate-y-0"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100 transform translate-y-0"
-        x-transition:leave-end="opacity-0 transform -translate-y-2"
-        class="md:hidden"
-      >
+      <div id="mobile-menu" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
           {% for item in navigation.main %}
-          <a href="{{ item.url }}" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors">
-            {{ item.name }}
+          <a href="{{ item.url }}" class="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
+            {{ item.title }}
           </a>
+          {% if item.children %}
+          <div class="pl-4 space-y-1">
+            {% for child in item.children %}
+            <a href="{{ child.url }}" class="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
+              {{ child.title }}
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% endfor %}
-          <a href="/contato" class="block px-3 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors">
-            Solicitar Orçamento
-          </a>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- Search Modal -->
+  <div id="search-modal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-semibold text-gray-900">Buscar</h3>
+            <button id="search-close" class="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <input 
+            type="text" 
+            id="search-input"
+            placeholder="Digite para buscar projetos..."
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          >
+          <div id="search-results" class="mt-4 max-h-96 overflow-y-auto hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Main Content -->
-  <main id="main-content" class="min-h-screen">
+  <main id="main-content">
     {{ content | safe }}
   </main>
 
@@ -133,88 +239,118 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Company Info -->
-        <div class="col-span-1 md:col-span-2">
+        <div class="md:col-span-2">
           <div class="flex items-center space-x-2 mb-4">
-            <span class="text-2xl">⚡</span>
-            <span class="text-xl font-bold">{{ meta.site.name }}</span>
+            <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-sm">PVP</span>
+            </div>
+            <span class="font-bold text-xl">{{ company.name }}</span>
           </div>
-          <p class="text-gray-300 mb-4 max-w-md">
-            {{ meta.site.description }}
-          </p>
+          <p class="text-gray-300 mb-4 max-w-md">{{ company.about.description }}</p>
           <div class="flex space-x-4">
-            {% for social in navigation.social %}
-            <a href="{{ social.url }}" class="text-gray-400 hover:text-white transition-colors" aria-label="{{ social.name }}">
-              <span class="sr-only">{{ social.name }}</span>
-              <span class="text-xl">{{ social.icon }}</span>
+            {% for contact in navigation.quickContact %}
+            <a 
+              href="{{ contact.url }}" 
+              target="_blank"
+              class="text-gray-400 hover:text-white transition-colors duration-200"
+              aria-label="{{ contact.title }}"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <!-- Icon placeholder -->
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
             </a>
             {% endfor %}
           </div>
         </div>
 
-        <!-- Services -->
+        <!-- Footer Links -->
+        {% for section in navigation.footer %}
         <div>
-          <h3 class="text-lg font-semibold mb-4">Serviços</h3>
+          <h3 class="font-semibold text-white mb-4">{{ section.title }}</h3>
           <ul class="space-y-2">
-            {% for service in navigation.footer.services %}
+            {% for item in section.items %}
             <li>
-              <a href="{{ service.url }}" class="text-gray-300 hover:text-white transition-colors">
-                {{ service.name }}
+              <a href="{{ item.url }}" class="text-gray-300 hover:text-white transition-colors duration-200">
+                {{ item.title }}
               </a>
             </li>
             {% endfor %}
           </ul>
         </div>
-
-        <!-- Contact -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Contato</h3>
-          <div class="space-y-2 text-gray-300">
-            <p>{{ meta.contact.engineer }}</p>
-            <p>{{ meta.contact.phone }}</p>
-            <p>{{ meta.contact.email }}</p>
-            <p>{{ meta.contact.address }}</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
 
       <!-- Bottom Footer -->
-      <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 text-sm">
-          © 2024 {{ meta.site.name }}. Todos os direitos reservados.
-        </p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-          {% for legal in navigation.footer.legal %}
-          <a href="{{ legal.url }}" class="text-gray-400 hover:text-white text-sm transition-colors">
-            {{ legal.name }}
-          </a>
-          {% endfor %}
+      <div class="border-t border-gray-800 mt-8 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 text-sm">
+            © 2024 {{ company.name }}. Todos os direitos reservados.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="/legal/privacidade" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              Política de Privacidade
+            </a>
+            <a href="/legal/termos" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              Termos de Uso
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Alpine.js Store for Mobile Menu -->
-  <script>
-    document.addEventListener('alpine:init', () => {
-      Alpine.store('mobileMenu', {
-        isOpen: false,
-        toggle() {
-          this.isOpen = !this.isOpen
-        }
-      })
-    })
-  </script>
+  <!-- Scroll to Top Button -->
+  <button 
+    class="scroll-to-top fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-all duration-200 opacity-0 pointer-events-none z-50"
+    aria-label="Voltar ao topo"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
 
+  <!-- Notification Container -->
+  <div id="notification-container" class="fixed top-4 right-4 z-50"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/scripts/main.js"></script>
+  
   <!-- Initialize AOS -->
   <script>
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
-      once: true
-    })
+      once: true,
+      offset: 100
+    });
   </script>
 
-  <!-- Custom Scripts -->
-  <script src="/scripts/main.js" defer></script>
+  <!-- Mobile Menu Toggle -->
+  <script>
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Search Modal
+    document.getElementById('search-toggle').addEventListener('click', function() {
+      document.getElementById('search-modal').classList.remove('hidden');
+      document.getElementById('search-input').focus();
+    });
+
+    document.getElementById('search-close').addEventListener('click', function() {
+      document.getElementById('search-modal').classList.add('hidden');
+    });
+
+    // Close search modal on escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('search-modal').classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html> 

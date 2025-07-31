@@ -1,149 +1,121 @@
-// Informações da empresa PVP Projects
+// Dados da empresa PVP Projects
 module.exports = {
   // Informações básicas
   name: 'PVP Projects',
   fullName: 'PVP Projects - Engenharia de Precisão',
   tagline: 'Soluções integradas que unem técnica, segurança e design',
   
-  // Sobre a empresa
-  about: {
-    description: 'A PVP Projects nasceu da paixão pela engenharia de precisão e do desejo de oferecer soluções integradas que unem técnica, segurança e design.',
-    history: 'Fundada por Pedro Vitor Pagliarin, Engenheiro Eletricista formado pela Universidade Federal do Rio Grande do Sul (UFRGS), a empresa acumula 8 anos de sólida experiência no desenvolvimento de projetos para escritórios de arquitetura e engenharia de renome.',
-    experience: '8 anos de experiência',
-    education: 'Engenheiro Eletricista - UFRGS',
-    focus: 'Transformar desafios técnicos em projetos eficientes e inteligentes, garantindo a tranquilidade e a satisfação de nossos clientes e parceiros.'
-  },
-
-  // Missão e valores
-  mission: {
-    title: 'Nossa Missão e Valores',
-    description: 'Acreditamos que um projeto de excelência é construído sobre pilares sólidos de confiança, competência e colaboração.',
-    values: [
-      {
-        title: 'Transparência e Competência Técnica',
-        description: 'Atuamos com clareza em todas as etapas, oferecendo soluções tecnicamente robustas, seguras e em total conformidade com as normas vigentes (NBR, CEEE Equatorial, DMAE, etc.).',
-        icon: '🔍'
-      },
-      {
-        title: 'Colaboração Estratégica',
-        description: 'Somos parceiros de arquitetos e construtores. Nosso objetivo é complementar a visão arquitetônica com soluções de engenharia que sejam funcionais, esteticamente integradas e executáveis.',
-        icon: '🤝'
-      },
-      {
-        title: 'Foco no Cliente',
-        description: 'Buscamos construir relações duradouras, baseadas na confiança e no benefício mútuo, entregando projetos que atendem e superam as expectativas.',
-        icon: '👥'
-      },
-      {
-        title: 'Inovação e Eficiência',
-        description: 'Utilizamos ferramentas de ponta, como Revit para modelagem BIM e AutoCAD para detalhamento preciso, garantindo compatibilidade entre disciplinas e otimização da execução em obra.',
-        icon: '⚡'
-      }
-    ]
-  },
-
-  // Serviços oferecidos
-  services: {
-    eletrico: {
-      title: 'Projetos Elétricos',
-      description: 'Instalações de baixa tensão para todos os portes',
-      features: [
-        'Entrada de energia e medição individualizada (padrão CEEE e outras concessionárias)',
-        'Quadros de distribuição, diagramas unifilares e balanceamento de cargas',
-        'Projetos de iluminação, tomadas e pontos de força',
-        'Infraestrutura para climatização, automação e sistemas fotovoltaicos',
-        'Sistema de Proteção contra Descargas Atmosféricas (SPDA)'
-      ],
-      icon: '⚡',
-      color: 'primary'
-    },
-    hidrossanitario: {
-      title: 'Projetos Hidrossanitários',
-      description: 'Redes de água fria e quente',
-      features: [
-        'Sistemas de esgoto cloacal e pluvial',
-        'Dimensionamento de reservatórios, caixas de inspeção e sistemas sépticos',
-        'Documentação para aprovação em concessionárias (DMAE, SEMAE, etc.)'
-      ],
-      icon: '🚰',
-      color: 'secondary'
-    },
-    comunicacao: {
-      title: 'Projetos de Comunicação',
-      description: 'Infraestrutura para redes de dados, telefonia e TV',
-      features: [
-        'Cabeamento estruturado',
-        'Redes de dados',
-        'Telefonia',
-        'TV'
-      ],
-      icon: '📡',
-      color: 'accent'
-    },
-    consultoria: {
-      title: 'Consultoria e Compatibilização BIM',
-      description: 'Modelagem 3D das instalações em Revit',
-      features: [
-        'Análise de interferências e otimização de rotas',
-        'Coordenação com projetos de arquitetura, estrutura e interiores',
-        'Modelagem 3D das instalações em Revit'
-      ],
-      icon: '🏗️',
-      color: 'success'
-    }
-  },
-
   // Informações de contato
   contact: {
-    engineer: 'Eng. Pedro Vitor Pagliarin',
     email: 'pedrovitor.pagliarin@hotmail.com',
-    phone: '+55 (54) 99159-0379',
-    whatsapp: '+55 (54) 99159-0379',
+    phone: '+55 (51) 99999-9999',
     address: 'Porto Alegre, RS, Brasil',
-    hours: 'Segunda a Sexta: 8h às 18h',
-    social: {
-      linkedin: 'https://linkedin.com/in/pedro-vitor-pagliarin',
-      whatsapp: 'https://wa.me/5554991590379',
-      email: 'mailto:pedrovitor.pagliarin@hotmail.com'
-    }
+    whatsapp: '+55 (51) 99999-9999'
   },
-
-  // Especialidades técnicas
-  expertise: {
-    areas: [
-      'Projetos Residenciais',
-      'Projetos Comerciais',
-      'Projetos Prediais',
-      'Projetos Institucionais'
-    ],
-    tools: [
-      'Revit (Modelagem BIM)',
-      'AutoCAD (Detalhamento)',
-      'NBR (Normas Técnicas)',
-      'CEEE Equatorial',
-      'DMAE',
-      'SEMAE'
-    ],
-    certifications: [
-      'Engenheiro Eletricista - UFRGS',
-      '8 anos de experiência',
-      'Projetos para escritórios de renome'
+  
+  // Sobre a empresa
+  about: {
+    description: 'Especialistas em projetos de engenharia elétrica e hidrossanitária, oferecendo soluções precisas e inovadoras para todos os tipos de empreendimentos.',
+    history: 'Fundada pelo Eng. Pedro Vitor Pagliarin, a PVP Projects nasceu da paixão pela engenharia de precisão. Com 8 anos de experiência sólida, desenvolvemos projetos que unem técnica avançada, segurança e design funcional.',
+    focus: 'Nosso foco é entregar projetos que não apenas atendem às normas técnicas, mas também otimizam a eficiência energética e proporcionam conforto aos usuários.',
+    experience: '8 anos',
+    mission: 'Transformar ideias em projetos executáveis através da excelência técnica e inovação.',
+    vision: 'Ser referência em projetos de engenharia elétrica e hidrossanitária no Rio Grande do Sul.',
+    values: [
+      'Transparência e Competência Técnica',
+      'Colaboração Estratégica',
+      'Foco no Cliente',
+      'Inovação e Eficiência'
     ]
   },
-
+  
   // Métricas da empresa
   metrics: {
-    experience: '8 anos',
-    projects: '50+ projetos',
-    clients: '20+ clientes',
+    experience: '8+',
+    projects: '10+',
+    clients: '10+',
     satisfaction: '100%',
-    compliance: '100% (normas vigentes)'
+    area: '3.650 m²',
+    complexity: '6.2/10'
   },
-
-  // Logotipo (espaço reservado)
-  logo: {
-    src: '/assets/images/logo-pvp-projects.png',
-    alt: 'PVP Projects - Engenharia de Precisão',
-    available: false
+  
+  // Serviços oferecidos
+  services: [
+    {
+      title: 'Projetos Elétricos',
+      description: 'Instalações de baixa tensão para todos os portes',
+      icon: '⚡',
+      color: 'primary',
+      features: [
+        'Instalações residenciais e comerciais',
+        'Quadros de distribuição e proteção',
+        'Iluminação e tomadas',
+        'Medição individualizada',
+        'Normas NBR 5410 e concessionárias'
+      ]
+    },
+    {
+      title: 'Projetos Hidrossanitários',
+      description: 'Redes de água fria e quente',
+      icon: '🚰',
+      color: 'secondary',
+      features: [
+        'Redes de água fria e quente',
+        'Sistemas de esgoto',
+        'Instalações hidráulicas',
+        'Normas NBR 8160',
+        'Sustentabilidade hídrica'
+      ]
+    },
+    {
+      title: 'Projetos de Comunicação',
+      description: 'Infraestrutura para redes de dados, telefonia e TV',
+      icon: '📡',
+      color: 'accent',
+      features: [
+        'Redes de dados estruturadas',
+        'Sistemas de telefonia',
+        'Infraestrutura para TV',
+        'Cabeamento estruturado',
+        'Tecnologia de ponta'
+      ]
+    },
+    {
+      title: 'Consultoria BIM',
+      description: 'Modelagem 3D das instalações em Revit',
+      icon: '🏗️',
+      color: 'success',
+      features: [
+        'Modelagem 3D em Revit',
+        'Compatibilização de projetos',
+        'Coordenadas técnicas',
+        'Detalhamento preciso',
+        'Visualização avançada'
+      ]
+    }
+  ],
+  
+  // Ferramentas técnicas
+  tools: [
+    'Revit - Modelagem BIM',
+    'AutoCAD - Detalhamento',
+    'NBR - Normas Técnicas',
+    'CEEE Equatorial - Concessionária',
+    'DMAE/SEMAE - Água'
+  ],
+  
+  // Certificações e credenciais
+  certifications: [
+    'Engenheiro Eletricista - UFRGS',
+    'CREA/RS Ativo',
+    'Especialização em Projetos Elétricos',
+    'Certificação Revit Architecture'
+  ],
+  
+  // Redes sociais
+  social: {
+    linkedin: 'https://linkedin.com/in/pedro-vitor-pagliarin',
+    whatsapp: 'https://wa.me/5551999999999',
+    email: 'mailto:pedrovitor.pagliarin@hotmail.com'
   }
 }; 

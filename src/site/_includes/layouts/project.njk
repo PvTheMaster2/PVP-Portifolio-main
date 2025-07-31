@@ -1,0 +1,320 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Hero Section do Projeto -->
+<section class="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Informações do Projeto -->
+      <div data-aos="fade-right">
+        <div class="mb-4">
+          <span class="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">{{ project.category }}</span>
+          <span class="bg-secondary-600 text-white px-3 py-1 rounded-full text-sm font-semibold ml-2">{{ project.subcategory }}</span>
+        </div>
+        
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{{ project.title }}</h1>
+        <p class="text-xl text-gray-600 mb-6">{{ project.subtitle }}</p>
+        
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div>
+            <div class="text-2xl font-bold text-primary-600">{{ project.metrics.area }} m²</div>
+            <div class="text-sm text-gray-600">Área Total</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-primary-600">{{ project.metrics.complexity }}/10</div>
+            <div class="text-sm text-gray-600">Complexidade</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-primary-600">{{ project.year }}</div>
+            <div class="text-sm text-gray-600">Ano</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-primary-600">{{ project.metrics.duration }}</div>
+            <div class="text-sm text-gray-600">Duração</div>
+          </div>
+        </div>
+
+        <p class="text-lg text-gray-600 mb-8">{{ project.description }}</p>
+
+        <!-- Botões de Ação -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/projetos" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-semibold text-lg inline-flex items-center justify-center">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Voltar aos Projetos
+          </a>
+          <a href="/contato" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg hover:bg-primary-600 hover:text-white transition-colors duration-200 font-semibold text-lg inline-flex items-center justify-center">
+            Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagem Principal -->
+      <div data-aos="fade-left">
+        <div class="relative">
+          <img 
+            src="{{ project.images[0].src }}" 
+            alt="{{ project.images[0].alt }}"
+            class="w-full h-96 object-cover rounded-xl shadow-2xl"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detalhes Técnicos -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <!-- Informações do Cliente -->
+      <div class="lg:col-span-1">
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Informações do Projeto</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <span class="text-sm text-gray-600">Cliente:</span>
+              <p class="font-semibold text-gray-900">{{ project.client }}</p>
+            </div>
+            <div>
+              <span class="text-sm text-gray-600">Localização:</span>
+              <p class="font-semibold text-gray-900">{{ project.location }}</p>
+            </div>
+            <div>
+              <span class="text-sm text-gray-600">Ano:</span>
+              <p class="font-semibold text-gray-900">{{ project.year }}</p>
+            </div>
+            <div>
+              <span class="text-sm text-gray-600">Área:</span>
+              <p class="font-semibold text-gray-900">{{ project.details.area }}</p>
+            </div>
+            {% if project.details.pavimentos %}
+            <div>
+              <span class="text-sm text-gray-600">Pavimentos:</span>
+              <p class="font-semibold text-gray-900">{{ project.details.pavimentos }}</p>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="mt-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Ferramentas Utilizadas</h4>
+            <div class="flex flex-wrap gap-2">
+              {% for ferramenta in project.details.ferramentas %}
+              <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm">{{ ferramenta }}</span>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Normas Aplicadas</h4>
+            <div class="flex flex-wrap gap-2">
+              {% for norma in project.details.normas %}
+              <span class="bg-secondary-100 text-secondary-800 px-3 py-1 rounded-full text-sm">{{ norma }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo Principal -->
+      <div class="lg:col-span-2">
+        <!-- Desafios e Soluções -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Desafios</h3>
+            <ul class="space-y-3">
+              {% for challenge in project.challenges %}
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-red-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">{{ challenge }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Soluções</h3>
+            <ul class="space-y-3">
+              {% for solution in project.solutions %}
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">{{ solution }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Resultados -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Resultados</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {% for result in project.results %}
+            <div class="bg-green-50 p-4 rounded-lg">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700 font-medium">{{ result }}</span>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Galeria de Imagens -->
+{% if project.images.length > 1 %}
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Galeria do Projeto</h2>
+      <p class="text-xl text-gray-600">Visualize os detalhes técnicos e a execução do projeto</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+      {% for image in project.images %}
+      <div class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img 
+          src="{{ image.src }}" 
+          alt="{{ image.alt }}"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+        {% if image.caption %}
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+          <p class="text-white text-sm font-medium">{{ image.caption }}</p>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Documentação -->
+{% if project.documents %}
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Documentação Técnica</h2>
+      <p class="text-xl text-gray-600">Acesse os documentos e desenhos técnicos do projeto</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
+      {% for document in project.documents %}
+      <a 
+        href="{{ document.url }}" 
+        target="_blank"
+        class="group bg-gray-50 p-6 rounded-xl hover:bg-gray-100 transition-colors duration-200 border border-gray-200 hover:border-primary-300"
+      >
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-primary-600 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">{{ document.name }}</h3>
+        <p class="text-sm text-gray-600">Clique para visualizar o documento</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Projetos Relacionados -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Projetos Relacionados</h2>
+      <p class="text-xl text-gray-600">Conheça outros projetos similares</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+      {% for relatedProject in projects | filterByCategory(project.category) | limit(3) %}
+      {% if relatedProject.id != project.id %}
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <div class="relative h-48 bg-gray-200">
+          <img 
+            src="{{ relatedProject.images[0].src }}" 
+            alt="{{ relatedProject.title }}"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute top-4 right-4">
+            <span class="bg-primary-600 text-white px-2 py-1 rounded-full text-xs font-semibold">{{ relatedProject.category }}</span>
+          </div>
+        </div>
+        
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">{{ relatedProject.title }}</h3>
+          <p class="text-gray-600 mb-4">{{ relatedProject.subtitle }}</p>
+          
+          <div class="grid grid-cols-3 gap-4 mb-4">
+            <div class="text-center">
+              <div class="text-lg font-bold text-primary-600">{{ relatedProject.metrics.area }}</div>
+              <div class="text-xs text-gray-500">m²</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-bold text-primary-600">{{ relatedProject.metrics.complexity }}/10</div>
+              <div class="text-xs text-gray-500">Complexidade</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-bold text-primary-600">{{ relatedProject.year }}</div>
+              <div class="text-xs text-gray-500">Ano</div>
+            </div>
+          </div>
+
+          <a 
+            href="/projetos/{{ relatedProject.id }}"
+            class="block w-full bg-primary-600 text-white px-4 py-2 rounded-lg text-center hover:bg-primary-700 transition-colors duration-200"
+          >
+            Ver Detalhes
+          </a>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-primary-600">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div data-aos="fade-up">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+        Precisa de um projeto similar?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
+        Entre em contato conosco para discutir suas necessidades e receber um orçamento personalizado.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contato" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg inline-flex items-center justify-center">
+          Solicitar Orçamento
+        </a>
+        <a href="/projetos" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary-600 transition-colors duration-200 font-semibold text-lg inline-flex items-center justify-center">
+          Ver Todos os Projetos
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 
