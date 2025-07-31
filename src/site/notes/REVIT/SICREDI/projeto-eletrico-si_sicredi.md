@@ -14,9 +14,9 @@ updated: 2025-07-30T03:19
 
 Este projeto representa um **estudo de viabilidade e infraestrutura elétrica** de um ambiente corporativo a ser executado futuramente. A ênfase foi dada à **infraestrutura flexível e inteligente**, contemplando **piso elevado com perfilados e tomadas baixas**, e iluminação superior também embutida em perfilados.
 
-- **Tipo:** Estudo Elétrico Corporativo  
-- **Ano:** 2024  
-- **Ferramenta:** Revit  
+- **Tipo:** Estudo Elétrico Corporativo
+- **Ano:** 2024
+- **Ferramenta:** Revit
 - **Escopo:** Infraestrutura de piso elevado e teto | Compatibilização com interiores | Planejamento corporativo
 
 <div class="project-gallery reveal">
@@ -38,6 +38,7 @@ A premissa era garantir **flexibilidade operacional**, permitindo adaptações n
 ### Escopo Técnico
 
 #### ⚡ Elétrica
+
 - Infraestrutura em **perfilados** no teto e no piso elevado
 - Tomadas de piso posicionadas conforme o layout corporativo
 - Iluminação superior com perfilados contínuos
@@ -47,16 +48,17 @@ A premissa era garantir **flexibilidade operacional**, permitindo adaptações n
 - Compatibilização com layout de interiores e setor de alimentação (cozinha corporativa)
 
 ### 📐 Compatibilização Estratégica
+
 - Análise das demandas dos setores corporativos
 - Estudo para adequação de pontos elétricos às **estações de trabalho móveis**
 - Viabilidade técnica da instalação de eletrocalhas e perfilados em estruturas existentes
 
 ## Tecnologias e Normas
 
-- **Software:** Autodesk Revit 2024  
+- **Software:** Autodesk Revit 2024
 - **Normas Técnicas Aplicadas:**
-  - NBR 5410 (Instalações Elétricas de Baixa Tensão)  
-  - NR-10 (Segurança em Instalações Elétricas)  
+  - NBR 5410 (Instalações Elétricas de Baixa Tensão)
+  - NR-10 (Segurança em Instalações Elétricas)
   - Boas práticas para ambientes corporativos: ergonomia, acessibilidade e modularidade elétrica
 
 ## Diferenciais do Projeto
@@ -68,7 +70,7 @@ A premissa era garantir **flexibilidade operacional**, permitindo adaptações n
 
 ## Documentação
 
-[📄 **Ver Estudo Corporativo (PDF)**](/assets/pdfs/estudo_corporativo_2024.pdf_sicredi.pdf){:target="_blank" .reveal}
+[📄 **Ver Estudo Corporativo (PDF)**](/assets/pdfs/estudo_corporativo_2024.pdf_sicredi.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/estudo_corporativo_2024.pdf#toolbar=0"

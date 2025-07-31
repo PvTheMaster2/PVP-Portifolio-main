@@ -13,10 +13,10 @@ updated: 2025-07-30T03:06
 **Residência de luxo — 2 pavimentos + subsolo / com piscina e garagem subterrânea**  
 Projeto completo das instalações **elétricas** e **hidrossanitárias** para uma residência de alto padrão localizada em condomínio fechado. O projeto foi desenvolvido com foco em desempenho, conforto térmico, integração com áreas de lazer e detalhamento executivo de alta precisão.
 
-- **Local:** Condomínio fechado – RS  
-- **Ano:** 2018  
-- **Área estimada:** 300m2 
-- **Ferramentas:** AutoCAD 2023  
+- **Local:** Condomínio fechado – RS
+- **Ano:** 2018
+- **Área estimada:** 300m2
+- **Ferramentas:** AutoCAD 2023
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_nairo.jpg" alt="Fachada renderizada do projeto NF" class="gallery-thumb" loading="lazy">
@@ -32,6 +32,7 @@ O Projeto “NF” envolveu o desenvolvimento das soluções completas para as i
 ### Escopo Técnico Detalhado
 
 #### ⚡ Instalações Elétricas
+
 - **Iluminação e Tomadas:** Layout completo de pontos em todos os ambientes internos e externos
 - **Sistema de Climatização:** Infraestrutura elétrica para múltiplos aparelhos de ar-condicionado
 - **Piscina com Cascata:** Inclusão de motores e dispositivos de acionamento elétrico dedicados
@@ -40,6 +41,7 @@ O Projeto “NF” envolveu o desenvolvimento das soluções completas para as i
 - **Telefonia e Internet:** Infraestrutura de cabeamento e pontos de telefonia e internet.
 
 #### 💧 Instalações Hidrossanitárias
+
 - **Água Fria e Quente:** Sistema com aquecimento central por boiler
 - **Área de Piscina:** Alimentação hidráulica para sistema de filtragem e cascata
 - **Esgoto Cloacal e Pluvial:** Dimensionamento completo conforme NBR 8160
@@ -49,15 +51,15 @@ O Projeto “NF” envolveu o desenvolvimento das soluções completas para as i
 ## Tecnologias Utilizadas
 
 - **Software:** AutoCAD 2023 (plantas e isométricos técnicos)
-- **Normas Técnicas:**  
-  - NBR 5410:2004 (instalações elétricas de baixa tensão)  
-  - NBR 5626:2020 (água fria e quente)  
-  - NBR 8160:1999 (esgoto sanitário)  
+- **Normas Técnicas:**
+  - NBR 5410:2004 (instalações elétricas de baixa tensão)
+  - NBR 5626:2020 (água fria e quente)
+  - NBR 8160:1999 (esgoto sanitário)
 
 ## Documentação
 
-[📄 **Ver Planta Elétrica**](/assets/pdfs/projeto-nf_eletrica.pdf_nairo.pdf){:target="_blank" .reveal}  
-[📄 **Ver Planta Hidrossanitária**](/assets/pdfs/projeto-nf_hidrosanitaria.pdf_nairo.pdf){:target="_blank" .reveal}
+[📄 **Ver Planta Elétrica**](/assets/pdfs/projeto-nf_eletrica.pdf_nairo.pdf){:target="\_blank" .reveal}  
+[📄 **Ver Planta Hidrossanitária**](/assets/pdfs/projeto-nf_hidrosanitaria.pdf_nairo.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/projeto-nf_eletrica.pdf#toolbar=0"

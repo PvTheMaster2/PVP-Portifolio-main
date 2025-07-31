@@ -1,77 +1,207 @@
-require("dotenv").config();
-const { globSync } = require("glob");
+require('dotenv').config();
+const { globSync } = require('glob');
 
-module.exports = async (data) => {
-  let baseUrl = process.env.SITE_BASE_URL || "";
-  if (baseUrl && !baseUrl.startsWith("http")) {
-    baseUrl = "https://" + baseUrl;
-  }
-  let themeStyle = globSync("src/site/styles/_theme.*.css")[0] || "";
-  if (themeStyle) {
-    themeStyle = themeStyle.split("site")[1];
-  }
-  let bodyClasses = [];
-  let noteIconsSettings = {
-    filetree: false,
-    links: false,
-    title: false,
-    default: process.env.NOTE_ICON_DEFAULT,
-  };
+const siteName = 'PVP Projects';
+const siteDescription = 'Soluções integradas que unem técnica, segurança e design. Projetos elétricos, hidrossanitários e consultoria BIM em Porto Alegre.';
+const siteUrl = 'https://pvp-projects.com.br';
+const siteImage = '/assets/images/og-image.jpg';
+const siteLogo = '/assets/images/logo-pvp-projects.png';
 
-  const styleSettingsCss = process.env.STYLE_SETTINGS_CSS || "";
-  const styleSettingsBodyClasses = process.env.STYLE_SETTINGS_BODY_CLASSES || "";
+// Metadados SEO otimizados para PVP Projects
+module.exports = {
+  // Configurações globais
+  site: {
+    name: 'PVP Projects - Engenharia de Precisão',
+    description: 'Especialistas em projetos de engenharia elétrica e hidrossanitária em Porto Alegre. Soluções precisas e inovadoras para todos os tipos de empreendimentos.',
+    url: 'https://pvp-projects.com',
+    language: 'pt-BR',
+    author: 'Eng. Pedro Vitor Pagliarin',
+    email: 'pedrovitor.pagliarin@hotmail.com'
+  },
 
-  if (process.env.NOTE_ICON_TITLE && process.env.NOTE_ICON_TITLE == "true") {
-    bodyClasses.push("title-note-icon");
-    noteIconsSettings.title = true;
-  }
-  if (
-    process.env.NOTE_ICON_FILETREE &&
-    process.env.NOTE_ICON_FILETREE == "true"
-  ) {
-    bodyClasses.push("filetree-note-icon");
-    noteIconsSettings.filetree = true;
-  }
-  if (
-    process.env.NOTE_ICON_INTERNAL_LINKS &&
-    process.env.NOTE_ICON_INTERNAL_LINKS == "true"
-  ) {
-    bodyClasses.push("links-note-icon");
-    noteIconsSettings.links = true;
-  }
-  if (
-    process.env.NOTE_ICON_BACK_LINKS &&
-    process.env.NOTE_ICON_BACK_LINKS == "true"
-  ) {
-    bodyClasses.push("backlinks-note-icon");
-    noteIconsSettings.backlinks = true;
-  }
-  if (styleSettingsCss) {
-    bodyClasses.push("css-settings-manager");
-  }
-  if (styleSettingsBodyClasses) {
-    bodyClasses.push(styleSettingsBodyClasses);
-  }
+  // Páginas principais
+  pages: {
+    home: {
+      title: 'PVP Projects - Engenharia de Precisão | Porto Alegre',
+      description: 'Especialistas em projetos de engenharia elétrica e hidrossanitária em Porto Alegre. 8 anos de experiência, 10+ projetos entregues com excelência técnica.',
+      keywords: 'engenharia elétrica, projetos hidrossanitários, Porto Alegre, engenheiro eletricista, Revit, AutoCAD',
+      ogImage: '/assets/images/og-home.jpg'
+    },
+    sobre: {
+      title: 'Sobre a PVP Projects - Engenharia de Precisão',
+      description: 'Conheça a história da PVP Projects, fundada pelo Eng. Pedro Vitor Pagliarin. 8 anos de experiência em projetos de engenharia elétrica e hidrossanitária.',
+      keywords: 'sobre PVP Projects, Pedro Vitor Pagliarin, engenheiro eletricista UFRGS, experiência engenharia',
+      ogImage: '/assets/images/og-sobre.jpg'
+    },
+    servicos: {
+      title: 'Serviços de Engenharia - PVP Projects',
+      description: 'Projetos elétricos, hidrossanitários, comunicação e consultoria BIM. Soluções completas de engenharia para todos os tipos de empreendimentos.',
+      keywords: 'projetos elétricos, projetos hidrossanitários, consultoria BIM, Revit, AutoCAD, engenharia',
+      ogImage: '/assets/images/og-servicos.jpg'
+    },
+    projetos: {
+      title: 'Portfólio de Projetos - PVP Projects',
+      description: 'Portfólio completo de projetos de engenharia elétrica e hidrossanitária. Edifícios residenciais, comerciais e institucionais em Porto Alegre.',
+      keywords: 'portfólio projetos, engenharia elétrica, projetos hidrossanitários, Porto Alegre, Revit',
+      ogImage: '/assets/images/og-projetos.jpg'
+    },
+    contato: {
+      title: 'Contato - PVP Projects Engenharia',
+      description: 'Entre em contato com a PVP Projects para projetos de engenharia elétrica e hidrossanitária. Orçamentos e consultoria em Porto Alegre.',
+      keywords: 'contato PVP Projects, orçamento engenharia, Porto Alegre, engenheiro eletricista',
+      ogImage: '/assets/images/og-contato.jpg'
+    }
+  },
 
-  let timestampSettings = {
-    timestampFormat: process.env.TIMESTAMP_FORMAT || "MMM dd, yyyy h:mm a",
-    showCreated: process.env.SHOW_CREATED_TIMESTAMP == "true",
-    showUpdated: process.env.SHOW_UPDATED_TIMESTAMP == "true",
-  };
-  const meta = {
-    env: process.env.ELEVENTY_ENV,
-    theme: process.env.THEME,
-    themeStyle,
-    bodyClasses: bodyClasses.join(" "),
-    noteIconsSettings,
-    timestampSettings,
-    baseTheme: process.env.BASE_THEME || "dark",
-    siteName: process.env.SITE_NAME_HEADER || "Digital Garden",
-    mainLanguage: process.env.SITE_MAIN_LANGUAGE || "en",
-    siteBaseUrl: baseUrl,
-    styleSettingsCss,
-    buildDate: new Date(),
-  };
+  // Serviços específicos
+  services: {
+    eletricos: {
+      title: 'Projetos Elétricos - PVP Projects',
+      description: 'Projetos elétricos completos para residências, comércios e edifícios. Instalações de baixa tensão, quadros de distribuição e medição individualizada.',
+      keywords: 'projetos elétricos, instalações elétricas, quadros de distribuição, medição individualizada, NBR 5410',
+      ogImage: '/assets/images/og-eletricos.jpg'
+    },
+    hidrossanitarios: {
+      title: 'Projetos Hidrossanitários - PVP Projects',
+      description: 'Projetos hidrossanitários para redes de água fria e quente, sistemas de esgoto e instalações hidráulicas. Sustentabilidade hídrica.',
+      keywords: 'projetos hidrossanitários, redes de água, sistemas de esgoto, instalações hidráulicas, NBR 8160',
+      ogImage: '/assets/images/og-hidrossanitarios.jpg'
+    },
+    comunicacao: {
+      title: 'Projetos de Comunicação - PVP Projects',
+      description: 'Infraestrutura para redes de dados, telefonia e TV. Cabeamento estruturado e tecnologia de ponta para seu projeto.',
+      keywords: 'projetos comunicação, redes de dados, telefonia, TV, cabeamento estruturado',
+      ogImage: '/assets/images/og-comunicacao.jpg'
+    },
+    consultoriaBim: {
+      title: 'Consultoria BIM - PVP Projects',
+      description: 'Modelagem 3D das instalações em Revit. Compatibilização de projetos, coordenadas técnicas e detalhamento preciso.',
+      keywords: 'consultoria BIM, Revit, modelagem 3D, compatibilização projetos, coordenadas técnicas',
+      ogImage: '/assets/images/og-bim.jpg'
+    }
+  },
 
-  return meta;
+  // Schema.org structured data
+  schema: {
+    organization: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PVP Projects - Engenharia de Precisão",
+      "url": "https://pvp-projects.com",
+      "logo": "https://pvp-projects.com/assets/images/logo-pvp-projects.png",
+      "description": "Especialistas em projetos de engenharia elétrica e hidrossanitária em Porto Alegre",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Porto Alegre",
+        "addressRegion": "RS",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-51-99999-9999",
+        "contactType": "customer service",
+        "email": "pedrovitor.pagliarin@hotmail.com"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pedro Vitor Pagliarin",
+        "jobTitle": "Engenheiro Eletricista",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade Federal do Rio Grande do Sul"
+        }
+      },
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Porto Alegre e região metropolitana"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Engenharia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Projetos Elétricos",
+              "description": "Instalações de baixa tensão para todos os portes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Projetos Hidrossanitários",
+              "description": "Redes de água fria e quente"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Projetos de Comunicação",
+              "description": "Infraestrutura para redes de dados, telefonia e TV"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultoria BIM",
+              "description": "Modelagem 3D das instalações em Revit"
+            }
+          }
+        ]
+      }
+    },
+    person: {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pedro Vitor Pagliarin",
+      "jobTitle": "Engenheiro Eletricista",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PVP Projects - Engenharia de Precisão"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal do Rio Grande do Sul"
+      },
+      "knowsAbout": [
+        "Engenharia Elétrica",
+        "Projetos Hidrossanitários",
+        "Revit",
+        "AutoCAD",
+        "Normas Técnicas NBR"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-51-99999-9999",
+        "email": "pedrovitor.pagliarin@hotmail.com"
+      }
+    }
+  },
+
+  // Open Graph padrões
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    siteName: 'PVP Projects - Engenharia de Precisão',
+    twitterCard: 'summary_large_image',
+    twitterCreator: '@pvp_projects'
+  },
+
+  // Robots.txt
+  robots: {
+    userAgent: '*',
+    allow: '/',
+    disallow: ['/admin/', '/private/'],
+    sitemap: 'https://pvp-projects.com/sitemap.xml'
+  },
+
+  // Analytics
+  analytics: {
+    googleAnalytics: 'G-XXXXXXXXXX', // Substituir pelo ID real
+    googleTagManager: 'GTM-XXXXXXX' // Substituir pelo ID real
+  }
 };

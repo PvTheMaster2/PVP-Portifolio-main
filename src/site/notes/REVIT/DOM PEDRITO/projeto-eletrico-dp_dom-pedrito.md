@@ -14,8 +14,8 @@ updated: 2025-07-30T03:06
 Projeto elétrico completo desenvolvido no **Revit (Habit)** para um edifício de cinco pavimentos com cinco unidades multifamiliares autônomas. O escopo contemplou toda a infraestrutura elétrica, comunicação, SPDA e elevador com casa de máquinas, com **modelagem tridimensional** e documentação técnica de alto nível para execução e compatibilização com outras disciplinas.
 
 - **Local:** Dom Pedrito - RS
-- **Ano:** 2024  
-- **Ferramentas:** Revit  
+- **Ano:** 2024
+- **Ferramentas:** Revit
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_dom-pedrito.jpg" alt="Fachada modelada no Revit" class="gallery-thumb" loading="lazy">
@@ -31,29 +31,29 @@ Este edifício multifamiliar foi modelado integralmente no **Revit**, com foco e
 ### Escopo Técnico Detalhado
 
 #### ⚡ Instalações Elétricas (Modeladas em Revit)
+
 - **Entrada de Energia:** Central de medidores com alimentações independentes para as cinco unidades
 - **Quadro de Cargas e CD Principal(Serviço):** Modelado em 3D com componentes elétricos e etiquetas
 - **Iluminação e Tomadas:** Distribuição completa por ambiente, incluindo áreas comuns
-- **Diagrama Unifilar e Setorização de Circuitos:** 
+- **Diagrama Unifilar e Setorização de Circuitos:**
 - **SPDA (Proteção contra Descargas Atmosféricas):** Malha externa, descidas e interligações equipotenciais modeladas conforme NBR 5419
 - **Casa de Máquinas do Elevador:** Quadro exclusivo com alimentação dedicada e proteção especial
 - **Prumadas Técnicas:** Infraestrutura elétrica, dados e internet com rotas definidas verticalmente por shaft técnico
 
 ## Tecnologias Utilizadas
 
-- **Software:** Revit 2024  
-- **Normas Técnicas:**  
-  - NBR 5410:2004 (instalações elétricas de baixa tensão)  
-  - NBR 5419:2015 (SPDA)  
-  - NBR 14565:2000 (infraestrutura de comunicação)  
-  - NBR 13570:1996 (entrada de energia)  
+- **Software:** Revit 2024
+- **Normas Técnicas:**
+  - NBR 5410:2004 (instalações elétricas de baixa tensão)
+  - NBR 5419:2015 (SPDA)
+  - NBR 14565:2000 (infraestrutura de comunicação)
+  - NBR 13570:1996 (entrada de energia)
   - Normas da concessionária local (CEEE)
-
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Revit (PDF)**](/assets/pdfs/fc-d08-wolf-e201-r05-térreo_recorte_p1_dom-pedrito.pdf){:target="_blank" .reveal}  
-[📄 **Ver Prumadas Técnicas e SPDA**](/assets/pdfs/fc-d08-wolf-e999-r00-detalhe-prumada_recorte_p1_dom-pedrito.pdf){:target="_blank" .reveal}
+[📄 **Ver Projeto Elétrico Revit (PDF)**](/assets/pdfs/fc-d08-wolf-e201-r05-térreo_recorte_p1_dom-pedrito.pdf){:target="\_blank" .reveal}  
+[📄 **Ver Prumadas Técnicas e SPDA**](/assets/pdfs/fc-d08-wolf-e999-r00-detalhe-prumada_recorte_p1_dom-pedrito.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/fc-d08-wolf-e201-r05-térreo_recorte_p1_dom-pedrito.pdf#toolbar=0"

@@ -1,0 +1,420 @@
+---
+layout: layouts/base.njk
+title: Projetos
+description: Portfólio completo de projetos de engenharia elétrica e hidrossanitária da PVP Projects
+permalink: /projetos/
+---
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center" data-aos="fade-up">
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Nossos <span class="text-primary-600">Projetos</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+        Portfólio completo de projetos de engenharia elétrica e hidrossanitária. 
+        Cada projeto representa nossa dedicação à excelência técnica e inovação.
+      </p>
+      
+      <!-- Métricas rápidas -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <div class="text-2xl font-bold text-primary-600">{{ calculatedMetrics.totalProjects }}+</div>
+          <div class="text-sm text-gray-600">Projetos</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <div class="text-2xl font-bold text-primary-600">{{ calculatedMetrics.totalArea }}+</div>
+          <div class="text-sm text-gray-600">m²</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <div class="text-2xl font-bold text-primary-600">{{ calculatedMetrics.averageComplexity | round(1) }}/10</div>
+          <div class="text-sm text-gray-600">Complexidade</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <div class="text-2xl font-bold text-primary-600">{{ uniqueClients.length }}+</div>
+          <div class="text-sm text-gray-600">Clientes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filtros -->
+<section class="py-12 bg-white border-b">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+      <!-- Filtros -->
+      <div class="flex flex-wrap gap-4" x-data="projectFilters()">
+        <!-- Filtro por Categoria -->
+        <div class="relative">
+          <select 
+            x-model="filters.category" 
+            @change="filterProjects()"
+            class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          >
+            <option value="all">Todas as Categorias</option>
+            <option value="predial">Predial</option>
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+            <option value="institucional">Institucional</option>
+          </select>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Filtro por Serviço -->
+        <div class="relative">
+          <select 
+            x-model="filters.service" 
+            @change="filterProjects()"
+            class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          >
+            <option value="all">Todos os Serviços</option>
+            <option value="eletrico">Elétrico</option>
+            <option value="hidrossanitario">Hidrossanitário</option>
+            <option value="comunicacao">Comunicação</option>
+            <option value="consultoria">Consultoria BIM</option>
+          </select>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Filtro por Ano -->
+        <div class="relative">
+          <select 
+            x-model="filters.year" 
+            @change="filterProjects()"
+            class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          >
+            <option value="all">Todos os Anos</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+          </select>
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Botão Limpar Filtros -->
+        <button 
+          @click="clearFilters()"
+          class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+        >
+          Limpar Filtros
+        </button>
+      </div>
+
+      <!-- Ordenação -->
+      <div class="flex items-center gap-4">
+        <span class="text-gray-600">Ordenar por:</span>
+        <select 
+          x-model="sortBy" 
+          @change="sortProjects()"
+          class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+        >
+          <option value="date">Data</option>
+          <option value="complexity">Complexidade</option>
+          <option value="area">Área</option>
+          <option value="name">Nome</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lista de Projetos -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Contador de resultados -->
+    <div class="mb-8 text-center">
+      <p class="text-gray-600">
+        Mostrando <span x-text="filteredProjects.length"></span> de <span x-text="allProjects.length"></span> projetos
+      </p>
+    </div>
+
+    <!-- Grid de Projetos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" x-ref="projectsGrid">
+      <template x-for="project in filteredProjects" :key="project.id">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <!-- Imagem do Projeto -->
+          <div class="relative h-48 bg-gray-200">
+            <img 
+              :src="project.images[0]?.src || '/assets/images/default-project.jpg'" 
+              :alt="project.title"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute top-4 right-4">
+              <span class="bg-primary-600 text-white px-2 py-1 rounded-full text-xs font-semibold" x-text="project.category"></span>
+            </div>
+          </div>
+
+          <!-- Conteúdo do Card -->
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2" x-text="project.title"></h3>
+            <p class="text-gray-600 mb-4" x-text="project.subtitle"></p>
+            
+            <!-- Métricas do Projeto -->
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <div class="text-center">
+                <div class="text-lg font-bold text-primary-600" x-text="project.metrics.area"></div>
+                <div class="text-xs text-gray-500">m²</div>
+              </div>
+              <div class="text-center">
+                <div class="text-lg font-bold text-primary-600" x-text="project.metrics.complexity + '/10'"></div>
+                <div class="text-xs text-gray-500">Complexidade</div>
+              </div>
+              <div class="text-center">
+                <div class="text-lg font-bold text-primary-600" x-text="project.year"></div>
+                <div class="text-xs text-gray-500">Ano</div>
+              </div>
+            </div>
+
+            <!-- Descrição -->
+            <p class="text-gray-600 text-sm mb-4" x-text="project.description"></p>
+
+            <!-- Botões de Ação -->
+            <div class="flex gap-2">
+              <a 
+                :href="'/projetos/' + project.id"
+                class="flex-1 bg-primary-600 text-white px-4 py-2 rounded-lg text-center hover:bg-primary-700 transition-colors duration-200"
+              >
+                Ver Detalhes
+              </a>
+              <button 
+                @click="showProjectModal(project)"
+                class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Mensagem quando não há resultados -->
+    <div x-show="filteredProjects.length === 0" class="text-center py-12">
+      <div class="text-gray-400 mb-4">
+        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">Nenhum projeto encontrado</h3>
+      <p class="text-gray-600">Tente ajustar os filtros para encontrar o que procura.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal de Projeto -->
+<div 
+  x-show="showModal" 
+  x-transition:enter="transition ease-out duration-300"
+  x-transition:enter-start="opacity-0"
+  x-transition:enter-end="opacity-100"
+  x-transition:leave="transition ease-in duration-200"
+  x-transition:leave-start="opacity-100"
+  x-transition:leave-end="opacity-0"
+  class="fixed inset-0 z-50 overflow-y-auto"
+  style="display: none;"
+>
+  <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+    <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+
+    <div 
+      x-show="showModal"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full"
+    >
+      <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <div class="sm:flex sm:items-start">
+          <div class="w-full">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-bold text-gray-900" x-text="selectedProject?.title"></h3>
+              <button 
+                @click="closeModal()"
+                class="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div x-show="selectedProject" class="space-y-6">
+              <!-- Imagens do Projeto -->
+              <div class="grid grid-cols-2 gap-4">
+                <template x-for="image in selectedProject.images" :key="image.src">
+                  <img 
+                    :src="image.src" 
+                    :alt="image.alt"
+                    class="w-full h-32 object-cover rounded-lg"
+                  />
+                </template>
+              </div>
+
+              <!-- Detalhes do Projeto -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Descrição</h4>
+                  <p class="text-gray-600 text-sm" x-text="selectedProject.description"></p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Detalhes Técnicos</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <li><strong>Área:</strong> <span x-text="selectedProject.details.area"></span></li>
+                    <li><strong>Ano:</strong> <span x-text="selectedProject.year"></span></li>
+                    <li><strong>Complexidade:</strong> <span x-text="selectedProject.metrics.complexity + '/10'"></span></li>
+                    <li><strong>Duração:</strong> <span x-text="selectedProject.metrics.duration"></span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Desafios e Soluções -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Desafios</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <template x-for="challenge in selectedProject.challenges" :key="challenge">
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-red-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span x-text="challenge"></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-2">Soluções</h4>
+                  <ul class="text-sm text-gray-600 space-y-1">
+                    <template x-for="solution in selectedProject.solutions" :key="solution">
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span x-text="solution"></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Documentos -->
+              <div x-show="selectedProject.documents?.length > 0">
+                <h4 class="font-semibold text-gray-900 mb-2">Documentação</h4>
+                <div class="flex flex-wrap gap-2">
+                  <template x-for="doc in selectedProject.documents" :key="doc.name">
+                    <a 
+                      :href="doc.url"
+                      target="_blank"
+                      class="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm hover:bg-gray-200 transition-colors duration-200"
+                    >
+                      <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                      <span x-text="doc.name"></span>
+                    </a>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para filtros e funcionalidades -->
+<script>
+function projectFilters() {
+  return {
+    allProjects: {{ projects | dump | safe }},
+    filteredProjects: [],
+    showModal: false,
+    selectedProject: null,
+    filters: {
+      category: 'all',
+      service: 'all',
+      year: 'all'
+    },
+    sortBy: 'date',
+
+    init() {
+      this.filteredProjects = [...this.allProjects];
+      this.sortProjects();
+    },
+
+    filterProjects() {
+      this.filteredProjects = this.allProjects.filter(project => {
+        const categoryMatch = this.filters.category === 'all' || project.category === this.filters.category;
+        const serviceMatch = this.filters.service === 'all' || project.subcategory === this.filters.service;
+        const yearMatch = this.filters.year === 'all' || project.year.toString() === this.filters.year;
+        
+        return categoryMatch && serviceMatch && yearMatch;
+      });
+      
+      this.sortProjects();
+    },
+
+    sortProjects() {
+      this.filteredProjects.sort((a, b) => {
+        switch(this.sortBy) {
+          case 'date':
+            return b.year - a.year;
+          case 'complexity':
+            return b.metrics.complexity - a.metrics.complexity;
+          case 'area':
+            return b.metrics.area - a.metrics.area;
+          case 'name':
+            return a.title.localeCompare(b.title);
+          default:
+            return 0;
+        }
+      });
+    },
+
+    clearFilters() {
+      this.filters = {
+        category: 'all',
+        service: 'all',
+        year: 'all'
+      };
+      this.filterProjects();
+    },
+
+    showProjectModal(project) {
+      this.selectedProject = project;
+      this.showModal = true;
+      document.body.style.overflow = 'hidden';
+    },
+
+    closeModal() {
+      this.showModal = false;
+      this.selectedProject = null;
+      document.body.style.overflow = 'auto';
+    }
+  }
+}
+</script> 

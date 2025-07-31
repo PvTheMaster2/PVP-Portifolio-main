@@ -524,7 +524,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/site/img");
   eleventyConfig.addPassthroughCopy("src/site/scripts");
   eleventyConfig.addPassthroughCopy("src/site/styles/_theme.*.css");
-  eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "dist" });
+  // eleventyConfig.addPlugin(faviconsPlugin, { outputDir: "dist" });
   eleventyConfig.addPlugin(tocPlugin, {
     ul: true,
     tags: ["h1", "h2", "h3", "h4", "h5", "h6"],
@@ -557,6 +557,47 @@ module.exports = function (eleventyConfig) {
       closingSingleTag: "slash",
       singleTags: ["link"],
     },
+  });
+
+  // Shortcode para imagens otimizadas
+  eleventyConfig.addNunjucksAsyncShortcode("image", async (src, alt, cls = "", sizes = "100vw", widths = [300, 600, 900, 1200]) => {
+    let metadata = await Image(src, {
+      widths: widths,
+      formats: ["webp", "jpeg"],
+      urlPath: "/img/optimized/",
+      outputDir: "./dist/img/optimized/"
+    });
+    
+    let imageAttributes = { 
+      alt, 
+      loading: "lazy", 
+      decoding: "async",
+      class: cls
+    };
+    
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
+  // Shortcode para imagens responsivas com picture
+  eleventyConfig.addNunjucksAsyncShortcode("responsiveImage", async (src, alt, cls = "", sizes = "100vw", widths = [300, 600, 900, 1200]) => {
+    let metadata = await Image(src, {
+      widths: widths,
+      formats: ["webp", "jpeg"],
+      urlPath: "/img/optimized/",
+      outputDir: "./dist/img/optimized/"
+    });
+    
+    let imageAttributes = { 
+      alt, 
+      loading: "lazy", 
+      decoding: "async",
+      class: cls
+    };
+    
+    return Image.generateHTML(metadata, imageAttributes, {
+      sizes: sizes,
+      pictureClass: "responsive-image"
+    });
   });
 
   userEleventySetup(eleventyConfig);

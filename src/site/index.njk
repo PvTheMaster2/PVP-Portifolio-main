@@ -1,0 +1,200 @@
+---
+layout: layouts/base.njk
+title: Home
+description: PVP Projects - Engenharia de Precisão. Soluções integradas que unem técnica, segurança e design em Porto Alegre.
+---
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
+  <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Content -->
+      <div data-aos="fade-right">
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <span class="text-primary-600">Engenharia</span> de Precisão
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          {{ company.about.description }}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/projetos" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-semibold text-lg inline-flex items-center justify-center">
+            Ver Projetos
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a href="/contato" class="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg hover:bg-primary-600 hover:text-white transition-colors duration-200 font-semibold text-lg inline-flex items-center justify-center">
+            Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl font-bold text-primary-600 mb-2">{{ company.metrics.experience }}</div>
+          <div class="text-gray-600">Experiência</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl font-bold text-primary-600 mb-2">{{ company.metrics.projects }}</div>
+          <div class="text-gray-600">Projetos</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl font-bold text-primary-600 mb-2">{{ company.metrics.clients }}</div>
+          <div class="text-gray-600">Clientes</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="text-3xl font-bold text-primary-600 mb-2">{{ company.metrics.satisfaction }}</div>
+          <div class="text-gray-600">Satisfação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Oferecemos soluções completas de engenharia para todos os tipos de projetos
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for service in company.services %}
+      <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+        <div class="text-4xl mb-4">{{ service.icon }}</div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">{{ service.title }}</h3>
+        <p class="text-gray-600 mb-4">{{ service.description }}</p>
+        <ul class="space-y-2 text-sm text-gray-600">
+          {% for feature in service.features %}
+          <li class="flex items-start">
+            <svg class="w-4 h-4 text-primary-600 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            {{ feature }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Sobre a PVP Projects</h2>
+        <p class="text-lg text-gray-600 mb-6">{{ company.about.history }}</p>
+        <p class="text-lg text-gray-600 mb-8">{{ company.about.focus }}</p>
+        
+        <div class="grid grid-cols-2 gap-6">
+          <div class="text-center">
+            <div class="text-2xl font-bold text-primary-600 mb-2">{{ company.about.experience }}</div>
+            <div class="text-gray-600">Experiência</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-primary-600 mb-2">{{ company.about.education }}</div>
+            <div class="text-gray-600">Formação</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+        <div class="space-y-4">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-2xl mb-2">🔍</div>
+            <h3 class="font-semibold text-gray-900 mb-2">Transparência</h3>
+            <p class="text-sm text-gray-600">Atuamos com clareza em todas as etapas</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-2xl mb-2">🤝</div>
+            <h3 class="font-semibold text-gray-900 mb-2">Colaboração</h3>
+            <p class="text-sm text-gray-600">Parceiros de arquitetos e construtores</p>
+          </div>
+        </div>
+        <div class="space-y-4 pt-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-2xl mb-2">👥</div>
+            <h3 class="font-semibold text-gray-900 mb-2">Foco no Cliente</h3>
+            <p class="text-sm text-gray-600">Relações duradouras baseadas na confiança</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-2xl mb-2">⚡</div>
+            <h3 class="font-semibold text-gray-900 mb-2">Inovação</h3>
+            <p class="text-sm text-gray-600">Ferramentas de ponta e eficiência</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Projetos em Destaque</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Conheça alguns dos nossos projetos mais representativos
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for project in projects.projects | slice(0, 6) %}
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+        {% if project.images and project.images[0] %}
+        <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+          <img src="{{ project.images[0].src }}" alt="{{ project.images[0].alt }}" class="w-full h-48 object-cover">
+        </div>
+        {% endif %}
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ project.title }}</h3>
+          <p class="text-gray-600 mb-4">{{ project.description }}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">{{ project.location }} • {{ project.year }}</span>
+            <a href="/projetos/{{ project.id }}" class="text-primary-600 hover:text-primary-700 font-medium">
+              Ver detalhes →
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="/projetos" class="bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors duration-200 font-semibold text-lg inline-flex items-center">
+        Ver Todos os Projetos
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-primary-600">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div data-aos="fade-up">
+      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Pronto para seu próximo projeto?</h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Entre em contato conosco e descubra como podemos transformar sua visão em realidade
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contato" class="bg-white text-primary-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg">
+          Solicitar Orçamento
+        </a>
+        <a href="tel:{{ meta.contact.phone }}" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary-600 transition-colors duration-200 font-semibold text-lg">
+          {{ meta.contact.phone }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 

@@ -8,15 +8,15 @@ title: projeto-eletrico-af-loja-avenida-af
 updated: 2025-07-30T03:06
 ---
 
-# Projeto Elétrico Comercial  'AF'– Loja Modular em Revit 🏪⚡
+# Projeto Elétrico Comercial 'AF'– Loja Modular em Revit 🏪⚡
 
 **Loja comercial com quatro unidades independentes | Projeto modular com quatro medidores | Modelado em Revit 3D**
 
 Projeto elétrico completo desenvolvido para empreendimento comercial de **dois pavimentos**, localizado em **Porto Alegre – RS**, com potencial de locação para até **quatro lojas independentes**. O projeto foi integralmente modelado em **Revit**, com estruturação elétrica modular, pronta para reformas e ampliações futuras, incluindo entrada de energia separada, quadros de cargas, espera para climatização e caixas de inspeção técnicas.
 
-- **Local:** Porto Alegre – RS  
-- **Ano:** 2024  
-- **Tipo:** Comercial – Loja modular  
+- **Local:** Porto Alegre – RS
+- **Ano:** 2024
+- **Tipo:** Comercial – Loja modular
 - **Ferramenta:** Revit
 
 <div class="project-gallery reveal">
@@ -34,6 +34,7 @@ A **modularidade do projeto** é o grande diferencial: cada loja conta com **med
 ### Escopo Técnico
 
 #### ⚡ Elétrica
+
 - **Planta de Situação e Terreno**
 - **Dois Pavimentos (Térreo e 2º andar)**
 - **Projeto completo de iluminação, tomadas e esperas**
@@ -46,16 +47,16 @@ A **modularidade do projeto** é o grande diferencial: cada loja conta com **med
 
 ## Tecnologias e Normas
 
-- **Software:** Autodesk Revit 2024  
-- **Normas Técnicas:**  
-  - NBR 5410 (instalações elétricas)  
-  - NBR 13570 (entrada de energia)  
-  - Normas da concessionária CEEE/Equatorial  
+- **Software:** Autodesk Revit 2024
+- **Normas Técnicas:**
+  - NBR 5410 (instalações elétricas)
+  - NBR 13570 (entrada de energia)
+  - Normas da concessionária CEEE/Equatorial
 - **Infraestrutura para futuras automações ou controle de consumo energético individualizado**
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Loja Modular (PDF)**](/assets/pdfs/675_arq_av-do-forte_ex_r01_recorte_p1_loja-avenida.pdf){:target="_blank" .reveal}  
+[📄 **Ver Projeto Elétrico Loja Modular (PDF)**](/assets/pdfs/675_arq_av-do-forte_ex_r01_recorte_p1_loja-avenida.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/675_arq_av-do-forte_ex_r01_recorte_p1_loja-avenida.pdf#toolbar=0"

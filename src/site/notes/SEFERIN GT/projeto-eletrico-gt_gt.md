@@ -14,9 +14,9 @@ updated: 2025-07-30T03:19
 Projeto desenvolvido com foco em eficiência, organização e previsibilidade. O escopo abrange desde a entrada de energia até a setorização dos quadros de distribuição, incluindo infraestrutura elétrica para climatização, aquecimento e futura instalação de sistema fotovoltaico.
 
 - **Local:** Porto Alegre - RS
-- **Ano:** 2022 
-- **Área estimada:** 290m2 
-- **Ferramentas:** AutoCAD 2023  
+- **Ano:** 2022
+- **Área estimada:** 290m2
+- **Ferramentas:** AutoCAD 2023
 
 <div class="project-gallery reveal">
   <img src="/assets/imagens/capa_thumb.jpg_gt.jpg" alt="Fachada do projeto GT" class="gallery-thumb" loading="lazy">
@@ -32,6 +32,7 @@ O Projeto “GT” compreendeu o desenvolvimento completo das **instalações el
 ### Escopo Técnico Detalhado
 
 #### ⚡ Instalações Elétricas
+
 - **Entrada de Energia:** Projeto executivo com detalhamento de eletrodutos, bitolas e caixa de medição
 - **Quadros de Cargas:** Organizados por pavimento e função, com dimensionamento de disjuntores e DPS
 - **Iluminação e Tomadas:** Pontos definidos com base em ergonomia e funcionalidade por ambiente
@@ -44,16 +45,15 @@ O Projeto “GT” compreendeu o desenvolvimento completo das **instalações el
 ## Tecnologias Utilizadas
 
 - **Software:** AutoCAD 2023 (plantas técnicas, diagramas, detalhamentos)
-- **Normas Técnicas:**  
-  - NBR 5410:2004 (instalações elétricas de baixa tensão)  
-  - NBR 13570:1996 (entrada de energia elétrica)  
+- **Normas Técnicas:**
+  - NBR 5410:2004 (instalações elétricas de baixa tensão)
+  - NBR 13570:1996 (entrada de energia elétrica)
   - Normas complementares da concessionária local
-
 
 ## Documentação
 
-[📄 **Ver Planta Elétrica Geral**](/assets/pdfs/projeto-gt_eletrica.pdf_gt.pdf){:target="_blank" .reveal}  
-[📄 **Ver Diagrama Unifilar e Quadro de Cargas**](/assets/pdfs/projeto-gt_unifilar.pdf_gt.pdf){:target="_blank" .reveal}
+[📄 **Ver Planta Elétrica Geral**](/assets/pdfs/projeto-gt_eletrica.pdf_gt.pdf){:target="\_blank" .reveal}  
+[📄 **Ver Diagrama Unifilar e Quadro de Cargas**](/assets/pdfs/projeto-gt_unifilar.pdf_gt.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/projeto-gt_unifilar.pdf#toolbar=0"

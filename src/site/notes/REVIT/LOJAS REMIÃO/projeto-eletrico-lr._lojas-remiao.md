@@ -14,10 +14,10 @@ updated: 2025-07-30T03:06
 
 Projeto elétrico completo de uma loja comercial de **dois pavimentos (térreo + mezanino)**, com **duas unidades consumidoras independentes**, desenvolvido em **Revit**. O projeto abrange desde a entrada de energia até o detalhamento de distribuição elétrica, contando com **compatibilização com os projetos hidrossanitário e estrutural**, e modelagem tridimensional precisa.
 
-- **Local:** Porto Alegre – RS  
-- **Ano:** 2024  
-- **Tipo:** Comercial – Loja 2 pavimentos  
-- **Ferramenta:** Revit  
+- **Local:** Porto Alegre – RS
+- **Ano:** 2024
+- **Tipo:** Comercial – Loja 2 pavimentos
+- **Ferramenta:** Revit
 - **Unidades consumidoras:** 2
 
 <div class="project-gallery reveal">
@@ -35,6 +35,7 @@ A infraestrutura contempla **entrada de energia individualizada**, **esperas par
 ### Escopo Técnico
 
 #### ⚡ Elétrica
+
 - **Planta de Situação com Entrada de Energia**
 - **Dois Quadros de Medição (duas UC’s)**
 - **Projeto de Iluminação e Tomadas – Térreo e Mezanino**
@@ -48,15 +49,15 @@ A infraestrutura contempla **entrada de energia individualizada**, **esperas par
 
 ## Tecnologias e Normas
 
-- **Software:** Autodesk Revit 2024  
-- **Normas Técnicas:**  
-  - NBR 5410 (Instalações Elétricas BT)  
-  - NBR 13570 (Entrada de Serviço)  
+- **Software:** Autodesk Revit 2024
+- **Normas Técnicas:**
+  - NBR 5410 (Instalações Elétricas BT)
+  - NBR 13570 (Entrada de Serviço)
   - Normas específicas da CEEE Equatorial.
 
 ## Documentação
 
-[📄 **Ver Projeto Elétrico Loja Mezanino (PDF)**](/assets/pdfs/694_arq_ep_joaowallig_r04_loja-joao.pdf){:target="_blank" .reveal}  
+[📄 **Ver Projeto Elétrico Loja Mezanino (PDF)**](/assets/pdfs/694_arq_ep_joaowallig_r04_loja-joao.pdf){:target="\_blank" .reveal}
 
 <div class="pdf-container reveal">
   <object data="/assets/pdfs/694_arq_ep_joaowallig_r04_loja-joao.pdf#toolbar=0"

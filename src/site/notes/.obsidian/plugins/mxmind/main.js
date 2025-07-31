@@ -12,32 +12,38 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
+  if ((from && typeof from === 'object') || typeof from === 'function') {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+        __defProp(to, key, {
+          get: () => from[key],
+          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
+        });
   }
   return to;
 };
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toCommonJS = mod =>
+  __copyProps(__defProp({}, '__esModule', { value: true }), mod);
 
 // main.ts
 var main_exports = {};
 __export(main_exports, {
   MxmindIframeView: () => MxmindIframeView,
   VIEW_TYPE_EXAMPLE: () => VIEW_TYPE_EXAMPLE,
-  default: () => MxmindPlugin
+  default: () => MxmindPlugin,
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian = require("obsidian");
+var import_obsidian = require('obsidian');
 
 // node_modules/lodash-es/_freeGlobal.js
-var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
+var freeGlobal =
+  typeof global == 'object' && global && global.Object === Object && global;
 var freeGlobal_default = freeGlobal;
 
 // node_modules/lodash-es/_root.js
-var freeSelf = typeof self == "object" && self && self.Object === Object && self;
-var root = freeGlobal_default || freeSelf || Function("return this")();
+var freeSelf =
+  typeof self == 'object' && self && self.Object === Object && self;
+var root = freeGlobal_default || freeSelf || Function('return this')();
 var root_default = root;
 
 // node_modules/lodash-es/_Symbol.js
@@ -50,12 +56,12 @@ var hasOwnProperty = objectProto.hasOwnProperty;
 var nativeObjectToString = objectProto.toString;
 var symToStringTag = Symbol_default ? Symbol_default.toStringTag : void 0;
 function getRawTag(value) {
-  var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+    tag = value[symToStringTag];
   try {
     value[symToStringTag] = void 0;
     var unmasked = true;
-  } catch (e) {
-  }
+  } catch (e) {}
   var result = nativeObjectToString.call(value);
   if (unmasked) {
     if (isOwn) {
@@ -77,27 +83,32 @@ function objectToString(value) {
 var objectToString_default = objectToString;
 
 // node_modules/lodash-es/_baseGetTag.js
-var nullTag = "[object Null]";
-var undefinedTag = "[object Undefined]";
+var nullTag = '[object Null]';
+var undefinedTag = '[object Undefined]';
 var symToStringTag2 = Symbol_default ? Symbol_default.toStringTag : void 0;
 function baseGetTag(value) {
   if (value == null) {
     return value === void 0 ? undefinedTag : nullTag;
   }
-  return symToStringTag2 && symToStringTag2 in Object(value) ? getRawTag_default(value) : objectToString_default(value);
+  return symToStringTag2 && symToStringTag2 in Object(value)
+    ? getRawTag_default(value)
+    : objectToString_default(value);
 }
 var baseGetTag_default = baseGetTag;
 
 // node_modules/lodash-es/isObjectLike.js
 function isObjectLike(value) {
-  return value != null && typeof value == "object";
+  return value != null && typeof value == 'object';
 }
 var isObjectLike_default = isObjectLike;
 
 // node_modules/lodash-es/isSymbol.js
-var symbolTag = "[object Symbol]";
+var symbolTag = '[object Symbol]';
 function isSymbol(value) {
-  return typeof value == "symbol" || isObjectLike_default(value) && baseGetTag_default(value) == symbolTag;
+  return (
+    typeof value == 'symbol' ||
+    (isObjectLike_default(value) && baseGetTag_default(value) == symbolTag)
+  );
 }
 var isSymbol_default = isSymbol;
 
@@ -105,8 +116,7 @@ var isSymbol_default = isSymbol;
 var reWhitespace = /\s/;
 function trimmedEndIndex(string) {
   var index = string.length;
-  while (index-- && reWhitespace.test(string.charAt(index))) {
-  }
+  while (index-- && reWhitespace.test(string.charAt(index))) {}
   return index;
 }
 var trimmedEndIndex_default = trimmedEndIndex;
@@ -114,14 +124,18 @@ var trimmedEndIndex_default = trimmedEndIndex;
 // node_modules/lodash-es/_baseTrim.js
 var reTrimStart = /^\s+/;
 function baseTrim(string) {
-  return string ? string.slice(0, trimmedEndIndex_default(string) + 1).replace(reTrimStart, "") : string;
+  return string
+    ? string
+        .slice(0, trimmedEndIndex_default(string) + 1)
+        .replace(reTrimStart, '')
+    : string;
 }
 var baseTrim_default = baseTrim;
 
 // node_modules/lodash-es/isObject.js
 function isObject(value) {
   var type = typeof value;
-  return value != null && (type == "object" || type == "function");
+  return value != null && (type == 'object' || type == 'function');
 }
 var isObject_default = isObject;
 
@@ -132,49 +146,65 @@ var reIsBinary = /^0b[01]+$/i;
 var reIsOctal = /^0o[0-7]+$/i;
 var freeParseInt = parseInt;
 function toNumber(value) {
-  if (typeof value == "number") {
+  if (typeof value == 'number') {
     return value;
   }
   if (isSymbol_default(value)) {
     return NAN;
   }
   if (isObject_default(value)) {
-    var other = typeof value.valueOf == "function" ? value.valueOf() : value;
-    value = isObject_default(other) ? other + "" : other;
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject_default(other) ? other + '' : other;
   }
-  if (typeof value != "string") {
+  if (typeof value != 'string') {
     return value === 0 ? value : +value;
   }
   value = baseTrim_default(value);
   var isBinary = reIsBinary.test(value);
-  return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+  return isBinary || reIsOctal.test(value)
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : reIsBadHex.test(value)
+      ? NAN
+      : +value;
 }
 var toNumber_default = toNumber;
 
 // node_modules/lodash-es/now.js
-var now = function() {
+var now = function () {
   return root_default.Date.now();
 };
 var now_default = now;
 
 // node_modules/lodash-es/debounce.js
-var FUNC_ERROR_TEXT = "Expected a function";
+var FUNC_ERROR_TEXT = 'Expected a function';
 var nativeMax = Math.max;
 var nativeMin = Math.min;
 function debounce(func, wait, options) {
-  var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
-  if (typeof func != "function") {
+  var lastArgs,
+    lastThis,
+    maxWait,
+    result,
+    timerId,
+    lastCallTime,
+    lastInvokeTime = 0,
+    leading = false,
+    maxing = false,
+    trailing = true;
+  if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
   wait = toNumber_default(wait) || 0;
   if (isObject_default(options)) {
     leading = !!options.leading;
-    maxing = "maxWait" in options;
-    maxWait = maxing ? nativeMax(toNumber_default(options.maxWait) || 0, wait) : maxWait;
-    trailing = "trailing" in options ? !!options.trailing : trailing;
+    maxing = 'maxWait' in options;
+    maxWait = maxing
+      ? nativeMax(toNumber_default(options.maxWait) || 0, wait)
+      : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
   function invokeFunc(time) {
-    var args = lastArgs, thisArg = lastThis;
+    var args = lastArgs,
+      thisArg = lastThis;
     lastArgs = lastThis = void 0;
     lastInvokeTime = time;
     result = func.apply(thisArg, args);
@@ -186,12 +216,22 @@ function debounce(func, wait, options) {
     return leading ? invokeFunc(time) : result;
   }
   function remainingWait(time) {
-    var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
-    return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+    var timeSinceLastCall = time - lastCallTime,
+      timeSinceLastInvoke = time - lastInvokeTime,
+      timeWaiting = wait - timeSinceLastCall;
+    return maxing
+      ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke)
+      : timeWaiting;
   }
   function shouldInvoke(time) {
-    var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
-    return lastCallTime === void 0 || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+    var timeSinceLastCall = time - lastCallTime,
+      timeSinceLastInvoke = time - lastInvokeTime;
+    return (
+      lastCallTime === void 0 ||
+      timeSinceLastCall >= wait ||
+      timeSinceLastCall < 0 ||
+      (maxing && timeSinceLastInvoke >= maxWait)
+    );
   }
   function timerExpired() {
     var time = now_default();
@@ -219,7 +259,8 @@ function debounce(func, wait, options) {
     return timerId === void 0 ? result : trailingEdge(now_default());
   }
   function debounced() {
-    var time = now_default(), isInvoking = shouldInvoke(time);
+    var time = now_default(),
+      isInvoking = shouldInvoke(time);
     lastArgs = arguments;
     lastThis = this;
     lastCallTime = time;
@@ -247,28 +288,32 @@ var debounce_default = debounce;
 // main.ts
 var iframe = null;
 var ready = false;
-var VIEW_TYPE_EXAMPLE = "mxmind-view";
+var VIEW_TYPE_EXAMPLE = 'mxmind-view';
 function getTheme() {
-  return document.body.hasClass("theme-dark") ? "dark" : "light";
+  return document.body.hasClass('theme-dark') ? 'dark' : 'light';
 }
 function getLanguage() {
   const locale = import_obsidian.moment.locale();
-  const arr = locale.split("-");
+  const arr = locale.split('-');
   if (arr[1]) {
     arr[1] = arr[1].toString().toUpperCase();
   }
-  return arr.join("-");
+  return arr.join('-');
 }
 var getUrl = () => {
-  const base = "https://mxmind.com";
-  return base + "/mindmap/new?utm_source=obsidian&utm_medium=plugin&theme=" + getTheme() + "&lng=" + getLanguage();
+  const base = 'https://mxmind.com';
+  return (
+    base +
+    '/mindmap/new?utm_source=obsidian&utm_medium=plugin&theme=' +
+    getTheme() +
+    '&lng=' +
+    getLanguage()
+  );
 };
 async function file2mindmap(file, update = false) {
   const content = await this.app.vault.cachedRead(file);
   const post = () => {
-    postIframeMessage(update ? "updateFromMarkdown" : "loadFromMd", [
-      content
-    ]);
+    postIframeMessage(update ? 'updateFromMarkdown' : 'loadFromMd', [content]);
   };
   try {
     await waitEditor();
@@ -286,10 +331,9 @@ async function saveAndRevealFile(app, blob, filePath) {
   }
   await app.vault.createBinary(filePath, uint8Array);
   const file = app.vault.getAbstractFileByPath(filePath);
-  if (!file)
-    return;
+  if (!file) return;
   await app.workspace.getLeaf(true).openFile(file);
-  const fileExplorer = app.workspace.getLeavesOfType("file-explorer")[0];
+  const fileExplorer = app.workspace.getLeavesOfType('file-explorer')[0];
   if (fileExplorer && fileExplorer.view.revealInFolder) {
     fileExplorer.view.revealInFolder(file);
   }
@@ -297,45 +341,41 @@ async function saveAndRevealFile(app, blob, filePath) {
 var MxmindPlugin = class extends import_obsidian.Plugin {
   //settings: MyPluginSettings;
   async onload() {
-    this.registerView(
-      VIEW_TYPE_EXAMPLE,
-      (leaf) => new MxmindIframeView(leaf)
-    );
-    const ribbonIconEl = this.addRibbonIcon(
-      "network",
-      "Mxmind",
-      async (evt) => {
-        this.toggleView();
-        const activeFile = this.app.workspace.getActiveFile();
-        if (activeFile && activeFile.extension == "md") {
-          await this.activateView();
-          await file2mindmap(activeFile);
-        }
+    this.registerView(VIEW_TYPE_EXAMPLE, leaf => new MxmindIframeView(leaf));
+    const ribbonIconEl = this.addRibbonIcon('network', 'Mxmind', async evt => {
+      this.toggleView();
+      const activeFile = this.app.workspace.getActiveFile();
+      if (activeFile && activeFile.extension == 'md') {
+        await this.activateView();
+        await file2mindmap(activeFile);
       }
-    );
+    });
     this.registerEvent(
-      this.app.workspace.on("file-menu", (menu, file) => {
+      this.app.workspace.on('file-menu', (menu, file) => {
         const extension = file.extension;
-        if (!extension || extension != "md")
-          return;
-        if (!(file instanceof import_obsidian.TFile))
-          return;
-        menu.addItem((item) => {
-          item.setTitle(trans("Open as mindmap")).setIcon("document").onClick(async () => {
-            await this.activateView();
-            await file2mindmap(file);
-          });
+        if (!extension || extension != 'md') return;
+        if (!(file instanceof import_obsidian.TFile)) return;
+        menu.addItem(item => {
+          item
+            .setTitle(trans('Open as mindmap'))
+            .setIcon('document')
+            .onClick(async () => {
+              await this.activateView();
+              await file2mindmap(file);
+            });
         });
       })
     );
     this.registerEvent(
-      this.app.workspace.on("css-change", () => {
-        postIframeMessage("setTheme", [getTheme()]);
+      this.app.workspace.on('css-change', () => {
+        postIframeMessage('setTheme', [getTheme()]);
       })
     );
     const onModify = debounce_default(
-      async (file) => {
-        const activeView = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
+      async file => {
+        const activeView = this.app.workspace.getActiveViewOfType(
+          import_obsidian.MarkdownView
+        );
         if (activeView && activeView.file === file) {
           const cursor = activeView.editor.getCursor();
           await file2mindmap(file, true);
@@ -349,20 +389,17 @@ var MxmindPlugin = class extends import_obsidian.Plugin {
       { trailing: true }
     );
     this.registerEvent(
-      this.app.vault.on("modify", async (file) => {
-        if (!ready)
-          return;
+      this.app.vault.on('modify', async file => {
+        if (!ready) return;
         onModify(file);
       })
     );
   }
-  onunload() {
-  }
+  onunload() {}
   async toggleView() {
     const { workspace } = this.app;
     const rightSplit = this.app.workspace.rightSplit;
-    if (rightSplit.collapsed)
-      rightSplit.expand();
+    if (rightSplit.collapsed) rightSplit.expand();
     const existingLeaf = workspace.getLeavesOfType(VIEW_TYPE_EXAMPLE).first();
     if (existingLeaf) {
       workspace.revealLeaf(existingLeaf);
@@ -370,7 +407,7 @@ var MxmindPlugin = class extends import_obsidian.Plugin {
       const leaf = workspace.getRightLeaf(false);
       if (leaf) {
         await leaf.setViewState({
-          type: VIEW_TYPE_EXAMPLE
+          type: VIEW_TYPE_EXAMPLE,
         });
         workspace.revealLeaf(leaf);
       }
@@ -395,7 +432,9 @@ var MxmindPlugin = class extends import_obsidian.Plugin {
   }
   activeLeafPath(workspace) {
     var _a;
-    return (_a = workspace.activeLeaf) == null ? void 0 : _a.view.getState().file;
+    return (_a = workspace.activeLeaf) == null
+      ? void 0
+      : _a.view.getState().file;
   }
   activeLeafName(workspace) {
     var _a;
@@ -411,10 +450,10 @@ var MxmindIframeView = class extends import_obsidian.ItemView {
     return VIEW_TYPE_EXAMPLE;
   }
   getDisplayText() {
-    return "Mxmind";
+    return 'Mxmind';
   }
   getIcon() {
-    return "network";
+    return 'network';
   }
   async onOpen() {
     const container = this.containerEl.children[1];
@@ -426,42 +465,40 @@ var MxmindIframeView = class extends import_obsidian.ItemView {
       }
     }, 100);
     container.setAttribute(
-      "style",
-      import_obsidian.Platform.isMobile ? "padding:0;overflow:hidden;" : "padding:0;padding-bottom:30px;overflow:hidden;"
+      'style',
+      import_obsidian.Platform.isMobile
+        ? 'padding:0;overflow:hidden;'
+        : 'padding:0;padding-bottom:30px;overflow:hidden;'
     );
     container.createEl(
-      "iframe",
+      'iframe',
       {
-        cls: "mxmind-iframe",
+        cls: 'mxmind-iframe',
         attr: {
-          style: "width:100%;height:100%;",
+          style: 'width:100%;height:100%;',
           src: getUrl(),
-          frameborder: "0",
-          allow: "accelerometer;gyroscope"
-        }
+          frameborder: '0',
+          allow: 'accelerometer;gyroscope',
+        },
       },
-      (el) => {
+      el => {
         iframe = el;
       }
     );
-    container.win.onmessage = async (event) => {
-      if (event.data.event && event.data.event == "editor-ready") {
+    container.win.onmessage = async event => {
+      if (event.data.event && event.data.event == 'editor-ready') {
         ready = true;
       }
-      if (event.data.method == "exportDataUrl") {
+      if (event.data.method == 'exportDataUrl') {
         const rsp = await fetch(event.data.result);
-        const item = new ClipboardItem({ "image/png": rsp.blob() });
+        const item = new ClipboardItem({ 'image/png': rsp.blob() });
         navigator.clipboard.write([item]);
-        new import_obsidian.Notice(trans("Image copied to the clipboard."));
+        new import_obsidian.Notice(trans('Image copied to the clipboard.'));
       }
-      if (event.data.method == "download") {
+      if (event.data.method == 'download') {
         let [fileName, blob] = event.data.result;
-        await saveAndRevealFile(
-          this.app,
-          blob,
-          decodeURIComponent(fileName)
-        );
-        new import_obsidian.Notice(trans("Download complete"));
+        await saveAndRevealFile(this.app, blob, decodeURIComponent(fileName));
+        new import_obsidian.Notice(trans('Download complete'));
       }
       console.log(event);
     };
@@ -470,17 +507,22 @@ var MxmindIframeView = class extends import_obsidian.ItemView {
     ready = false;
   }
   onPaneMenu(menu, source) {
-    menu.addItem(
-      (item) => item.setIcon("image-file").setTitle(trans("Copy image")).onClick(() => {
-        var _a;
-        (_a = iframe == null ? void 0 : iframe.contentWindow) == null ? void 0 : _a.postMessage(
-          {
-            method: "exportDataUrl",
-            params: []
-          },
-          "*"
-        );
-      })
+    menu.addItem(item =>
+      item
+        .setIcon('image-file')
+        .setTitle(trans('Copy image'))
+        .onClick(() => {
+          var _a;
+          (_a = iframe == null ? void 0 : iframe.contentWindow) == null
+            ? void 0
+            : _a.postMessage(
+                {
+                  method: 'exportDataUrl',
+                  params: [],
+                },
+                '*'
+              );
+        })
     );
   }
 };
@@ -506,24 +548,26 @@ function waitEditor() {
 }
 function postIframeMessage(method, params) {
   var _a;
-  if (!iframe)
-    return;
-  (_a = iframe == null ? void 0 : iframe.contentWindow) == null ? void 0 : _a.postMessage(
-    {
-      method,
-      params
-    },
-    "*"
-  );
+  if (!iframe) return;
+  (_a = iframe == null ? void 0 : iframe.contentWindow) == null
+    ? void 0
+    : _a.postMessage(
+        {
+          method,
+          params,
+        },
+        '*'
+      );
 }
 function trans(str) {
   const cn = {
-    "Copy image": "\u590D\u5236\u56FE\u7247",
-    "Open as mindmap": "\u8F6C\u4E3A\u601D\u7EF4\u5BFC\u56FE",
-    "Image copied to the clipboard.": "\u56FE\u7247\u5DF2\u7ECF\u590D\u5236\u5230\u526A\u5207\u677F\u3002",
-    "Download complete": "\u4E0B\u8F7D\u5B8C\u6210"
+    'Copy image': '\u590D\u5236\u56FE\u7247',
+    'Open as mindmap': '\u8F6C\u4E3A\u601D\u7EF4\u5BFC\u56FE',
+    'Image copied to the clipboard.':
+      '\u56FE\u7247\u5DF2\u7ECF\u590D\u5236\u5230\u526A\u5207\u677F\u3002',
+    'Download complete': '\u4E0B\u8F7D\u5B8C\u6210',
   };
-  if (import_obsidian.moment.locale().includes("zh")) {
+  if (import_obsidian.moment.locale().includes('zh')) {
     return cn[str] || str;
   }
   return str;
