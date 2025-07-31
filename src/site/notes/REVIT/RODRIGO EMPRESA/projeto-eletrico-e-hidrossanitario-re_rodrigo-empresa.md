@@ -4,7 +4,9 @@ dg-publish: true
 noteIcon: ''
 permalink: /notes/projeto-eletrico-e-hidrossanitario-re-rodrigo-empresa-re/
 tags:
-  - gardenEntry
+  - projeto
+  - eletrico
+  - hidrossanitario
 title: projeto-eletrico-e-hidrossanitario-re-rodrigo-empresa-re
 updated: 2025-07-30T03:19
 ---

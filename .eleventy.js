@@ -559,6 +559,47 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  // Shortcode para imagens otimizadas
+  eleventyConfig.addNunjucksAsyncShortcode("image", async (src, alt, cls = "", sizes = "100vw", widths = [300, 600, 900, 1200]) => {
+    let metadata = await Image(src, {
+      widths: widths,
+      formats: ["webp", "jpeg"],
+      urlPath: "/img/optimized/",
+      outputDir: "./dist/img/optimized/"
+    });
+    
+    let imageAttributes = { 
+      alt, 
+      loading: "lazy", 
+      decoding: "async",
+      class: cls
+    };
+    
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
+  // Shortcode para imagens responsivas com picture
+  eleventyConfig.addNunjucksAsyncShortcode("responsiveImage", async (src, alt, cls = "", sizes = "100vw", widths = [300, 600, 900, 1200]) => {
+    let metadata = await Image(src, {
+      widths: widths,
+      formats: ["webp", "jpeg"],
+      urlPath: "/img/optimized/",
+      outputDir: "./dist/img/optimized/"
+    });
+    
+    let imageAttributes = { 
+      alt, 
+      loading: "lazy", 
+      decoding: "async",
+      class: cls
+    };
+    
+    return Image.generateHTML(metadata, imageAttributes, {
+      sizes: sizes,
+      pictureClass: "responsive-image"
+    });
+  });
+
   userEleventySetup(eleventyConfig);
 
   return {
